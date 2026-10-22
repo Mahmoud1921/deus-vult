@@ -37,6 +37,11 @@ Not done yet: focus trees, events, religion mechanics, proper flags and leader p
   - The biggest powers (the Ayyubids, the HRE, Angevin England, France, Byzantium, the Almohads, Sicily, Venice, Jin and Song) also start with a *Siege Train*
 - Settled realms start with the siege engine tech, so they can build trebuchets
 
+## What's in 0.4.0: icons and the opening war
+- Medieval unit icons replace the WW2 ones: a nasal helm for men-at-arms, a mounted knight with a lance, a trebuchet for siege engines, a bow for archers, and sword-and-shield and trebuchet pictures for the equipment. `tools/draw_icons.py` draws them, and `interface/dv_units.gfx` registers the archer sprite
+- The game opens at war, as it was in July 1187: the Ayyubids against the Crusader States faction (Jerusalem, Tripoli and Antioch)
+- The 3D models on the map are still vanilla. Turn on "show units as counters" in the game settings to see the medieval icons on the map instead
+
 ## Regenerating the map
 `tools/` holds the Python scripts that built the country and state files from the vanilla game files.
 `nations.py` lists every tag with its name, colour, capital, religion, leader and states. `assign.py` assigns the remaining states by region, `gen.py` writes the mod files, and `gen_army.py` writes the starting armies (run it before `gen.py`, which reads its `army_summary.json` to link each country to its army). To move a state to a different owner, edit `nations.py`, then rerun `assign.py` and `gen.py`.
