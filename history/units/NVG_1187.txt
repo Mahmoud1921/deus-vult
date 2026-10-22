@@ -1,0 +1,42 @@
+division_template = {
+	name = "Feudal Host"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		dv_archers = { x = 1 y = 0 }
+		dv_archers = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "1. Feudal Host"
+		location = 117
+		division_template = "Feudal Host"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Feudal Host"
+		location = 117
+		division_template = "Feudal Host"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3. Feudal Host"
+		location = 117
+		division_template = "Feudal Host"
+		start_experience_factor = 0.3
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_0
+		amount = 1100
+		producer = NVG
+	}
+}

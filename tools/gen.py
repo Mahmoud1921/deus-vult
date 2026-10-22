@@ -2,6 +2,7 @@ import json,re,os,glob,shutil
 from nations import N,GFX
 from PIL import Image,ImageDraw
 A={int(k):v for k,v in json.load(open('assign.json')).items()}
+ARMY=json.load(open('army_summary.json')) if os.path.exists('army_summary.json') else {}
 OUT='out'; shutil.rmtree(OUT,ignore_errors=True)
 def w(p,s,bom=False):
     p=os.path.join(OUT,p); os.makedirs(os.path.dirname(p),exist_ok=True)
@@ -52,8 +53,10 @@ for tag,(name,adj,g,col,cap,rel,leader,_) in N.items():
 	ideology = despotism
 	traits = {{ }}
 }}\n''' if leader else ''
+    oob=f'oob = "{tag}_1187"\n' if tag in ARMY else ''
+    art='\tgw_artillery = 1\n' if ARMY.get(tag,['warband'])[0] in ('feudal','askar') else ''
     w(f'history/countries/{tag} - {fn}.txt',f'''capital = {cap}
-
+{oob}
 set_research_slots = 2
 set_stability = 0.6
 set_war_support = 0.5
@@ -61,7 +64,7 @@ add_ideas = dv_{rel}
 
 set_technology = {{
 	infantry_weapons = 1
-}}
+{art}}}
 
 set_politics = {{
 	ruling_party = neutrality

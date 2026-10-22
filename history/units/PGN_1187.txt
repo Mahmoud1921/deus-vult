@@ -1,0 +1,36 @@
+division_template = {
+	name = "Askar"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		dv_archers = { x = 1 y = 0 }
+		dv_archers = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "1. Askar"
+		location = 4202
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Askar"
+		location = 4202
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_0
+		amount = 800
+		producer = PGN
+	}
+}

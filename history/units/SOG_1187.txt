@@ -1,0 +1,77 @@
+division_template = {
+	name = "Askar"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		dv_archers = { x = 1 y = 0 }
+		dv_archers = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Siege Train"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "1. Askar"
+		location = 9958
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Askar"
+		location = 9958
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3. Askar"
+		location = 9958
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4. Askar"
+		location = 9958
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5. Askar"
+		location = 9958
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6. Askar"
+		location = 9958
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1. Siege Train"
+		location = 9958
+		division_template = "Siege Train"
+		start_experience_factor = 0.3
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_0
+		amount = 2000
+		producer = SOG
+	}
+}

@@ -1,0 +1,37 @@
+division_template = {
+	name = "Horde"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		dv_archers = { x = 2 y = 0 }
+		dv_archers = { x = 2 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "1. Horde"
+		location = 4801
+		division_template = "Horde"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Horde"
+		location = 4801
+		division_template = "Horde"
+		start_experience_factor = 0.3
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_0
+		amount = 800
+		producer = MGT
+	}
+}
