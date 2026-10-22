@@ -1,5 +1,7 @@
 import json,re,os,glob,shutil
 from nations import N,GFX
+from heraldry import draw_flag
+from gen_heraldry import leader_block  # portraits themselves are drawn by tools/gen_heraldry.py
 from PIL import Image,ImageDraw
 A={int(k):v for k,v in json.load(open('assign.json')).items()}
 ARMY=json.load(open('army_summary.json')) if os.path.exists('army_summary.json') else {}
@@ -106,13 +108,7 @@ for tag,(name,adj,g,col,cap,rel,leader,_) in N.items():
     tags.append(f'{tag} = "countries/{fn}.txt"')
     gc=GFX[g]
     w(f'common/countries/{fn}.txt',f'graphical_culture = {gc}_gfx\ngraphical_culture_2d = {gc}_2d\n\ncolor = {{ {col[0]} {col[1]} {col[2]} }}\n')
-    L=f'''\ncreate_country_leader = {{
-	name = "{leader}"
-	desc = ""
-	expire = "1300.1.1.1"
-	ideology = despotism
-	traits = {{ }}
-}}\n''' if leader else ''
+    L='\n'+leader_block(tag)
     oob=f'oob = "{tag}_1187"\n' if tag in ARMY else ''
     extra=EXTRA_HISTORY.get(tag,'')
     art='\tgw_artillery = 1\n' if ARMY.get(tag,['warband'])[0] in ('feudal','askar') else ''
@@ -143,29 +139,10 @@ set_popularities = {{
     the = '' if name.endswith(('Tribes','Peoples','Kingdoms','Chiefdoms','Kipchaks','Principalities','Emirates')) else 'the '
     for suf in ['','_neutrality','_democratic','_fascism','_communism']:
         loc.append(f' {tag}{suf}:0 "{name}"'); loc.append(f' {tag}{suf}_DEF:0 "{the}{name}"'); loc.append(f' {tag}{suf}_ADJ:0 "{adj}"')
-    # flags
-    img=Image.new('RGBA',(82,52),col+(255,)); d=ImageDraw.Draw(img)
-    lum=0.3*col[0]+0.59*col[1]+0.11*col[2]
-    fg=(30,30,30,255) if lum>170 else (245,235,200,255)
-    if tag=='JRS':
-        img=Image.new('RGBA',(82,52),(250,250,250,255)); d=ImageDraw.Draw(img); gold=(220,170,30,255)
-        d.rectangle([37,6,44,46],fill=gold); d.rectangle([21,22,60,29],fill=gold)
-        for cx,cy in [(20,13),(61,13),(20,39),(61,39)]:
-            d.rectangle([cx-1,cy-6,cx+2,cy+6],fill=gold); d.rectangle([cx-5,cy-1,cx+6,cy+2],fill=gold)
-    elif rel=='catholic':
-        d.rectangle([36,0,45,51],fill=fg); d.rectangle([0,21,81,30],fill=fg)
-    elif rel=='orthodox':
-        d.rectangle([0,26,81,51],fill=tuple(int(c*0.6) for c in col)+(255,))
-        d.rectangle([38,8,43,44],fill=fg); d.rectangle([28,16,53,20],fill=fg); d.rectangle([30,30,51,34],fill=fg)
-    elif rel in ('sunni','shia'):
-        d.ellipse([24,10,56,42],fill=fg); d.ellipse([31,8,63,40],fill=col+(255,))
-        if rel=='shia': d.rectangle([0,44,81,51],fill=(40,120,60,255))
-    else:
-        d.rectangle([0,0,81,12],fill=tuple(int(c*0.6) for c in col)+(255,)); d.rectangle([0,39,81,51],fill=tuple(int(c*0.6) for c in col)+(255,))
-        d.ellipse([33,18,48,33],fill=fg)
+    # flags (designs in heraldry.py)
     for sub,size in [('',(82,52)),('medium/',(41,26)),('small/',(10,7))]:
         p=os.path.join(OUT,'gfx/flags',sub); os.makedirs(p,exist_ok=True)
-        (img if sub=='' else img.resize(size,Image.LANCZOS)).save(os.path.join(p,tag+'.tga'))
+        draw_flag(tag,*size).save(os.path.join(p,tag+'.tga'))
 w('common/country_tags/dv_countries.txt','\n'.join(tags)+'\n')
 # religion national spirits, holy war decisions and focus trees live in tools/gen_content.py
 # bookmark

@@ -26,7 +26,9 @@ set_popularities = {
 create_country_leader = {
 	name = "Ruaidri Ua Conchobair"
 	desc = ""
+	picture = GFX_portrait_dv_IRK
 	expire = "1300.1.1.1"
 	ideology = despotism
 	traits = { }
 }
+

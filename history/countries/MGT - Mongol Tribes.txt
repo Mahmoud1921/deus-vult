@@ -22,3 +22,12 @@ set_popularities = {
 	communism = 0
 	neutrality = 100
 }
+
+create_country_leader = {
+	name = "Temujin"
+	desc = ""
+	picture = GFX_portrait_dv_MGT
+	expire = "1300.1.1.1"
+	ideology = despotism
+	traits = { }
+}

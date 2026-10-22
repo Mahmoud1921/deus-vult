@@ -27,7 +27,9 @@ set_popularities = {
 create_country_leader = {
 	name = "Caliph al-Nasir"
 	desc = ""
+	picture = GFX_portrait_dv_ABS
 	expire = "1300.1.1.1"
 	ideology = despotism
 	traits = { }
 }
+
