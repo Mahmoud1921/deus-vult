@@ -35,6 +35,18 @@ for f in glob.glob('v/history/states/*.txt'):
     ins=f"\n\t\towner = {tag}\n\t\tadd_core_of = {tag}\n"+''.join(f"\t\tadd_claim_by = {c}\n" for c in CLAIMS.get(sid,[]))
     t=t[:hs.end()]+ins+h+t[i-1:]
     w('history/states/'+os.path.basename(f),t)
+# starting wars and factions (history files run in tag order, so the Ayyubid file sets up both sides)
+EXTRA_HISTORY={'AYB':'''
+# July 1187: Saladin's invasion of the Kingdom of Jerusalem
+JRS = {
+	create_faction = DV_FACTION_CRUSADER_STATES
+	add_to_faction = TRP
+	add_to_faction = ANT
+}
+declare_war_on = { target = JRS type = annex_everything }
+declare_war_on = { target = TRP type = annex_everything }
+declare_war_on = { target = ANT type = annex_everything }
+'''}
 # --- countries
 tags=[];loc=['l_english:']
 owned={}
@@ -54,6 +66,7 @@ for tag,(name,adj,g,col,cap,rel,leader,_) in N.items():
 	traits = {{ }}
 }}\n''' if leader else ''
     oob=f'oob = "{tag}_1187"\n' if tag in ARMY else ''
+    extra=EXTRA_HISTORY.get(tag,'')
     art='\tgw_artillery = 1\n' if ARMY.get(tag,['warband'])[0] in ('feudal','askar') else ''
     w(f'history/countries/{tag} - {fn}.txt',f'''capital = {cap}
 {oob}
@@ -78,7 +91,7 @@ set_popularities = {{
 	communism = 0
 	neutrality = 100
 }}
-{L}''')
+{L}{extra}''')
     the = '' if name.endswith(('Tribes','Peoples','Kingdoms','Chiefdoms','Kipchaks','Principalities','Emirates')) else 'the '
     for suf in ['','_neutrality','_democratic','_fascism','_communism']:
         loc.append(f' {tag}{suf}:0 "{name}"'); loc.append(f' {tag}{suf}_DEF:0 "{the}{name}"'); loc.append(f' {tag}{suf}_ADJ:0 "{adj}"')
@@ -134,7 +147,7 @@ BD={'JRS':"4 July 1187. King Guy has marched the whole army of Jerusalem out to 
 'HRE':"Frederick Barbarossa, the old emperor, has one last campaign left in him.",
 'BYZ':"Isaac II Angelos holds a weakened empire, threatened by Bulgarian rebels, Sicilian fleets and crusading armies alike.",
 'RUM':"Kilij Arslan II has beaten Byzantium at Myriokephalon, but his sons are already fighting over his realm."}
-loc+=[' DV_BOOKMARK_1187:0 "The Third Crusade"',' DV_BOOKMARK_1187_DESC:0 "July 1187. Saladin has invaded the Kingdom of Jerusalem, and Europe is about to take the cross."',' DV_OTHER_BOOKMARK_DESC:0 "A realm caught up in the struggle for the Holy Land."']
+loc+=[' DV_FACTION_CRUSADER_STATES:0 "Crusader States"',' DV_BOOKMARK_1187:0 "The Third Crusade"',' DV_BOOKMARK_1187_DESC:0 "July 1187. Saladin has invaded the Kingdom of Jerusalem, and Europe is about to take the cross."',' DV_OTHER_BOOKMARK_DESC:0 "A realm caught up in the struggle for the Holy Land."']
 loc+=[f' DV_{k}_BOOKMARK_DESC:0 "{v}"' for k,v in BD.items()]
 w('localisation/english/dv_countries_l_english.yml','\n'.join(loc)+'\n',bom=True)
 w('common/defines/dv_defines.lua','NDefines.NGame.START_DATE = "1187.7.4.12"\nNDefines.NGame.END_DATE = "1300.1.1.1"\n')

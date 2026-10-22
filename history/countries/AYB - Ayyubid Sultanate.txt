@@ -31,3 +31,13 @@ create_country_leader = {
 	ideology = despotism
 	traits = { }
 }
+
+# July 1187: Saladin's invasion of the Kingdom of Jerusalem
+JRS = {
+	create_faction = DV_FACTION_CRUSADER_STATES
+	add_to_faction = TRP
+	add_to_faction = ANT
+}
+declare_war_on = { target = JRS type = annex_everything }
+declare_war_on = { target = TRP type = annex_everything }
+declare_war_on = { target = ANT type = annex_everything }
