@@ -1,0 +1,194 @@
+focus_tree = {
+	id = dv_papal_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PPS
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 50 y = 1200 }
+
+	focus = {
+		id = dv_pps_audita_tremendi
+		icon = GFX_goal_generic_propaganda
+		x = 4
+		y = 0
+		cost = 3
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+			every_country = {
+				limit = { has_idea = dv_catholic }
+				add_war_support = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = dv_pps_preach_the_crusade
+		icon = GFX_goal_generic_major_alliance
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_pps_audita_tremendi }
+		available = {
+			country_exists = JRS
+			JRS = { has_war_with = AYB }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = { tag = AGV tag = FRK tag = HRE tag = SCL tag = HNG }
+					is_ai = yes
+					is_in_faction = no
+					NOT = { has_war_with = JRS }
+					NOT = { has_war_with = AYB }
+				}
+				JRS = { add_to_faction = PREV }
+				declare_war_on = { target = AYB type = annex_everything }
+				add_ideas = dv_crusader_vow
+			}
+		}
+	}
+
+	focus = {
+		id = dv_pps_military_orders
+		icon = GFX_goal_generic_special_forces
+		x = 2
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_pps_preach_the_crusade }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+			if = {
+				limit = { country_exists = JRS NOT = { JRS = { has_idea = dv_military_orders } } }
+				JRS = { add_ideas = dv_military_orders }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_pps_indulgences
+		icon = GFX_goal_generic_trade
+		x = 2
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_pps_military_orders }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_indulgences
+		}
+	}
+
+	focus = {
+		id = dv_pps_reconcile_with_the_emperor
+		icon = GFX_goal_generic_improve_relations
+		x = 5
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_pps_audita_tremendi }
+		mutually_exclusive = { focus = dv_pps_lombard_league }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.05
+			if = {
+				limit = { country_exists = HRE }
+				add_opinion_modifier = { target = HRE modifier = dv_friendship }
+				HRE = { add_opinion_modifier = { target = ROOT modifier = dv_friendship } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_pps_lombard_league
+		icon = GFX_goal_generic_fortify_city
+		x = 7
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_pps_audita_tremendi }
+		mutually_exclusive = { focus = dv_pps_reconcile_with_the_emperor }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_lombard_league
+			if = {
+				limit = { country_exists = HRE }
+				add_opinion_modifier = { target = HRE modifier = dv_betrayal }
+				HRE = { add_opinion_modifier = { target = ROOT modifier = dv_betrayal } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_pps_patrimony
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 6
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_pps_reconcile_with_the_emperor focus = dv_pps_lombard_league }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_claim = 161
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+
+	focus = {
+		id = dv_pps_lateran_council
+		icon = GFX_goal_generic_scientific_exchange
+		x = 6
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_pps_patrimony }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_lateran_reform
+		}
+	}
+
+	focus = {
+		id = dv_pps_vicar_of_christ
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 4
+		cost = 5
+		prerequisite = { focus = dv_pps_indulgences }
+		prerequisite = { focus = dv_pps_lateran_council }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_vicar_of_christ
+		}
+	}
+}

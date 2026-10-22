@@ -1,0 +1,366 @@
+focus_tree = {
+	id = dv_byzantine_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BYZ
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 50 y = 1200 }
+
+	focus = {
+		id = dv_byz_isaac_angelos
+		icon = GFX_goal_generic_national_unity
+		x = 6
+		y = 0
+		cost = 3
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = dv_byz_crusader_problem
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_byz_isaac_angelos }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = dv_byz_pact_with_saladin
+		icon = GFX_goal_generic_neutrality_focus
+		x = 1
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_byz_crusader_problem }
+		mutually_exclusive = { focus = dv_byz_aid_the_crusaders }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = { country_exists = AYB NOT = { has_war_with = AYB } }
+				diplomatic_relation = { country = AYB relation = non_aggression_pact active = yes }
+			}
+			if = {
+				limit = { country_exists = AYB }
+				add_opinion_modifier = { target = AYB modifier = dv_friendship }
+				AYB = { add_opinion_modifier = { target = ROOT modifier = dv_friendship } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_byz_aid_the_crusaders
+		icon = GFX_goal_generic_improve_relations
+		x = 3
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_byz_crusader_problem }
+		mutually_exclusive = { focus = dv_byz_pact_with_saladin }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = { country_exists = HRE NOT = { has_war_with = HRE } }
+				give_military_access = HRE
+				add_opinion_modifier = { target = HRE modifier = dv_friendship }
+				HRE = { add_opinion_modifier = { target = ROOT modifier = dv_friendship } }
+			}
+			if = {
+				limit = { country_exists = FRK NOT = { has_war_with = FRK } }
+				give_military_access = FRK
+				add_opinion_modifier = { target = FRK modifier = dv_friendship }
+				FRK = { add_opinion_modifier = { target = ROOT modifier = dv_friendship } }
+			}
+			if = {
+				limit = { country_exists = AGV NOT = { has_war_with = AGV } }
+				give_military_access = AGV
+				add_opinion_modifier = { target = AGV modifier = dv_friendship }
+				AGV = { add_opinion_modifier = { target = ROOT modifier = dv_friendship } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_byz_recover_cyprus
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 2
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_byz_pact_with_saladin focus = dv_byz_aid_the_crusaders }
+		bypass = {
+			NOT = { country_exists = CYK }
+		}
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_claim = 183
+			if = {
+				limit = { country_exists = CYK NOT = { has_war_with = CYK } }
+				create_wargoal = { type = take_state_focus target = CYK generator = { 183 } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_byz_favour_venice
+		icon = GFX_goal_generic_trade
+		x = 1
+		y = 4
+		cost = 5
+		prerequisite = { focus = dv_byz_recover_cyprus }
+		mutually_exclusive = { focus = dv_byz_favour_pisa }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_venetian_quarter
+			if = {
+				limit = { country_exists = VNC }
+				add_opinion_modifier = { target = VNC modifier = dv_friendship }
+				VNC = { add_opinion_modifier = { target = ROOT modifier = dv_friendship } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_byz_favour_pisa
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 3
+		y = 4
+		cost = 5
+		prerequisite = { focus = dv_byz_recover_cyprus }
+		mutually_exclusive = { focus = dv_byz_favour_venice }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_pisan_quarter
+			if = {
+				limit = { country_exists = PSA }
+				add_opinion_modifier = { target = PSA modifier = dv_friendship }
+				PSA = { add_opinion_modifier = { target = ROOT modifier = dv_friendship } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_byz_varangian_guard
+		icon = GFX_goal_generic_special_forces
+		x = 6
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_byz_isaac_angelos }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_varangian_guard
+		}
+	}
+
+	focus = {
+		id = dv_byz_vlach_rebellion
+		icon = GFX_goal_generic_major_war
+		x = 5
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_byz_varangian_guard }
+		bypass = {
+			NOT = { country_exists = BLG }
+		}
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_claim = 801
+			add_state_claim = 211
+			add_state_claim = 77
+			add_state_claim = 971
+			if = {
+				limit = { country_exists = BLG NOT = { has_war_with = BLG } }
+				create_wargoal = { type = annex_everything target = BLG }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_byz_greek_fire
+		icon = GFX_goal_generic_build_navy
+		x = 7
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_byz_varangian_guard }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_offsite_building = { type = dockyard level = 1 }
+		}
+	}
+
+	focus = {
+		id = dv_byz_serbia
+		icon = GFX_goal_generic_military_sphere
+		x = 5
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_byz_vlach_rebellion }
+		bypass = {
+			NOT = { country_exists = SRB }
+		}
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = { country_exists = SRB NOT = { has_war_with = SRB } }
+				create_wargoal = { type = puppet_wargoal_focus target = SRB }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_byz_reconquer_anatolia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 7
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_byz_greek_fire }
+		bypass = {
+			NOT = { country_exists = RUM }
+		}
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_claim = 343
+			add_state_claim = 49
+			if = {
+				limit = { country_exists = RUM NOT = { has_war_with = RUM } }
+				create_wargoal = { type = take_state_focus target = RUM generator = { 343 49 } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_byz_restoration
+		icon = GFX_goal_generic_army_doctrines
+		x = 6
+		y = 4
+		cost = 5
+		prerequisite = { focus = dv_byz_serbia }
+		prerequisite = { focus = dv_byz_reconquer_anatolia }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_roman_restoration
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = dv_byz_pronoia
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 11
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_byz_isaac_angelos }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_pronoia
+		}
+	}
+
+	focus = {
+		id = dv_byz_theodosian_walls
+		icon = GFX_goal_generic_fortify_city
+		x = 10
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_byz_pronoia }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			797 = {
+				add_building_construction = {
+					type = bunker level = 3 instant_build = yes
+					province = { all_provinces = yes limit_to_victory_point > 0 }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = dv_byz_hagia_sophia
+		icon = GFX_goal_generic_propaganda
+		x = 12
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_byz_pronoia }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = dv_byz_basileia
+		icon = GFX_goal_generic_political_pressure
+		x = 11
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_byz_theodosian_walls }
+		prerequisite = { focus = dv_byz_hagia_sophia }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_basileia
+		}
+	}
+}

@@ -1,0 +1,230 @@
+focus_tree = {
+	id = dv_rum_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RUM
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 50 y = 1200 }
+
+	focus = {
+		id = dv_rum_kilij_arslan
+		icon = GFX_goal_generic_national_unity
+		x = 5
+		y = 0
+		cost = 3
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = dv_rum_turkmen
+		icon = GFX_goal_generic_cavalry
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_rum_kilij_arslan }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_turkmen_archers
+		}
+	}
+
+	focus = {
+		id = dv_rum_defend_iconium
+		icon = GFX_goal_generic_defence
+		x = 2
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_rum_turkmen }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			346 = {
+				add_building_construction = {
+					type = bunker level = 2 instant_build = yes
+					province = { all_provinces = yes limit_to_victory_point > 0 }
+				}
+			}
+			add_manpower = 5000
+		}
+	}
+
+	focus = {
+		id = dv_rum_harry_the_franks
+		icon = GFX_goal_generic_position_armies
+		x = 2
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_rum_defend_iconium }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 20
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = dv_rum_reunite_the_sons
+		icon = GFX_goal_generic_political_pressure
+		x = 5
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_rum_kilij_arslan }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.15
+		}
+	}
+
+	focus = {
+		id = dv_rum_caravanserais
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 5
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_rum_reunite_the_sons }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			346 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+
+	focus = {
+		id = dv_rum_persian_court
+		icon = GFX_goal_generic_scientific_exchange
+		x = 5
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_rum_caravanserais }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_persian_court
+		}
+	}
+
+	focus = {
+		id = dv_rum_byzantine_frontier
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 8
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_rum_kilij_arslan }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = dv_rum_myriokephalon
+		icon = GFX_goal_generic_army_doctrines
+		x = 8
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_rum_byzantine_frontier }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = dv_rum_push_to_the_sea
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 7
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_rum_myriokephalon }
+		bypass = {
+			NOT = { country_exists = BYZ }
+		}
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 0.5
+		}
+		completion_reward = {
+			add_state_claim = 342
+			add_state_claim = 339
+			if = {
+				limit = { country_exists = BYZ NOT = { has_war_with = BYZ } }
+				create_wargoal = { type = take_state_focus target = BYZ generator = { 342 339 } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_rum_embassy_to_saladin
+		icon = GFX_goal_generic_improve_relations
+		x = 9
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_rum_myriokephalon }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = { country_exists = AYB NOT = { has_war_with = AYB } }
+				diplomatic_relation = { country = AYB relation = non_aggression_pact active = yes }
+			}
+			if = {
+				limit = { country_exists = AYB }
+				add_opinion_modifier = { target = AYB modifier = dv_friendship }
+				AYB = { add_opinion_modifier = { target = ROOT modifier = dv_friendship } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_rum_sultanate_of_rum
+		icon = GFX_goal_generic_political_pressure
+		x = 5
+		y = 4
+		cost = 5
+		prerequisite = { focus = dv_rum_persian_court }
+		prerequisite = { focus = dv_rum_push_to_the_sea focus = dv_rum_embassy_to_saladin }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_sultanate_of_rum
+		}
+	}
+}
