@@ -1,4 +1,4 @@
-version="0.1.0"
+version="0.2.0"
 tags={
 	"Alternative History"
 	"Map"
@@ -6,5 +6,6 @@ tags={
 	"Gameplay"
 }
 name="Deus Vult"
-supported_version="1.*"
+replace_path="common/bookmarks"
+supported_version="1.19.*"
 path="C:/Users/henda/Documents/Paradox Interactive/Hearts of Iron IV/mod/deus_vult"
