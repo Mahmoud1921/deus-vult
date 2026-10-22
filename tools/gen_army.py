@@ -70,7 +70,7 @@ w('common/units/dv_archers.txt','''sub_units = {
 
 	dv_archers = {
 		abbreviation = "ARC"
-		sprite = infantry
+		sprite = dv_archers
 		map_icon_category = infantry
 
 		priority = 590
