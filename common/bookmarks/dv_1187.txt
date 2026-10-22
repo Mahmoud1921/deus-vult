@@ -1,0 +1,114 @@
+bookmarks = {
+	bookmark = {
+		name = "DV_BOOKMARK_1187"
+		desc = "DV_BOOKMARK_1187_DESC"
+		date = 1187.7.4.12
+		picture = "GFX_select_date_1936"
+		default_country = "JRS"
+		default = yes
+		JRS = {
+			history = "DV_JRS_BOOKMARK_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = { }
+		}
+		AYB = {
+			history = "DV_AYB_BOOKMARK_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = { }
+		}
+		AGV = {
+			history = "DV_AGV_BOOKMARK_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = { }
+		}
+		FRK = {
+			history = "DV_FRK_BOOKMARK_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = { }
+		}
+		HRE = {
+			history = "DV_HRE_BOOKMARK_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = { }
+		}
+		BYZ = {
+			history = "DV_BYZ_BOOKMARK_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = { }
+		}
+		RUM = {
+			history = "DV_RUM_BOOKMARK_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = { }
+		}
+		"---" = {
+			history = "DV_OTHER_BOOKMARK_DESC"
+		}
+		SCL = {
+			minor = yes
+			history = "DV_OTHER_BOOKMARK_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = { }
+		}
+		HNG = {
+			minor = yes
+			history = "DV_OTHER_BOOKMARK_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = { }
+		}
+		CAS = {
+			minor = yes
+			history = "DV_OTHER_BOOKMARK_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = { }
+		}
+		ALM = {
+			minor = yes
+			history = "DV_OTHER_BOOKMARK_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = { }
+		}
+		ABS = {
+			minor = yes
+			history = "DV_OTHER_BOOKMARK_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = { }
+		}
+		GRG = {
+			minor = yes
+			history = "DV_OTHER_BOOKMARK_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = { }
+		}
+		PLD = {
+			minor = yes
+			history = "DV_OTHER_BOOKMARK_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = { }
+		}
+		KYV = {
+			minor = yes
+			history = "DV_OTHER_BOOKMARK_DESC"
+			ideology = neutrality
+			ideas = { }
+			focuses = { }
+		}
+		effect = {
+			randomize_weather = 22345
+		}
+	}
+}
