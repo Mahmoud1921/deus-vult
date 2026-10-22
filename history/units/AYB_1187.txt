@@ -1,0 +1,124 @@
+division_template = {
+	name = "Askar"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		dv_archers = { x = 1 y = 0 }
+		dv_archers = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Heavy Cavalry"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Siege Train"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		artillery_brigade = { x = 1 y = 0 }
+		artillery_brigade = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "1. Askar"
+		location = 7011
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Askar"
+		location = 7011
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3. Askar"
+		location = 7011
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4. Askar"
+		location = 7011
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5. Askar"
+		location = 7011
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6. Askar"
+		location = 7011
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7. Askar"
+		location = 7011
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "8. Askar"
+		location = 7011
+		division_template = "Askar"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1. Heavy Cavalry"
+		location = 7011
+		division_template = "Heavy Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Heavy Cavalry"
+		location = 7011
+		division_template = "Heavy Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3. Heavy Cavalry"
+		location = 7011
+		division_template = "Heavy Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4. Heavy Cavalry"
+		location = 7011
+		division_template = "Heavy Cavalry"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1. Siege Train"
+		location = 7011
+		division_template = "Siege Train"
+		start_experience_factor = 0.3
+	}
+}
+
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_0
+		amount = 3800
+		producer = AYB
+	}
+}

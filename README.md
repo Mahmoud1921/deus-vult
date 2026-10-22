@@ -24,11 +24,22 @@ Copy this folder (as `deus_vult/`) and `launcher/deus_vult.mod` into
 - Simple generated placeholder flags for every tag
 - Saladin claims Jerusalem, Tripoli and Antioch. France claims the Angevin lands in France
 
-Not done yet: armies, focus trees, events, religion mechanics, proper flags and leader portraits. Vanilla buildings and resources are still on every state.
+Not done yet: focus trees, events, religion mechanics, proper flags and leader portraits. Vanilla buildings and resources are still on every state.
+
+## What's in 0.3.0: armies
+- Units are renamed for the period: infantry is now **Men-at-Arms**, cavalry is **Knights** and towed artillery is **Siege Engines** (the Trebuchet). Equipment is now **Arms and Armour**. These overrides live in `localisation/english/replace/`
+- A new **Archers** sub-unit (`common/units/dv_archers.txt`) hits harder but is more fragile than men-at-arms
+- Every nation has a starting army at its capital (`history/units/TAG_1187.txt`), 288 divisions in all:
+  - Catholic and Orthodox realms field a *Feudal Host* (men-at-arms, archers, knights) plus *Knights* brigades
+  - Muslim and Eastern realms field an *Askar* (more cavalry and archers) plus *Heavy Cavalry*
+  - Steppe peoples field a *Horde* (mostly cavalry and archers)
+  - Tribes and the placeholder realms field a *Warband*
+  - The biggest powers (the Ayyubids, the HRE, Angevin England, France, Byzantium, the Almohads, Sicily, Venice, Jin and Song) also start with a *Siege Train*
+- Settled realms start with the siege engine tech, so they can build trebuchets
 
 ## Regenerating the map
 `tools/` holds the Python scripts that built the country and state files from the vanilla game files.
-`nations.py` lists every tag with its name, colour, capital, religion, leader and states. `assign.py` assigns the remaining states by region, and `gen.py` writes the mod files. To move a state to a different owner, edit `nations.py`, then rerun `assign.py` and `gen.py`.
+`nations.py` lists every tag with its name, colour, capital, religion, leader and states. `assign.py` assigns the remaining states by region, `gen.py` writes the mod files, and `gen_army.py` writes the starting armies (run it before `gen.py`, which reads its `army_summary.json` to link each country to its army). To move a state to a different owner, edit `nations.py`, then rerun `assign.py` and `gen.py`.
 The scripts expect the vanilla files (unpacked into `v/`) and a `states.tsv` of state centroids made by `cent.py`.
 
 ## Layout

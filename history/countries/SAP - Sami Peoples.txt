@@ -1,4 +1,5 @@
 capital = 149
+oob = "SAP_1187"
 
 set_research_slots = 2
 set_stability = 0.6

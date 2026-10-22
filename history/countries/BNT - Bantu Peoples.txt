@@ -1,4 +1,5 @@
 capital = 558
+oob = "BNT_1187"
 
 set_research_slots = 2
 set_stability = 0.6
