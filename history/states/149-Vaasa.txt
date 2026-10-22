@@ -11,6 +11,14 @@ state = {
 	history = {
 		owner = SAP
 		add_core_of = SAP
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			3122 = {
+				naval_base = 1
+			}
+		}
 
 		
 		victory_points = { #Vaasa
@@ -29,13 +37,7 @@ state = {
 			6141 1
 		}
 
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 2
-			3122 = {
-				naval_base = 1
-			}
-		}
+		
 		
 	}
 

@@ -9,10 +9,11 @@ state={
 	history={
 		owner = SLJ
 		add_core_of = SLJ
-
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
+
+		
 	}
 
 	provinces={

@@ -11,12 +11,13 @@ state = {
 	history = {
 		owner = OCN
 		add_core_of = OCN
-
-
-
 		buildings = {
-			infrastructure = 0
+			infrastructure = 1
 		}
+
+
+
+		
 
 	}
 

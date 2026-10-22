@@ -8,17 +8,17 @@ state = {
 	history = {
 		owner = ABY
 		add_core_of = ABY
+		buildings = {
+			infrastructure = 1
+			12941 = {
+				naval_base = 2
+			}
+		}
 
 		victory_points = {
 		 	12941 1 
 		}
-		buildings = {
-			infrastructure = 2
-			12941 = {
-				naval_base = 2
-			}
-			
-		}
+		
 	}
 	provinces = { 
 		11014 12941

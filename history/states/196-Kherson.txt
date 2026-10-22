@@ -12,6 +12,12 @@ state = {
 	history = {
 		owner = CUM
 		add_core_of = CUM
+		buildings = {
+			infrastructure = 2
+			721 = {
+				bunker = 2
+			}
+		}
 
 
 
@@ -19,14 +25,7 @@ state = {
 			721 1 # Kherson
 		}
 		
-		buildings = {
-			infrastructure = 3 #was: 5
-			air_base = 3
-
-			# Kakhovka Dam
-			#737 = { dam = 1 }
-			
-		}
+		
 		
 	}
 

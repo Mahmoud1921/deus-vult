@@ -12,12 +12,13 @@ state = {
 	history = {
 		owner = PGN
 		add_core_of = PGN
-
-
-
 		buildings = {
 			infrastructure = 1
 		}
+
+
+
+		
 
 		victory_points = {
 			1492 3 # Mandalay

@@ -13,11 +13,11 @@ state={
 	history={
 		owner = DCN
 		add_core_of = DCN
-
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
+			infrastructure = 1
 		}
+
+		
 
 	}
 

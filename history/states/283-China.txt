@@ -8,12 +8,12 @@ state = {
 	history = {
 		owner = XXA
 		add_core_of = XXA
-
-
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
+			infrastructure = 1
 		}
+
+
+		
 
 		victory_points = {
 			7911 1 # Tianshui

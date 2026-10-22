@@ -9,14 +9,18 @@ state=
 	history= {
 		owner = CUM
 		add_core_of = CUM
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			3707 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			3707 1
 		}
-		buildings = {
-			infrastructure = 2
-			air_base = 2
-		}
+		
 	}
 	provinces=
 	{

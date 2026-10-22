@@ -11,6 +11,9 @@ state={
 	history = {
 		owner = XXA
 		add_core_of = XXA
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -18,10 +21,7 @@ state={
 			10750 1 # Dulan  
 		}
 
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 1
-		}
+		
 
 		
 

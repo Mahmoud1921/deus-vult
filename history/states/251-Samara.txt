@@ -8,6 +8,12 @@ state = {
 	history = {
 		owner = VBG
 		add_core_of = VBG
+		buildings = {
+			infrastructure = 2
+			11225 = {
+				bunker = 2
+			}
+		}
 
 
 
@@ -15,15 +21,7 @@ state = {
 			11225 3 # Kuybyshev
 		}
 
-		buildings = {
-			infrastructure = 3 #was: 5
-			arms_factory = 2
-			air_base = 1
-
-			# Kuybyshev Hydroelectric Station
-			#6275 = { dam = 1 }
-
-		}
+		
 		
 		
 	}

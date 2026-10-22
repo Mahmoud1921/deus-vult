@@ -12,6 +12,14 @@ state = {
 	history = {
 		owner = ABS
 		add_core_of = ABS
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 2
+			2097 = {
+				bunker = 3
+			}
+		}
 
 
 
@@ -25,12 +33,7 @@ state = {
 			3795 2 # Tikrit 
 		}
 
-		buildings = {
-			infrastructure = 3 #was: 5
-			arms_factory = 1
-			industrial_complex = 1 
-			air_base = 4
-		}
+		
 		
 	}
 

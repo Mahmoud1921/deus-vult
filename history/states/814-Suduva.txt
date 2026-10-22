@@ -6,17 +6,17 @@ state={
 	history={
 		owner = LTH
 		add_core_of = LTH
+		buildings = {
+			infrastructure = 2
+			11312 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			11312 1 #Marijampole
 		}
-		buildings = {
-			infrastructure = 2
-			arms_factory = 1
-			industrial_complex = 1
-			air_base = 4
-
-		}
+		
 
 	}
 

@@ -12,6 +12,12 @@ state = {
 	history = {
 		owner = BNT
 		add_core_of = BNT
+		buildings = {
+			infrastructure = 1
+			12975 = {
+				naval_base = 1
+			}
+		}
 
 
 
@@ -23,12 +29,7 @@ state = {
 			12975 1 #Loango
 		}
 
-		buildings = {
-			infrastructure = 2
-			12975 = {
-				naval_base = 1
-			}
-		}
+		
 
 	}
 

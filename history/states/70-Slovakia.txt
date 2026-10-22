@@ -15,24 +15,16 @@ state = {
 	history = {
 		owner = HNG
 		add_core_of = HNG
+		buildings = {
+			infrastructure = 2
+			9692 = {
+				bunker = 2
+			}
+		}
 
 
 		
-		buildings = {
-			infrastructure = 3
-			industrial_complex = 3
-			arms_factory = 2
-			air_base = 3
-			3484 = {
-				landmark_bojnice_castle = {
-					level = 1
-					allowed = {
-						has_dlc = "Peace For Our Time"
-					}
-				}
-			}
-
-		}
+		
 
 		victory_points = {
 			9692 10 # Bratislava

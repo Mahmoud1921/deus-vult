@@ -13,6 +13,9 @@ state={
 	history={
 		owner = DCN
 		add_core_of = DCN
+		buildings = {
+			infrastructure = 1
+		}
 
 		victory_points = {
 			8087 15 
@@ -23,11 +26,7 @@ state={
 
 
 			
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 2
-			air_base = 3
-		}
+		
 
 	}
 

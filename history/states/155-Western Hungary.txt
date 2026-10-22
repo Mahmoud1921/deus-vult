@@ -13,6 +13,14 @@ state = {
 	history = {
 		owner = HNG
 		add_core_of = HNG
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 2
+			6720 = {
+				bunker = 3
+			}
+		}
 
 
 
@@ -24,12 +32,7 @@ state = {
 			686 1 # Sopron
 		} 
 
-		buildings = {
-			infrastructure = 3 #was: 6
-			industrial_complex = 2
-			arms_factory = 1
-			air_base = 1
-		}
+		
 		
 	}
 

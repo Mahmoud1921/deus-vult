@@ -5,14 +5,17 @@ state={
 	history={
 		owner = ARN
 		add_core_of = ARN
+		buildings = {
+			infrastructure = 2
+			3954 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			3954 1 
 		}
-		buildings = {
-			infrastructure = 3 #was: 6
-
-		}
+		
 
 	}
 

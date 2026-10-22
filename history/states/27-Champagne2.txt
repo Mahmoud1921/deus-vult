@@ -13,15 +13,17 @@ state={
 	history={
 		owner = FRK
 		add_core_of = FRK
+		buildings = {
+			infrastructure = 2
+			3652 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			3652 5 
 		}
-		buildings = {
-			infrastructure = 4
-			industrial_complex = 2
-			air_base = 2
-		}
+		
 		
 	}
 

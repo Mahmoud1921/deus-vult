@@ -11,6 +11,12 @@ state = {
 	history = {
 		owner = ABS
 		add_core_of = ABS
+		buildings = {
+			infrastructure = 2
+			12413 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			12413 1 # Rumadiyah

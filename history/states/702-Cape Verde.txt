@@ -8,6 +8,12 @@ state = {
 	history = {
 		owner = GHN
 		add_core_of = GHN
+		buildings = {
+			infrastructure = 1
+			13014 = {
+				naval_base = 1
+			}
+		}
  
 
 
@@ -15,12 +21,7 @@ state = {
 			13014 1 # Praia
 		}
 
-		buildings = {
-			infrastructure = 2
-			13014 ={
-				naval_base = 1
-			}
-		}
+		
 
 	}
 

@@ -9,15 +9,18 @@ state={
 	history={
 		owner = VSZ
 		add_core_of = VSZ
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			121 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			121 5 
 		}
-		buildings = {
-			infrastructure = 3 #was: 5
-			industrial_complex = 1
-			air_base = 1
-		}
+		
 	}
 
 	provinces={

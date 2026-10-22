@@ -13,6 +13,16 @@ state = {
 	history = {
 		owner = DNK
 		add_core_of = DNK
+		buildings = {
+			infrastructure = 2
+			9279 = {
+				bunker = 2
+				naval_base = 3
+			}
+			11215 = {
+				naval_base = 3
+			}
+		}
 
 
 		victory_points = {
@@ -25,19 +35,7 @@ state = {
 			6345 1 # Helsingborg
 		}
 
-		buildings = {
-			infrastructure = 3 #was: 5
-			industrial_complex = 1
-			dockyard = 1
-			11215 = {
-				naval_base = 5
-				coastal_bunker = 3
-			}
-			9279 = {
-				naval_base = 5
-				coastal_bunker = 1
-			}
-		}
+		
 
 	}
 

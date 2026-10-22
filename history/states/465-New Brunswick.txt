@@ -8,16 +8,16 @@ state = {
 	history = {
 		owner = NAM
 		add_core_of = NAM
-
-
-
 		buildings = {
-			infrastructure = 3 #was: 5
-			industrial_complex = 2
+			infrastructure = 1
 			4285 = {
 				naval_base = 2
 			}
 		}
+
+
+
+		
 
 		victory_points = {
 			1424 2 

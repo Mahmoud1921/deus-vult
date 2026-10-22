@@ -13,6 +13,17 @@ state= {
 		owner = CYK
 		add_core_of = CYK
 		add_claim_by = BYZ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			11984 = {
+				bunker = 3
+			}
+			7193 = {
+				naval_base = 2
+			}
+		}
 
 		victory_points = {
 			11984 5
@@ -20,13 +31,7 @@ state= {
 		victory_points = {
 			7193 3
 		}
-		buildings = {
-			infrastructure = 2
-			air_base = 1
-			7193 = {
-				naval_base = 2
-			}
-		}
+		
 
 	}
 	provinces= { 7193 11984 }

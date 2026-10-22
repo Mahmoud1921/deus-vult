@@ -13,19 +13,16 @@ state = {
 	history = {
 		owner = PHL
 		add_core_of = PHL
-
-
-
 		buildings = {
-
-			infrastructure = 2
-			industrial_complex = 1
-
+			infrastructure = 1
 			12213 = {
 				naval_base = 1
 			}
-
 		}
+
+
+
+		
 
 		victory_points = {
 			12213 1 # Aparri

@@ -8,14 +8,13 @@ state = {
 	history = {
 		owner = PHL
 		add_core_of = PHL
-
-
-
 		buildings = {
-
 			infrastructure = 1
-
 		}
+
+
+
+		
 
 		victory_points = {
 			10243 1 # Cagayan de Oro

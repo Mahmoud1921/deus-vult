@@ -8,6 +8,15 @@ state = {
 	history = {
 		owner = DNK
 		add_core_of = DNK
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			6287 = {
+				bunker = 3
+				naval_base = 3
+			}
+		}
 
 		victory_points = {
 			6287 20 
@@ -15,17 +24,7 @@ state = {
 		victory_points = {
 			6393 2 
 		}
-		buildings = {
-			infrastructure = 3
-			arms_factory = 2
-			industrial_complex = 3
-			dockyard = 2
-			air_base = 6
-			6287 = {
-				naval_base = 8
-
-			}
-		}
+		
 		
 	}
 

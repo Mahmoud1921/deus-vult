@@ -13,6 +13,9 @@ state = {
 	history = {
 		owner = BNT
 		add_core_of = BNT
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -20,9 +23,7 @@ state = {
 			697 1 # Mongu
 		}
 
-		buildings = {
-			infrastructure = 1
-		}
+		
 	}
 
 	provinces = {

@@ -12,15 +12,17 @@ state={
 	history={
 		owner = LVN
 		add_core_of = LVN
+		buildings = {
+			infrastructure = 2
+			10493 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			10493 1 #Valmiera
 		}
-		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
-			air_base = 3
-		}
+		
 	}
 
 	provinces={

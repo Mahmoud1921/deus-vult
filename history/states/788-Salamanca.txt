@@ -8,14 +8,17 @@ state={
 	history={
 		owner = LEO
 		add_core_of = LEO
+		buildings = {
+			infrastructure = 2
+			3874 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			3874 1 
 		}
-		buildings = {
-			infrastructure = 3 #was: 5
-
-		}
+		
 
 	}
 

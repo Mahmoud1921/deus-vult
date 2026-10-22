@@ -14,6 +14,13 @@ state={
 	history={
 		owner = AGV
 		add_core_of = AGV
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			6237 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			6237 10 #Nottingham
@@ -21,12 +28,7 @@ state={
 		victory_points = {
 			11279 3 #Leicester
 		}
-		buildings = {
-			infrastructure = 4 #was: 8
-			arms_factory = 2
-			industrial_complex = 1
-			air_base = 5
-		}
+		
 		
 	}
 

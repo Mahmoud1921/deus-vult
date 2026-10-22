@@ -13,6 +13,15 @@ state = {
 	history = {
 		owner = SWD
 		add_core_of = SWD
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			6050 = {
+				bunker = 3
+				naval_base = 3
+			}
+		}
 
 
 		victory_points = {
@@ -23,17 +32,7 @@ state = {
 			9149 3 # Uppsala
 		}
 
-		buildings = {
-			infrastructure = 4 #was: 7
-			arms_factory = 2
-			industrial_complex = 3
-			dockyard = 1
-			air_base = 6
-			6050 = {
-				naval_base = 5
-				coastal_bunker = 3
-			}
-		}
+		
 
 
 	}

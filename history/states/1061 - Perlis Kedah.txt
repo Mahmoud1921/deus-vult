@@ -12,6 +12,9 @@ state = {
 	history = {
 		owner = SRV
 		add_core_of = SRV
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -23,11 +26,7 @@ state = {
 			12144 1 # Kangar 
 		}
 
-		buildings = {
-
-			infrastructure = 1
-
-		}
+		
 		
 	}
 

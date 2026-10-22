@@ -11,16 +11,13 @@ state = {
 	history = {
 		owner = JPN
 		add_core_of = JPN
-
-
-
 		buildings = {
-		
-			arms_factory = 1
-			industrial_complex = 1
-			infrastructure = 2
-
+			infrastructure = 1
 		}
+
+
+
+		
 		
 		victory_points = {
 			7169 15 # Sendai

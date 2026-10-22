@@ -8,16 +8,17 @@ state={
 	history={
 		owner = SRV
 		add_core_of = SRV
-
-		start_resistance = yes
-		set_resistance = 75
-		set_compliance = 2
 		buildings = {
 			infrastructure = 1
 			13398 = {
 				naval_base = 1
 			}
 		}
+
+		start_resistance = yes
+		set_resistance = 75
+		set_compliance = 2
+		
 
 		victory_points = {
 			13398 1

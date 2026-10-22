@@ -12,13 +12,14 @@ state = {
 	history = {
 		owner = NJD
 		add_core_of = NJD
+		buildings = {
+			infrastructure = 1
+		}
 
 
 		#
 
-		buildings = {
-			infrastructure = 1
-		}
+		
 
 		victory_points = {
 			5049 1 # Nizwa

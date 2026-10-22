@@ -12,15 +12,15 @@ state = {
 	history = {
 		owner = JIN
 		add_core_of = JIN
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
 		
 
-		buildings = {
-			infrastructure = 1
-			arms_factory = 1
-		}
+		
 
 		victory_points = {
 			10372 1 # Xilinhot

@@ -13,20 +13,19 @@ state = {
 	history = {
 		owner = SCL
 		add_core_of = SCL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			819 = {
+				bunker = 2
+				naval_base = 3
+			}
+		}
 
 		victory_points = {
 			819 20 
 		}
-		buildings = {
-			infrastructure = 3
-			arms_factory = 1
-			industrial_complex = 2
-			dockyard = 1
-			air_base = 3
-			819 = {
-				naval_base = 6
-			}
-		}
+		
 		
 	}
 

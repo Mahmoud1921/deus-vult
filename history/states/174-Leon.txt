@@ -9,15 +9,19 @@ state={
 	history={
 		owner = LEO
 		add_core_of = LEO
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			726 = {
+				bunker = 3
+			}
+		}
 
 		victory_points = {
 			726 1
 		}
-		buildings = {
-			infrastructure = 3 #was: 6
-			industrial_complex = 1
-
-		}
+		
 
 	}
 

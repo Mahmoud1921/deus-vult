@@ -8,6 +8,14 @@ state={
 	history={
 		owner = SHV
 		add_core_of = SHV
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			7661 = {
+				bunker = 3
+			}
+		}
 
 		victory_points = {
 			7661 10 
@@ -15,12 +23,7 @@ state={
 		victory_points = {
 			11674 1 
 		}
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-			fuel_silo = 1
-			air_base = 1
-		}
+		
 
 	}
 

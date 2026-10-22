@@ -5,6 +5,13 @@ state={
 	history={
 		owner = LTH
 		add_core_of = LTH
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			9304 = {
+				bunker = 2
+			}
+		}
 
 
 		victory_points = {
@@ -15,11 +22,7 @@ state={
 			3393 3
 		}
 		
-		buildings = {
-			infrastructure = 3
-			air_base = 3
-
-		}
+		
 
 	}
 

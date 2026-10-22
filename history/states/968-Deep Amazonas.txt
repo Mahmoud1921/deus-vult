@@ -7,6 +7,9 @@ state={
 	history={
 		owner = AMZ
 		add_core_of = AMZ
+		buildings = {
+			infrastructure = 1
+		}
 
 	}
 	manpower=12300

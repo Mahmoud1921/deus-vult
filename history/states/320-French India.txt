@@ -8,6 +8,12 @@ state = {
 	history = {
 		owner = DCN
 		add_core_of = DCN
+		buildings = {
+			infrastructure = 1
+			10149 = {
+				naval_base = 1
+			}
+		}
 
 
 
@@ -15,12 +21,7 @@ state = {
 			10149 1 # Pondicherry
 		}
 
-		buildings = {
-			infrastructure = 3 #was: 5
-			10149 = {
-				naval_base = 1
-			}
-		}
+		
 
 	}
 

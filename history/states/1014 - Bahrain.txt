@@ -7,6 +7,13 @@ state = {
 	history = {
 		owner = UYN
 		add_core_of = UYN
+		buildings = {
+			infrastructure = 2
+			13313 = {
+				bunker = 2
+				naval_base = 2
+			}
+		}
 
 		
 
@@ -14,12 +21,7 @@ state = {
 			13313 2 # Manama
 		}
 
-		buildings = {
-			infrastructure = 1
-			13313 = {
-				naval_base = 2
-			}
-		}
+		
 	}
 
 	provinces = {

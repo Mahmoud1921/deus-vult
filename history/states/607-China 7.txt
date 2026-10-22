@@ -10,12 +10,17 @@ state={
 	history={
 		owner = SOG
 		add_core_of = SOG
-
-
 		buildings = {
-			infrastructure = 2 #was: 5/ 3
-			industrial_complex = 1 #Was 2
+			infrastructure = 2
+			industrial_complex = 3
+			arms_factory = 2
+			9958 = {
+				bunker = 3
+			}
 		}
+
+
+		
 
 		victory_points = {
 			9958 2 # Zhengzhou 

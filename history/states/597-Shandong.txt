@@ -12,6 +12,15 @@ state = {
 	history = {
 		owner = JIN
 		add_core_of = JIN
+		buildings = {
+			infrastructure = 1
+			4205 = {
+				naval_base = 2
+			}
+			1104 = {
+				naval_base = 1
+			}
+		}
 
 
 
@@ -25,22 +34,7 @@ state = {
 			4205 1 # Weihaiwei
 		}
 
-		buildings = {
-			infrastructure = 2
-
-			4205 = {
-				naval_base = 2
-				coastal_bunker = 1
-				bunker = 1
-			}
-
-			1104 = {
-				naval_base = 1
-				coastal_bunker = 1
-				bunker = 1
-			}
-
-		}
+		
 
 		
 		

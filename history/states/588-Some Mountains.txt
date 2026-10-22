@@ -11,6 +11,9 @@ state = {
 	history = {
 		owner = KIP
 		add_core_of = KIP
+		buildings = {
+			infrastructure = 1
+		}
 
 
 		victory_points = {
@@ -20,9 +23,7 @@ state = {
 		#	7350 1 # Kurchatov
 		#}
 
-		buildings = {
-			infrastructure = 2
-		}
+		
 		
 	}
 

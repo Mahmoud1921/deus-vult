@@ -12,16 +12,17 @@ state={
 	{
 		owner = GHN
 		add_core_of = GHN
-
-		victory_points = {
-			2038 1 
-		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			2038 = {
 				naval_base = 3
 			}
 		}
+
+		victory_points = {
+			2038 1 
+		}
+		
 
 	}
 	

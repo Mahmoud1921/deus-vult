@@ -16,12 +16,13 @@ state = {
 	history = {
 		owner = SRV
 		add_core_of = SRV
-
-
-
 		buildings = {
-			infrastructure = 0
+			infrastructure = 1
 		}
+
+
+
+		
 
 	}
 

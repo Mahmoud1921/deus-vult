@@ -9,6 +9,11 @@ state = {
 	history = {
 		owner = FNT
 		add_core_of = FNT
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+		}
 
 
 		victory_points = { #Tampere
@@ -23,9 +28,7 @@ state = {
 			9167 1
 		}
 	
-		buildings = {
-			infrastructure = 1 #MM: Was 2
-		}
+		
 	}
 
 	provinces = {

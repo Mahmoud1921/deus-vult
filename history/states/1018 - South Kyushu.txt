@@ -12,16 +12,13 @@ state = {
 	history = {
 		owner = JPN
 		add_core_of = JPN
-
-
-
 		buildings = {
-
-			infrastructure = 2
-			dockyard = 1
-			industrial_complex = 1
-			
+			infrastructure = 1
 		}
+
+
+
+		
 
 		victory_points = {
 			4102 15 # Kagoshima

@@ -13,10 +13,14 @@ state={
 		owner = AGV
 		add_core_of = AGV
 		add_claim_by = FRK
-
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
+			620 = {
+				bunker = 2
+			}
 		}
+
+		
 		victory_points = {
 			620 5
 		}

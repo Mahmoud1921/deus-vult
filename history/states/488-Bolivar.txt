@@ -9,11 +9,11 @@ state={
 	history={
 		owner = MSA
 		add_core_of = MSA
-
 		buildings = {
 			infrastructure = 1
-
 		}
+
+		
 		victory_points = {
 			10879 1
 		}

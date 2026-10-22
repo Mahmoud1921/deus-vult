@@ -8,12 +8,16 @@ state = {
 	history = {
 		owner = HNG
 		add_core_of = HNG
+		buildings = {
+			infrastructure = 2
+			3548 = {
+				bunker = 2
+			}
+		}
 
 		
 
-		buildings = {
-			infrastructure = 3
-		}
+		
 
 		victory_points = {
 			3548 1 # Mukacevo

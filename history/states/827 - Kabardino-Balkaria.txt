@@ -8,11 +8,14 @@ state = {
 	history = {
 		owner = ALN
 		add_core_of = ALN
-
 		buildings = {
 			infrastructure = 2
-
+			11614 = {
+				bunker = 2
+			}
 		}
+
+		
 		victory_points = {
 			11614 1
 		}

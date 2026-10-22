@@ -14,10 +14,16 @@ state={
 	history={
 		owner = DCN
 		add_core_of = DCN
-
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			10246 = {
+				bunker = 3
+			}
 		}
+
+		
 		victory_points = {
 			10246 3 # Madurai
 		}

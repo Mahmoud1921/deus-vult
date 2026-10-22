@@ -9,12 +9,13 @@ state={
 	history={
 		owner = SRV
 		add_core_of = SRV
-
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 1
-			air_base = 2
+			13404 = {
+				bunker = 3
+			}
 			13403 = {
 				naval_base = 3
 			}
@@ -22,6 +23,8 @@ state={
 				naval_base = 1
 			}
 		}
+
+		
 
 		victory_points = {
 			13404 1 #Purwokerto

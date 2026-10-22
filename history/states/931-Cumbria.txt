@@ -11,13 +11,17 @@ state = {
 	history = {
 		owner = AGV
 		add_core_of = AGV
+		buildings = {
+			infrastructure = 2
+			11332 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			11332 3 #Carlisle
 		}
-		buildings = {
-			infrastructure = 3 #was: 6
-		}
+		
 	}
 
 	provinces = {

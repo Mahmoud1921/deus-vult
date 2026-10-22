@@ -8,6 +8,14 @@ state = {
 	history = {
 		owner = ALM
 		add_core_of = ALM
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 2
+			4108 = {
+				bunker = 3
+			}
+		}
 
 
 
@@ -15,9 +23,7 @@ state = {
 			4108 3 # Marrakesh
 		}
 
-		buildings = {
-			infrastructure = 1
-		}
+		
 	}
 
 	provinces = {

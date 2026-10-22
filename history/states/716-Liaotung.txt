@@ -12,25 +12,14 @@ state={
 	history={
 		owner = JIN
 		add_core_of = JIN
-
 		buildings = {
-			infrastructure = 2
-			arms_factory = 2
-			industrial_complex = 1
-			air_base = 5
+			infrastructure = 1
 			11764 = {
 				naval_base = 3
-
-			}
-			11808 = {
-				landmark_great_wall_section = {
-				    level = 1
-				    allowed = {
-				        has_dlc = "No Compromise, No Surrender"
-				    }
-				}
 			}
 		}
+
+		
 		victory_points = {
 			11771 3
 		}

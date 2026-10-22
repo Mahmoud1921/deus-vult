@@ -8,16 +8,17 @@ state = {
 	history = {
 		owner = AYB
 		add_core_of = AYB
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			12071 = {
+				bunker = 2
+			}
+		}
 
 		
 
-		buildings = {
-			infrastructure = 2
-
-			# Aswan Low Dam
-			11999 = { dam = 1 }
-
-		}
+		
 
 		victory_points = {
 			12071 3 # Luxor

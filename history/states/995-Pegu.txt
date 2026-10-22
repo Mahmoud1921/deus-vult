@@ -9,17 +9,16 @@ state = {
 	history = {
 		owner = PGN
 		add_core_of = PGN
-
-
-
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-			arms_factory = 1
+			infrastructure = 1
 			1330 = {
 				naval_base = 1
 			}
 		}
+
+
+
+		
 
 		victory_points = {
 			1330 15 # Rangoon

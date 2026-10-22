@@ -12,6 +12,9 @@ state = {
 	history = {
 		owner = SOG
 		add_core_of = SOG
+		buildings = {
+			infrastructure = 1
+		}
 
 
 		
@@ -22,9 +25,7 @@ state = {
 			7301 1 # Xian
 		}
 
-		buildings = {
-			infrastructure = 2
-		}
+		
 
 	}
 

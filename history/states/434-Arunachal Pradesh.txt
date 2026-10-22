@@ -12,12 +12,13 @@ state={
 	history = {
 		owner = HND
 		add_core_of = HND
-
-
-
 		buildings = {
 			infrastructure = 1
 		}
+
+
+
+		
 
 		victory_points = {
 			1116 1 # Itanagar 

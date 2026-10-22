@@ -11,14 +11,11 @@ state={
 	history={
 		owner = NAM
 		add_core_of = NAM
-
 		buildings = {
-			infrastructure = 3 #was: 6
-			arms_factory = 1
-			industrial_complex = 6
-			air_base = 4
-
+			infrastructure = 1
 		}
+
+		
 		victory_points = {
 			6710 20 # Detriot
 		}

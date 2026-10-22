@@ -14,10 +14,14 @@ state = {
 	history = {
 		owner = CUM
 		add_core_of = CUM
-
 		buildings = {
 			infrastructure = 2
+			6502 = {
+				bunker = 2
+			}
 		}
+
+		
 		victory_points = {
 			6502 1
 		}

@@ -10,10 +10,14 @@ state={
 	history={
 		owner = ILD
 		add_core_of = ILD
-
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
+			7604 = {
+				bunker = 2
+			}
 		}
+
+		
 		victory_points = {
 			7604 1 
 		}

@@ -11,13 +11,13 @@ state = {
 	history = {
 		owner = JIN
 		add_core_of = JIN
-
-
-
 		buildings = {
 			infrastructure = 1
-			industrial_complex = 1
 		}
+
+
+
+		
 
 		victory_points = {
 			12331 1 # Pailingmiao

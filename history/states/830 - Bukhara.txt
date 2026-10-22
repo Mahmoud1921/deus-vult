@@ -7,6 +7,9 @@ state = {
 	history = {
 		owner = KRK
 		add_core_of = KRK
+		buildings = {
+			infrastructure = 1
+		}
 
 	
 		
@@ -17,11 +20,7 @@ state = {
 			10671 1 
 		}
 		
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-			air_base = 1
-		}
+		
 		
 
 	}

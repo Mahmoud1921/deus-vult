@@ -12,14 +12,13 @@ state = {
 	history = {
 		owner = OCN
 		add_core_of = OCN
-
-
-
 		buildings = {
-
-			infrastructure = 2 
-
+			infrastructure = 1
 		}
+
+
+
+		
 
 		victory_points = {
 			2211 2 # Dunedin

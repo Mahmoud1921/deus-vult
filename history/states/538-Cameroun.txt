@@ -11,6 +11,9 @@ state = {
 	history = {
 		owner = BNT
 		add_core_of = BNT
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -28,9 +31,7 @@ state = {
 			988 2 # Coquilhatville
 		}
 
-		buildings = {
-			infrastructure = 1
-		}
+		
 
 		
 

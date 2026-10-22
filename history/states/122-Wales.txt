@@ -15,6 +15,17 @@ state= {
 	{
 		owner = GWY
 		add_core_of = GWY
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			407 = {
+				bunker = 3
+			}
+			377 = {
+				naval_base = 3
+			}
+		}
 
 		victory_points = {
 			407 3 #Swansea
@@ -23,13 +34,7 @@ state= {
 			311 1 #Wrexham
 		}
 		victory_points = { 377 5 }
-		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
-			377 = {
-				naval_base = 3
-			}
-		}
+		
 	}
 
 	provinces=

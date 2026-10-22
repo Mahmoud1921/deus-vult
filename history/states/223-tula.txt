@@ -9,16 +9,18 @@ state={
 	history={
 		owner = CRN
 		add_core_of = CRN
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			6262 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			6262 3 
 		}
-		buildings = {
-			infrastructure = 3 #was: 5
-			arms_factory = 2
-			air_base = 1
-			synthetic_refinery = 1 #NSB
-		}
+		
 		
 	}
 

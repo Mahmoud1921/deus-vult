@@ -10,6 +10,13 @@ state = {
 	history={
 		owner = SWD
 		add_core_of = SWD
+		buildings = {
+			infrastructure = 2
+			11380 = {
+				bunker = 2
+				naval_base = 1
+			}
+		}
 
 		victory_points = {
 			11380 1 
@@ -17,14 +24,7 @@ state = {
 		victory_points = {
 			9393 2 
 		}
-		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
-			air_base = 2
-			11380 = {
-				naval_base = 1
-			}
-		}
+		
 	}
 
 	provinces = {

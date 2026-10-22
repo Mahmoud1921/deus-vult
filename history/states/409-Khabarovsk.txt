@@ -12,18 +12,17 @@ state = {
 	history = {
 		owner = SBT
 		add_core_of = SBT
-
-		victory_points = {
-			12189 1
-		}
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-			air_base = 4
+			infrastructure = 1
 			9604 = {
 				naval_base = 1
 			}
 		}
+
+		victory_points = {
+			12189 1
+		}
+		
 	}
 
 	provinces = {

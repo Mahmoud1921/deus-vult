@@ -9,18 +9,19 @@ state=
 	history = {
 		owner = FNT
 		add_core_of = FNT
+		buildings = {
+			infrastructure = 2
+			9228 = {
+				naval_base = 1
+			}
+		}
 
 		
 		victory_points = { #Mariehman
 			9228 1
 		}
 
-		buildings = {
-			infrastructure = 2 #MM: Was 3
-			9228 = {
-				naval_base = 1
-			}
-		}
+		
 	}
 	
 	provinces=	{

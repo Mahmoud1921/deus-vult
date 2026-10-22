@@ -13,6 +13,12 @@ state = {
 	history = {
 		owner = PRT
 		add_core_of = PRT
+		buildings = {
+			infrastructure = 2
+			9787 = {
+				bunker = 2
+			}
+		}
 
 
 
@@ -24,14 +30,7 @@ state = {
 			6996 1 # Guarda
 		}
 
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 2
-
-			# Cabril Dam
-			#11885 = { dam = 1 }
-			
-		}
+		
 		
 	}
 

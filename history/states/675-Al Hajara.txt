@@ -8,6 +8,12 @@ state = {
 	history = {
 		owner = ABS
 		add_core_of = ABS
+		buildings = {
+			infrastructure = 2
+			12879 = {
+				bunker = 2
+			}
+		}
 
 
 
@@ -15,9 +21,7 @@ state = {
 			12879 1 # Samawah
 		}
 
-		buildings = {
-			#infrastructure = 1
-		}
+		
 		
 	}
 	

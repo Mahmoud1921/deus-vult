@@ -7,6 +7,14 @@ state = {
 	history = {
 		owner = HRE
 		add_core_of = HRE
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			6389 = {
+				bunker = 2
+				naval_base = 3
+			}
+		}
 
 
 
@@ -18,15 +26,7 @@ state = {
 			9347 20 # Hamburg
 		}
 
-		buildings = {
-			infrastructure = 3
-			arms_factory = 1
-			dockyard = 6
-			air_base = 5
-			6389 = {
-				naval_base = 8	
-			}
-		}
+		
 		
 		
 	}

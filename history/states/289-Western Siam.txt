@@ -9,14 +9,14 @@ state={
 	history={
 		owner = KHR
 		add_core_of = KHR
+		buildings = {
+			infrastructure = 1
+		}
 
 		victory_points = {
 			7312 1 #Mae Sot
 		}
-		buildings ={
-			air_base = 1 
-			infrastructure = 1
-		}
+		
 	}
 
 	provinces={

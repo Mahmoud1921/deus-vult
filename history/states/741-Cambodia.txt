@@ -6,6 +6,12 @@ state = {
 	history = {
 		owner = SRV
 		add_core_of = SRV
+		buildings = {
+			infrastructure = 1
+			7432 = {
+				naval_base = 1
+			}
+		}
 
 
 
@@ -21,13 +27,7 @@ state = {
 			4302 2 # Siem Reap
 		}
 
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 1 
-			7432 = {
-				naval_base = 1
-			}
-		}
+		
 	}
 
 	provinces = {

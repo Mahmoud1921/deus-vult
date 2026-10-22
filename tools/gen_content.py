@@ -415,5 +415,22 @@ AYB = [
 w('common/national_focus/dv_jerusalem.txt', focus_tree('dv_jerusalem_focus', 'JRS', JRS))
 w('common/national_focus/dv_ayyubid.txt', focus_tree('dv_ayyubid_focus', 'AYB', AYB))
 
+# ---------------------------------------------------------------- building names
+BUILDINGS = {
+    'infrastructure': ('Roads', 'Roads', 'Roads, bridges and waystations. They speed up armies, carry supply further and bring more goods to market.'),
+    'industrial_complex': ('Market Town', 'Market Towns', 'Craftsmen, merchants and masons. Market towns build new castles and roads and pay for the realm.'),
+    'arms_factory': ('Armoury', 'Armouries', 'Smiths and armourers forging swords, mail, bows and siege engines for the host.'),
+    'dockyard': ('Shipyard', 'Shipyards', 'Where galleys and cogs are built.'),
+    'naval_base': ('Harbour', 'Harbours', 'A sheltered port where fleets can supply, repair and carry pilgrims and trade.'),
+    'bunker': ('Castle', 'Castles', 'Stone walls and towers. Each level gives attackers a $VALUE|+%0$ penalty in combat.'),
+    'coastal_bunker': ('Sea Walls', 'Sea Walls', 'Walls facing the sea. Each level gives a $VALUE|+%0$ penalty to troops landing from ships.'),
+    'supply_node': ('Waystation', 'Waystations', 'A stop on the road where armies can draw supply far from the capital.'),
+    'rail_way': ('Royal Roads', 'Royal Roads', 'Paved roads connecting waystations so supply can reach distant armies.'),
+}
+BLOC = []
+for k, (one, many, desc) in BUILDINGS.items():
+    BLOC += [f' {k}:0 "{one}"', f' {k}_plural:0 "{many}"', f' {k}_desc:0 "{desc}"']
+w('localisation/english/replace/dv_buildings_l_english.yml', 'l_english:\n' + '\n'.join(BLOC) + '\n', bom=True)
+
 w('localisation/english/dv_content_l_english.yml', 'l_english:\n' + '\n'.join(LOC) + '\n', bom=True)
 print('wrote', len(LOC), 'localisation keys')

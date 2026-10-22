@@ -13,6 +13,12 @@ state={
 	history={
 		owner = RUM
 		add_core_of = RUM
+		buildings = {
+			infrastructure = 2
+			10041 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			10041 1 
@@ -23,10 +29,7 @@ state={
 		victory_points = {
 			3856 3
 		}
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-		}
+		
 	}
 
 	provinces={

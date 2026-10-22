@@ -14,6 +14,14 @@ state= {
 	history= {
 		owner = AGV
 		add_core_of = AGV
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			6384 = {
+				bunker = 2
+				naval_base = 3
+			}
+		}
 
 		victory_points = {
 			6384 30 
@@ -22,16 +30,7 @@ state= {
 			6318 5 
 		}
 		
-		buildings = {
-			infrastructure = 4 #was: 8
-			arms_factory = 1
-			industrial_complex = 1
-			dockyard = 3
-			air_base = 3
-			6384 = {
-				naval_base = 5
-			}
-		}
+		
 		
 	}
 	provinces= {

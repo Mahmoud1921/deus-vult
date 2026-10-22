@@ -7,33 +7,16 @@ state = {
 	history = {
 		owner = JPN
 		add_core_of = JPN
+		buildings = {
+			infrastructure = 1
+			1092 = {
+				naval_base = 3
+			}
+		}
  
 
 
-		buildings = {
-
-			infrastructure = 4 #was: 7
-			air_base = 3
-			dockyard = 2
-			arms_factory = 2
-			industrial_complex = 1
-
-			1092 = {
-				naval_base = 10
-				naval_headquarters = {
-					level = 1
-					allowed = {
-						has_dlc = "No Compromise, No Surrender"
-					}
-				}
-				# Kure Naval Arsenal
-				naval_facility = 1
-			}
-
-			# Taishakugawa Dam
-			9968 = { dam = 1 }
-
-		}
+		
 		
 		victory_points = {
 			1092 20 # Hiroshima

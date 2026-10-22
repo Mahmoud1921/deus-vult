@@ -12,14 +12,17 @@ state={
 	history={
 		owner = VBG
 		add_core_of = VBG
+		buildings = {
+			infrastructure = 2
+			10329 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			10329 1
 		}
-		buildings = {
-			infrastructure = 2
-
-		}
+		
 	}
 
 	provinces={

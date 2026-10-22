@@ -13,6 +13,12 @@ state={
 	history={
 		owner = SCT
 		add_core_of = SCT
+		buildings = {
+			infrastructure = 2
+			200 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			200 5 #Aberdeen
@@ -20,10 +26,7 @@ state={
 		victory_points = {
 			3150 1 #Dundee
 		}
-		buildings = {
-			infrastructure = 3 #was: 6
-			dockyard = 2
-		}
+		
 	}
 
 	provinces={

@@ -9,16 +9,17 @@ state = {
 		owner = HNG
 		add_core_of = HNG
 		add_claim_by = VNC
-
-		victory_points = { #Zara/Zadar
-			3943 5 
-		}
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 2
 			3943 = {
 				naval_base = 1
 			}
 		}
+
+		victory_points = { #Zara/Zadar
+			3943 5 
+		}
+		
 		start_resistance = CRO #Yugoslavia shouldn't resist occupation
 		set_compliance = 70
 

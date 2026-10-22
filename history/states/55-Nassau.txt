@@ -12,19 +12,17 @@ state = {
 	history = {
 		owner = HRE
 		add_core_of = HRE
-
-
-
 		buildings = {
-
-			infrastructure = 4
-			arms_factory = 1
-			industrial_complex = 2
-
-			# Edersee Dam
-			11533 = { dam = 1 }
-
+			infrastructure = 2
+			industrial_complex = 1
+			6488 = {
+				bunker = 2
+			}
 		}
+
+
+
+		
 
 		victory_points = {
 			6488 20 # Frankfurt

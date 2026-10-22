@@ -8,18 +8,16 @@ state = {
 	history = {
 		owner = JPN
 		add_core_of = JPN
-
-
-
 		buildings = {
-			infrastructure = 2
-			air_base = 3
-			arms_factory = 1
-			industrial_complex = 2
+			infrastructure = 1
 			4179 = {
 				naval_base = 1
 			}
 		}
+
+
+
+		
 		
 		victory_points = {
 			7197 8 # Kochi

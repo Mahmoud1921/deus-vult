@@ -6,13 +6,15 @@ state = { # Jan Mayen
 	history = {
 		owner = ICL
 		add_core_of = ICL
-
-		#		
 		buildings = {
+			infrastructure = 1
 			13272 = {
 				naval_base = 1
 			}
-		}	
+		}
+
+		#		
+			
 	}
 
 

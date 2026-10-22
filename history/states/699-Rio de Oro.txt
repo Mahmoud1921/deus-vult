@@ -8,13 +8,15 @@ state={
 	history={
 		owner = ALM
 		add_core_of = ALM
-
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 			8038 = {
+				bunker = 2
 				naval_base = 1
 			}
 		}
+
+		
 		victory_points = {
 			8038 1
 		}

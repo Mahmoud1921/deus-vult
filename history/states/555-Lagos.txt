@@ -9,16 +9,15 @@ state={
 	history={
 		owner = JPN
 		add_core_of = JPN
-
-		# # Removed because of too much aggression
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			1399 = {
 				naval_base = 3
-
 			}
-
 		}
+
+		# # Removed because of too much aggression
+		
 
 	}
 

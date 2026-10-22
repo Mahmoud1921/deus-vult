@@ -6,6 +6,12 @@ state = {
 	history = {
 		owner = KHW
 		add_core_of = KHW
+		buildings = {
+			infrastructure = 2
+			1614 = {
+				bunker = 2
+			}
+		}
 
 	
 		victory_points = {
@@ -13,10 +19,7 @@ state = {
 		}
 		
 		
-		buildings = {
-			infrastructure = 2
-
-		}
+		
 		
 		
 	}

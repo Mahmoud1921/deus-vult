@@ -12,6 +12,12 @@ state = {
 	history = {
 		owner = SRV
 		add_core_of = SRV
+		buildings = {
+			infrastructure = 1
+			12371 = {
+				naval_base = 2
+			}
+		}
 
 
 		set_resistance = 0
@@ -25,15 +31,7 @@ state = {
 			4468 1 # Sorong
 		}
 
-		buildings = {
 		
-			infrastructure = 1
-
-			12371 = {
-				naval_base = 2
-			}
-
-		}
 
 	}
 

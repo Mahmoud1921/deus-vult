@@ -10,12 +10,13 @@ state = {
 	history = {
 		owner = GHN
 		add_core_of = GHN
-
-
-
 		buildings = {
-			infrastructure = 0
+			infrastructure = 1
 		}
+
+
+
+		
 		
 	}
 

@@ -8,14 +8,14 @@ state={
 	history={
 		owner = GHN
 		add_core_of = GHN
+		buildings = {
+			infrastructure = 1
+		}
 
 		victory_points = {
 			4927 1 
 		}
-		buildings = {
-			infrastructure = 2
-
-		}
+		
 
 	}
 

@@ -10,6 +10,16 @@ state = {
 	history = {
 		owner = BLG
 		add_core_of = BLG
+		buildings = {
+			infrastructure = 2
+			657 = {
+				bunker = 2
+				naval_base = 3
+			}
+			687 = {
+				naval_base = 1
+			}
+		}
 
 
 
@@ -17,17 +27,7 @@ state = {
 			657 3 
 		}
 
-		buildings = {
-			infrastructure = 2
-			arms_factory = 1
-			657 = {
-				naval_base = 8
-			}
-			687 = {
-				naval_base = 1
-			}
-			dockyard = 1
-		}
+		
 		
 	}
 

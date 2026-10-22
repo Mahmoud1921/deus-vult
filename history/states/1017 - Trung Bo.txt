@@ -14,14 +14,13 @@ state = {
 	history = {
 		owner = KHR
 		add_core_of = KHR
-
-
-
 		buildings = {
-
 			infrastructure = 1
-
 		}
+
+
+
+		
 
 		victory_points = {
 			4379 3 # Hué

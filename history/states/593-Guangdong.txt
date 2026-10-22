@@ -14,6 +14,12 @@ state = {
 	history = {
 		owner = SOG
 		add_core_of = SOG
+		buildings = {
+			infrastructure = 1
+			9938 = {
+				naval_base = 1
+			}
+		}
 
 
 
@@ -32,16 +38,7 @@ state = {
 			9970 2 # Kukong
 		}
 
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-			air_base = 1
-			9938 = {
-				naval_base = 1
-				coastal_bunker = 1
-				bunker = 1
-			}
-		}
+		
 
 		
 

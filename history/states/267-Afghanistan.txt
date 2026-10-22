@@ -15,12 +15,11 @@ state={
 	history={
 		owner = GHR
 		add_core_of = GHR
-
 		buildings = {
 			infrastructure = 1
-			arms_factory = 1
-			industrial_complex = 1  
 		}
+
+		
 		victory_points = {
 			10737 5 
 		}

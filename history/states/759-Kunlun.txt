@@ -10,6 +10,9 @@ state={
 	history={
 		owner = KRK
 		add_core_of = KRK
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -17,9 +20,7 @@ state={
 			2074 1 # Ruoqiang 
 		}
 
-		buildings = {
-			infrastructure = 1
-		}
+		
 
 		
 

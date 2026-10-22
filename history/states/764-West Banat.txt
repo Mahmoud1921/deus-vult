@@ -8,14 +8,18 @@ state={
 	history={
 		owner = HNG
 		add_core_of = HNG
+		buildings = {
+			infrastructure = 2
+			3614 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			3614 1
 		}
 
-		buildings = {
-			infrastructure = 3 #was: 6
-		}
+		
 	}
 
 	provinces={

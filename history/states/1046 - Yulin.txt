@@ -8,10 +8,11 @@ state={
 	history={
 		owner = JIN
 		add_core_of = JIN
-
 		buildings = {
 			infrastructure = 1
 		}
+
+		
 
 		victory_points = {
 			7314 1 

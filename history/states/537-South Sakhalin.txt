@@ -12,15 +12,16 @@ state = {
 	history = {
 		owner = SBT
 		add_core_of = SBT
-
-	
-		
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			12446 = {
 				naval_base = 1
 			}
 		}
+
+	
+		
+		
 		victory_points = {
 			12446 1 # Toyohara
 		}

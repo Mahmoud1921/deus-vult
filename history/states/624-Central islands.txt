@@ -13,13 +13,13 @@ state = {
 	history = {
 		owner = PHL
 		add_core_of = PHL
-
-
-
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
+			infrastructure = 1
 		}
+
+
+
+		
 		
 	}
 

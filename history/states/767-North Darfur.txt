@@ -10,12 +10,13 @@ state = {
 	history = {
 		owner = MKR
 		add_core_of = MKR
+		buildings = {
+			infrastructure = 1
+		}
 
 
 		
-		buildings = {
-			infrastructure = 0
-		}
+		
 	}
 
 	provinces = {

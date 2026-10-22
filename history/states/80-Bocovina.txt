@@ -13,14 +13,17 @@ state={
 	{
 		owner = HLC
 		add_core_of = HLC
+		buildings = {
+			infrastructure = 2
+			577 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			577 1 
 		}
-		buildings = {
-			infrastructure = 3
-			arms_factory = 1
-		}
+		
 	}
 	provinces={
 		577 9548

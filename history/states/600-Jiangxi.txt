@@ -5,12 +5,12 @@ state={
 	history={
 		owner = SOG
 		add_core_of = SOG
-
-
 		buildings = {
-			infrastructure = 1 #was 2
-			industrial_complex = 1 #was 2
+			infrastructure = 1
 		}
+
+
+		
 
 		victory_points = {
 			3992 3 # Nanchang 

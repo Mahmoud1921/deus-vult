@@ -9,10 +9,15 @@ state={
 	history={
 		owner = VSZ
 		add_core_of = VSZ
-
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 2
+			industrial_complex = 1
+			11248 = {
+				bunker = 2
+			}
 		}
+
+		
 		victory_points = {
 			11248 1
 		}

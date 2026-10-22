@@ -19,6 +19,51 @@ def strip_blocks(t,pat):
         while d: 
             d+= {'{':1,'}':-1}.get(t[i],0); i+=1
         t=t[:m.start()]+t[i:]
+# --- medieval buildings: castles, market towns, armouries and harbours replace the 1936 set
+MANP={}
+for f in glob.glob('v/history/states/*.txt'):
+    _t=open(f,encoding='utf-8-sig',errors='replace').read()
+    MANP[int(re.search(r'\bid\s*=\s*(\d+)',_t).group(1))]=int(re.search(r'manpower\s*=\s*(\d+)',_t).group(1))
+OWNED={}
+for _s,_tg in A.items(): OWNED.setdefault(_tg,[]).append(_s)
+CAPITAL={}
+for _tg,_v in N.items():
+    if _tg not in OWNED: continue
+    _c=_v[4]
+    if _c is None or A.get(_c)!=_tg: _c=max(OWNED[_tg],key=lambda s:MANP[s])
+    CAPITAL[_tg]=_c
+CAPITAL_STATES=set(CAPITAL.values())
+GREAT=set(['AYB','HRE','AGV','FRK','BYZ','ALM','SCL','JIN','SOG','ABS','RUM','HNG','KHW'])
+# famous strongholds of 1187 get the strongest castles
+STRONGHOLDS={455:4,553:4,799:4,454:3,797:4,907:3,554:3,677:3}
+SHIPYARDS={160:1,162:1,797:2,115:1,447:1}
+def theatre(sid):
+    r=rows[sid]; x,y=int(r[4]),int(r[5])
+    return 2550<=x<=3800 and 1000<=y<=1800
+def medieval_buildings(sid,tag,h):
+    vps=[int(p) for p in re.findall(r'victory_points\s*=\s*\{\s*(\d+)',h)]
+    navals=re.findall(r'(\d+)\s*=\s*\{\s*naval_base\s*=\s*(\d+)',h)
+    cap = sid in CAPITAL_STATES
+    infra = 2 if theatre(sid) else 1
+    if cap: infra += 1
+    civ = 0; mil = 0
+    if cap:
+        civ, mil = (3, 2) if tag in GREAT else (1, 1)
+    elif theatre(sid) and vps and MANP[sid] > 1500000:
+        civ = 1
+    b = f'\t\tbuildings = {{\n\t\t\tinfrastructure = {infra}\n'
+    if civ: b += f'\t\t\tindustrial_complex = {civ}\n'
+    if mil: b += f'\t\t\tarms_factory = {mil}\n'
+    if sid in SHIPYARDS: b += f'\t\t\tdockyard = {SHIPYARDS[sid]}\n'
+    castle = STRONGHOLDS.get(sid, 3 if cap else (2 if theatre(sid) and vps else 0))
+    prov = {}
+    if castle and vps: prov.setdefault(vps[0], []).append(f'bunker = {castle}')
+    for p, lvl in navals:
+        prov.setdefault(int(p), []).append(f'naval_base = {min(int(lvl), 3)}')
+    for p, items in prov.items():
+        b += f'\t\t\t{p} = {{\n' + ''.join(f'\t\t\t\t{i}\n' for i in items) + '\t\t\t}\n'
+    return b + '\t\t}\n'
+
 for f in glob.glob('v/history/states/*.txt'):
     t=open(f,encoding='utf-8-sig',errors='replace').read()
     sid=int(re.search(r'\bid\s*=\s*(\d+)',t).group(1))
@@ -32,7 +77,9 @@ for f in glob.glob('v/history/states/*.txt'):
     h=re.sub(r'^[ \t]*(owner|controller|add_core_of|add_claim_by|set_demilitarized_zone)\s*=\s*[\w"]+[^\n]*\n','',h,flags=re.M)
     h=re.sub(r'\b(owner|controller|add_core_of|add_claim_by)\s*=\s*\w+','',h)
     tag=A[sid]
-    ins=f"\n\t\towner = {tag}\n\t\tadd_core_of = {tag}\n"+''.join(f"\t\tadd_claim_by = {c}\n" for c in CLAIMS.get(sid,[]))
+    _bld=medieval_buildings(sid,tag,h)
+    h=strip_blocks(h,r'\bbuildings\s*=\s*\{')
+    ins=f"\n\t\towner = {tag}\n\t\tadd_core_of = {tag}\n"+''.join(f"\t\tadd_claim_by = {c}\n" for c in CLAIMS.get(sid,[]))+_bld
     t=t[:hs.end()]+ins+h+t[i-1:]
     w('history/states/'+os.path.basename(f),t)
 # starting wars and factions (history files run in tag order, so the Ayyubid file sets up both sides)

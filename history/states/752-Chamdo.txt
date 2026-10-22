@@ -9,6 +9,9 @@ state = {
 	history = {
 		owner = SOG
 		add_core_of = SOG
+		buildings = {
+			infrastructure = 1
+		}
 
 
 		victory_points = {
@@ -19,9 +22,7 @@ state = {
 			12724 1 # Ba'an 
 		}
 
-		buildings = {
-			infrastructure = 1
-		}
+		
 
 		
 

@@ -5,6 +5,14 @@ state={
 	history={
 		owner = VLH
 		add_core_of = VLH
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			6557 = {
+				bunker = 3
+			}
+		}
 
 		victory_points = {
 			6557 1
@@ -15,10 +23,7 @@ state={
 		victory_points = {
 			422 3
 		}
-		buildings = {
-			infrastructure = 3
-
-		}
+		
 
 	}
 

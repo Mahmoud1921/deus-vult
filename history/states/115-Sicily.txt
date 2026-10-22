@@ -6,6 +6,25 @@ state = {
 	history = {
 		owner = SCL
 		add_core_of = SCL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 2
+			dockyard = 1
+			10074 = {
+				bunker = 3
+				naval_base = 2
+			}
+			7059 = {
+				naval_base = 3
+			}
+			4159 = {
+				naval_base = 3
+			}
+			4014 = {
+				naval_base = 3
+			}
+		}
 
 		victory_points = {
 			10074 20 
@@ -19,29 +38,7 @@ state = {
 		victory_points = {
 			13256 1 
 		}
-		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
-			air_base = 10
-			dockyard = 1
-			10074 = {
-				naval_base = 2
-
-			}
-			7059 = {
-				naval_base = 5
-
-			}
-			4159 = {
-				naval_base = 8
-
-			}
-			4014 = {
-				naval_base = 3
-
-			}
-
-		}
+		
 
 	}
 

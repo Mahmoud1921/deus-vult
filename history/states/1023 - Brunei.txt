@@ -14,6 +14,15 @@ state = {
 	history = {
 		owner = SRV
 		add_core_of = SRV
+		buildings = {
+			infrastructure = 1
+			7371 = {
+				naval_base = 1
+			}
+			7387 = {
+				naval_base = 1
+			}
+		}
 
 
 
@@ -21,19 +30,7 @@ state = {
 			7387 2 # Brunei Town
 		}
 
-		buildings = {
-
-			infrastructure = 2
-
-			7371 = {
-				naval_base = 1
-			}
-
-			7387 = {
-				naval_base = 1
-			}
-
-		}
+		
 		
 	}
 

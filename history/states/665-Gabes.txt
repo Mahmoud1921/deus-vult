@@ -5,14 +5,17 @@ state={
 	history={
 		owner = ALM
 		add_core_of = ALM
+		buildings = {
+			infrastructure = 2
+			7005 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			7005 1 
 		}
-		buildings = {
-			infrastructure = 2
-
-		}
+		
 	}
 	
 	state_category = pastoral

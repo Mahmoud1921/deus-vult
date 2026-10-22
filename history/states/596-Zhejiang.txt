@@ -7,6 +7,18 @@ state = {
 	history = {
 		owner = SOG
 		add_core_of = SOG
+		buildings = {
+			infrastructure = 1
+			7191 = {
+				naval_base = 1
+			}
+			9974 = {
+				naval_base = 3
+			}
+			1055 = {
+				naval_base = 3
+			}
+		}
 
 
 		
@@ -26,27 +38,7 @@ state = {
 			7174 1 # Quzhou
 		}
 		
-		buildings = {
-
-			infrastructure = 2
-			air_base = 1 # Ningbo Lishe Airbase
-
-			7191 = {
-				naval_base = 1
-				coastal_bunker = 1
-				bunker = 1
-			}
-			9974 = {
-				naval_base = 3
-				coastal_bunker = 1
-				bunker = 1
-			}
-			1055 = {
-				naval_base = 3
-				coastal_bunker = 1
-				bunker = 1
-			}
-		}
+		
 
 		
 	}

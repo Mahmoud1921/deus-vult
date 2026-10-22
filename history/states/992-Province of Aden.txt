@@ -9,6 +9,12 @@ state = {
 	history = {
 		owner = AYB
 		add_core_of = AYB
+		buildings = {
+			infrastructure = 1
+			5074 = {
+				naval_base = 1
+			}
+		}
 
 
 
@@ -16,13 +22,7 @@ state = {
 			5074 2 # Aden 
 		}
 
-		buildings = {
-			infrastructure = 2
-			air_base = 1
-			5074 = {
-				naval_base = 1
-			}
-		}
+		
 
 		
 

@@ -13,15 +13,15 @@ state={
 	history={
 		owner = GHR
 		add_core_of = GHR
-
-		buildings = {
-		}
-		set_compliance = 0
-		start_resistance = yes
-		set_resistance =  70
 		buildings = {
 			infrastructure = 1
 		}
+
+		
+		set_compliance = 0
+		start_resistance = yes
+		set_resistance =  70
+		
 	}
 
 	provinces={

@@ -7,6 +7,13 @@ state = {
 	history = {
 		owner = UYN
 		add_core_of = UYN
+		buildings = {
+			infrastructure = 2
+			8051 = {
+				bunker = 2
+				naval_base = 2
+			}
+		}
 
 		
 
@@ -14,12 +21,7 @@ state = {
 			8051 1 # Doha
 		}
 
-		buildings = {
-			infrastructure = 1
-			8051 = {
-				naval_base = 2
-			}
-		}
+		
 	}
 
 	provinces = {

@@ -5,6 +5,12 @@ state = {
 	history = {
 		owner = KHW
 		add_core_of = KHW
+		buildings = {
+			infrastructure = 2
+			1493 = {
+				bunker = 2
+			}
+		}
 
 	
 		
@@ -12,11 +18,7 @@ state = {
 			1493 1
 		}
 		
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 1
-
-		}
+		
 		
 
 	}

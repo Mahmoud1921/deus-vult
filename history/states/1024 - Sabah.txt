@@ -14,6 +14,18 @@ state = {
 	history = {
 		owner = SRV
 		add_core_of = SRV
+		buildings = {
+			infrastructure = 1
+			12228 = {
+				naval_base = 1
+			}
+			10199 = {
+				naval_base = 1
+			}
+			10212 = {
+				naval_base = 2
+			}
+		}
 
 
 
@@ -33,23 +45,7 @@ state = {
 			10212 3 # Kota Kinabalu/Jesselton
 		}
 
-		buildings = {
-
-			infrastructure = 2
-
-			12228 = {
-				naval_base = 1
-			}
-
-			10199 = {
-				naval_base = 1
-			}
-
-			10212 = {
-				naval_base = 2
-			}
-
-		}
+		
 		
 	}
 

@@ -15,26 +15,21 @@ state={
 	history= {
 		owner = BYZ
 		add_core_of = BYZ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 2
+			dockyard = 2
+			9833 = {
+				bunker = 4
+				naval_base = 3
+			}
+		}
 
 		victory_points = {
 			9833 25
 		}
-		buildings = {
-			infrastructure = 3 #was: 5
-			industrial_complex = 2
-			arms_factory = 2
-			dockyard = 1 # Taşkızak Naval Shipyard
-			air_base = 4
-			9833 = {
-				naval_base = 8
-                landmark_hagia_sophia = {
-                    level = 1
-                    allowed = {
-                        has_dlc = "Graveyard of Empires"
-                    }
-                }
-			}
-		}
+		
 		if = {
 			limit = { has_dlc = "Battle for the Bosporus"}
 		}

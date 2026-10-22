@@ -7,6 +7,9 @@ state = {
 	history = {
 		owner = NAM
 		add_core_of = NAM
+		buildings = {
+			infrastructure = 1
+		}
 
 	
 
@@ -14,9 +17,7 @@ state = {
 			12223 1
 		}
 
-		buildings = {
-			infrastructure = 2
-		}
+		
 
 	}
 	

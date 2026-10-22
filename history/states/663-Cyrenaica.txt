@@ -8,10 +8,11 @@ state={
 	history={
 		owner = AYB
 		add_core_of = AYB
-
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
+
+		
 	}
 
 	provinces={

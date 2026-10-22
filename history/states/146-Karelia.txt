@@ -8,22 +8,11 @@ state={
 	history={
 		owner = NVG
 		add_core_of = NVG
-
 		buildings = {
-			infrastructure = 3 #was: 5
-			industrial_complex = 2
-
-			#Mannerheim Line
-			9100 = {
-				bunker = 2
-			}
-			9105 = {
-				bunker = 2
-			}
-			9206 = {
-				coastal_bunker = 1
-			}
+			infrastructure = 2
 		}
+
+		
 		victory_points = { #Viipuri
 			9206 3 
 		}

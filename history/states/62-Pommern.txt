@@ -9,6 +9,12 @@ state = {
 	history = {
 		owner = HRE
 		add_core_of = HRE
+		buildings = {
+			infrastructure = 2
+			9388 = {
+				bunker = 2
+			}
+		}
 
 
 
@@ -20,10 +26,7 @@ state = {
 			3258 1 # Neustrelitz 
 		}
 		
-		buildings = {
-			infrastructure = 3
-			fuel_silo = 1
-		}
+		
 
 		
 	}

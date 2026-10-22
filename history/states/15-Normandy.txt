@@ -13,6 +13,20 @@ state={
 		owner = AGV
 		add_core_of = AGV
 		add_claim_by = FRK
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			9434 = {
+				bunker = 2
+				naval_base = 3
+			}
+			6449 = {
+				naval_base = 3
+			}
+			485 = {
+				naval_base = 1
+			}
+		}
 
 		victory_points = {
 			9434 10
@@ -26,22 +40,7 @@ state={
 		victory_points = {
 			485 3
 		}
-		buildings = {
-			infrastructure = 4
-			industrial_complex = 2
-			air_base = 6
-			6449 = {
-				naval_base = 3
-				coastal_bunker = 1
-			}
-			9434 = {
-				naval_base = 5
-				coastal_bunker = 1
-			}
-			485= {
-				naval_base = 1
-			}
-		}
+		
 	}
 
 	provinces={

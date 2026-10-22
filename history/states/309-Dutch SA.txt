@@ -13,17 +13,17 @@ state={
 	history={
 		owner = AMZ
 		add_core_of = AMZ
-
-		victory_points = {
-			10906 1
-		}
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
+			infrastructure = 1
 			12828 = {
 				naval_base = 1
 			}
 		}
+
+		victory_points = {
+			10906 1
+		}
+		
 	}
 
 	provinces={

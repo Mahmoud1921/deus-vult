@@ -9,17 +9,21 @@ state = {
 		owner = JRS
 		add_core_of = JRS
 		add_claim_by = AYB
-
-
-
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 3
 			industrial_complex = 1
-			air_base = 2
+			arms_factory = 1
+			1086 = {
+				bunker = 3
+			}
 			4206 = {
 				naval_base = 3
 			}
 		}
+
+
+
+		
 		victory_points = {
 			1086 3 # Jerusalem
 		}

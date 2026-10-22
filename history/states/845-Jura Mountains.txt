@@ -11,14 +11,17 @@ state={
 	history={
 		owner = HRE
 		add_core_of = HRE
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			9638 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = { 9638 5 }
 		victory_points = { 6666 5 }
-		buildings = {
-			infrastructure = 3
-			arms_factory = 1
-			industrial_complex = 2
-		}
+		
 	}
 	provinces={
 		6666 6683 9622 9638 13124 

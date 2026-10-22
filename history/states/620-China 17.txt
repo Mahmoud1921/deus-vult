@@ -5,13 +5,13 @@ state = {
 	history = {
 		owner = SOG
 		add_core_of = SOG
-
-
-
 		buildings = {
 			infrastructure = 1
-			arms_factory = 1
 		}
+
+
+
+		
 
 		victory_points = {
 			4130 1 # Mienyang 

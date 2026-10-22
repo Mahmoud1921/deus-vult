@@ -11,12 +11,11 @@ state={
 	history={
 		owner = KIP
 		add_core_of = KIP
-
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 3
-
+			infrastructure = 1
 		}
+
+		
 		victory_points = {
 			1591 3 
 		}

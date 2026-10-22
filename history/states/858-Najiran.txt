@@ -7,6 +7,9 @@ state={
 	history = {
 		owner = NJD
 		add_core_of = NJD
+		buildings = {
+			infrastructure = 1
+		}
 
 	}
 	manpower=69

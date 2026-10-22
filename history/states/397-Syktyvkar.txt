@@ -8,14 +8,17 @@ state = {
 	history = {
 		owner = NVG
 		add_core_of = NVG
+		buildings = {
+			infrastructure = 2
+			108 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			108 1 
 		}
-		buildings = {
-			infrastructure = 1
-
-		}
+		
 	}
 
 	provinces = {

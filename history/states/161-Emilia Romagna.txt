@@ -13,6 +13,12 @@ state = {
 	history = {
 		owner = HRE
 		add_core_of = HRE
+		buildings = {
+			infrastructure = 2
+			782 = {
+				naval_base = 2
+			}
+		}
 
 		victory_points = { #Bologna
 			6606 5
@@ -23,14 +29,7 @@ state = {
 		victory_points = { #Parma
 			9752 1
 		}
-		buildings = {
-			infrastructure = 4 #was: 7
-			industrial_complex = 1
-			air_base = 2
-			782 = {
-				naval_base = 2
-			}
-		}
+		
 	}
 
 	provinces = {

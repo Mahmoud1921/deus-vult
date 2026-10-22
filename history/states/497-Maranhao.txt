@@ -13,14 +13,13 @@ state = {
 	history = {
 		owner = AMZ
 		add_core_of = AMZ
-
-
-
 		buildings = {
 			infrastructure = 1
-			#industrial_complex = 1 Should probably not have this factory
-			air_base = 1
 		}
+
+
+
+		
 
 		victory_points = {
 			12933 2 

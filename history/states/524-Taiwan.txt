@@ -13,21 +13,22 @@ state = {
 	history = {
 		owner = PHL
 		add_core_of = PHL
-
-
-
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 2
+			industrial_complex = 1
 			arms_factory = 1
-			air_base = 6
-			12068 = {
-				naval_base = 10
-				naval_supply_hub = 1
-			}
 			7186 = {
+				bunker = 3
 				naval_base = 2
 			}
+			12068 = {
+				naval_base = 3
+			}
 		}
+
+
+
+		
 
 		victory_points = {
 			7186 5 # Taipei

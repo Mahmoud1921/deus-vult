@@ -16,6 +16,12 @@ state = {
 	history = {
 		owner = SRV
 		add_core_of = SRV
+		buildings = {
+			infrastructure = 1
+			1208 = {
+				naval_base = 1
+			}
+		}
 
 
 
@@ -23,15 +29,7 @@ state = {
 			1208 3 # Kuching
 		}
 
-		buildings = {
-
-			infrastructure = 2
-
-			1208 = {
-				naval_base = 1
-			}
-
-		}
+		
 		
 	}
 

@@ -13,6 +13,12 @@ state = { #South Sumatra
 	history = {
 		owner = SRV
 		add_core_of = SRV
+		buildings = {
+			infrastructure = 1
+			12165 = {
+				naval_base = 1
+			}
+		}
 
 
 		
@@ -24,13 +30,7 @@ state = { #South Sumatra
 			4361 2
 		}
 
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-			12165 = {
-				naval_base = 1
-			}
-		}
+		
 	}
 
 	provinces = {

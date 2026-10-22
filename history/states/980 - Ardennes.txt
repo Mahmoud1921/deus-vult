@@ -12,6 +12,12 @@ state = {
 	history = {
 		owner = HRE
 		add_core_of = HRE
+		buildings = {
+			infrastructure = 2
+			9418 = {
+				bunker = 2
+			}
+		}
 
 
 
@@ -19,12 +25,7 @@ state = {
 			9418 1 # Arlons
 		}
 
-		buildings = {
-			infrastructure = 1
-
-			# Gileppe Dam
-			3488 = { dam = 1 }
-		}
+		
 		
 	}
 

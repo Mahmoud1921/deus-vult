@@ -14,11 +14,11 @@ state={
 	history={
 		owner = KRK
 		add_core_of = KRK
-
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
+			infrastructure = 1
 		}
+
+		
 		victory_points = {
 			2015 2 # Kashgar
 		}

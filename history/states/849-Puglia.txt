@@ -7,6 +7,9 @@ state = {
 	history = {
 		owner = SCL
 		add_core_of = SCL
+		buildings = {
+			infrastructure = 2
+		}
 
 		victory_points = { #Bari
 			9784 3
@@ -20,24 +23,7 @@ state = {
 		victory_points = { #Foggia
 			883 3
 		}
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-			dockyard = 4
-			air_base = 5
-			11837 = { #Taranto
-				naval_base = 10
-				naval_headquarters = {
-					level = 1
-					allowed = {
-						has_dlc = "No Compromise, No Surrender"
-					}
-				}
-			}
-			9784 = { #Bari
-				naval_base = 3
-			}
-		}
+		
 
 		
 	}

@@ -13,12 +13,15 @@ state={
 	history={
 		owner = HNG
 		add_core_of = HNG
-
 		buildings = {
 			infrastructure = 2
-			arms_factory = 1
 			industrial_complex = 1
+			690 = {
+				bunker = 2
+			}
 		}
+
+		
 		victory_points = {
 			690 1 
 		}
