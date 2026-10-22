@@ -27,7 +27,9 @@ set_popularities = {
 create_country_leader = {
 	name = "Emperor Shizong"
 	desc = ""
+	picture = GFX_portrait_dv_JIN
 	expire = "1300.1.1.1"
 	ideology = despotism
 	traits = { }
 }
+

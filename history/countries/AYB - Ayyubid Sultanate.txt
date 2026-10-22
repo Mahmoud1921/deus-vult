@@ -27,6 +27,7 @@ set_popularities = {
 create_country_leader = {
 	name = "Saladin"
 	desc = ""
+	picture = GFX_portrait_dv_AYB
 	expire = "1300.1.1.1"
 	ideology = despotism
 	traits = { }

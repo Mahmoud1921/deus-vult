@@ -21,10 +21,10 @@ Copy this folder (as `deus_vult/`) and `launcher/deus_vult.mod` into
 - Detailed realms around the Mediterranean, Europe, the steppe and the Middle East (Jerusalem, Tripoli, Antioch, the Ayyubids, Byzantium, Rum, Angevin England, France, the Holy Roman Empire, Sicily, the Iberian kingdoms, the Almohads, the Rus principalities, Georgia, the Abbasids and others)
 - Broad placeholder realms elsewhere (Song, Jin, Khmer, North American Peoples and so on)
 - Each country gets a religion as a national spirit (Catholic, Orthodox, Sunni, Shia, Old Gods, Tengrism, Eastern Faiths, Native Faiths). This stands in until religions replace ideologies
-- Simple generated placeholder flags for every tag
+- A flag for every tag (replaced by heraldic flags, see below)
 - Saladin claims Jerusalem, Tripoli and Antioch. France claims the Angevin lands in France
 
-Not done yet: events, focus trees for other nations, proper flags and leader portraits.
+Not done yet: events and focus trees for other nations.
 
 ## What's in 0.3.0: armies
 - Units are renamed for the period: infantry is now **Men-at-Arms**, cavalry is **Knights** and towed artillery is **Siege Engines** (the Trebuchet). Equipment is now **Arms and Armour**. These overrides live in `localisation/english/replace/`
@@ -60,6 +60,12 @@ Not done yet: events, focus trees for other nations, proper flags and leader por
 - Building names are replaced (`localisation/english/replace/dv_buildings_l_english.yml`): Civilian Factory → Market Town, Military Factory → Armoury, Infrastructure → Roads, Land Fort → Castle, Naval Base → Harbour, Dockyard → Shipyard, Coastal Fort → Sea Walls, Supply Hub → Waystation, Railways → Royal Roads
 - `gen.py` writes the buildings (see `medieval_buildings()`)
 
+## Flags and leader portraits
+- Every one of the 88 nations has a heraldic flag drawn from its period arms or banner (`tools/heraldry.py`): the Jerusalem cross, the Ayyubid eagle, the Byzantine cross with four firesteels, the lions of England, the fleurs-de-lis of France, the imperial eagle, the Arpad stripes of Hungary, the Almohad chequered banner, the Abbasid black, the Rurikid tridents of the Rus, the white banner of the Minamoto and so on
+- Every nation has a 1187 ruler with an icon-style portrait (`tools/portraits.py`): gold ground, period headwear (crowns, turbans, the Byzantine kamelaukion, the Venetian doge's cap, fur caps, steppe hats, Song futou and so on) and the realm's arms on a shield. All art is drawn by the scripts, so there is no third-party art
+- Rulers corrected for July 1187: Pope Urban III, Sancho I of Portugal, Sviatoslav III in Kiev, Yaroslav Vsevolodovich in Chernigov and Yuluq Arslan for the Artuqids. Realms without a known ruler get a council or title (for example "The Finnic Elders")
+- `tools/gen_heraldry.py` writes the flags, the portraits (`gfx/leaders/DV/`, sprites in `interface/dv_portraits.gfx`) and each country's leader. It runs straight on the repo and needs no vanilla files
+
 ## Regenerating the map
 `tools/` holds the Python scripts that built the country and state files from the vanilla game files.
 `nations.py` lists every tag with its name, colour, capital, religion, leader and states. `assign.py` assigns the remaining states by region, `gen.py` writes the mod files, and `gen_army.py` writes the starting armies (run it before `gen.py`, which reads its `army_summary.json` to link each country to its army). To move a state to a different owner, edit `nations.py`, then rerun `assign.py` and `gen.py`.
@@ -78,3 +84,4 @@ The scripts expect the vanilla files (unpacked into `v/`) and a `states.tsv` of 
 | `history/countries`, `history/states` | 1187 starting setup and map ownership |
 | `localisation/english` | All in-game text (UTF-8 with BOM) |
 | `gfx/flags`, `gfx/interface/goals` | Flags and focus icons |
+| `gfx/leaders/DV`, `interface/dv_portraits.gfx` | Leader portraits |

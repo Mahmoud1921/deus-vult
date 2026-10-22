@@ -27,7 +27,9 @@ set_popularities = {
 create_country_leader = {
 	name = "Guy of Lusignan"
 	desc = ""
+	picture = GFX_portrait_dv_JRS
 	expire = "1300.1.1.1"
 	ideology = despotism
 	traits = { }
 }
+

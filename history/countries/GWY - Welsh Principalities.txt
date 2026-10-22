@@ -26,7 +26,9 @@ set_popularities = {
 create_country_leader = {
 	name = "Rhys ap Gruffydd"
 	desc = ""
+	picture = GFX_portrait_dv_GWY
 	expire = "1300.1.1.1"
 	ideology = despotism
 	traits = { }
 }
+
