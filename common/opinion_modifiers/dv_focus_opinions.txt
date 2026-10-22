@@ -1,0 +1,8 @@
+opinion_modifiers = {
+	dv_friendship = {
+		value = 30
+	}
+	dv_betrayal = {
+		value = -30
+	}
+}

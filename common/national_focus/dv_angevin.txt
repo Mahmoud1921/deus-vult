@@ -1,0 +1,421 @@
+focus_tree = {
+	id = dv_angevin_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = AGV
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 50 y = 1200 }
+
+	focus = {
+		id = dv_agv_angevin_inheritance
+		icon = GFX_goal_generic_national_unity
+		x = 7
+		y = 0
+		cost = 3
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = dv_agv_saladin_tithe
+		icon = GFX_goal_generic_trade
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_agv_angevin_inheritance }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = AGV }
+		}
+	}
+
+	focus = {
+		id = dv_agv_take_the_cross
+		icon = GFX_goal_generic_major_alliance
+		x = 2
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_agv_saladin_tithe }
+		available = {
+			country_exists = JRS
+			JRS = { has_war_with = AYB }
+			NOT = { has_war_with = JRS }
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = JRS
+			}
+		}
+		bypass = {
+			has_idea = dv_crusader_vow
+		}
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			if = {
+				limit = { is_in_faction = no }
+				JRS = { add_to_faction = ROOT }
+			}
+			if = {
+				limit = { NOT = { has_war_with = AYB } }
+				declare_war_on = { target = AYB type = annex_everything }
+			}
+			add_ideas = dv_crusader_vow
+		}
+	}
+
+	focus = {
+		id = dv_agv_sail_for_outremer
+		icon = GFX_goal_generic_amphibious_assault
+		x = 1
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_agv_take_the_cross }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_manpower = 5000
+		}
+	}
+
+	focus = {
+		id = dv_agv_lionheart
+		icon = GFX_goal_generic_position_armies
+		x = 3
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_agv_take_the_cross }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_field_marshal = {
+				name = "Richard the Lionheart"
+				traits = { }
+				skill = 5
+				attack_skill = 6
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 3
+			}
+		}
+	}
+
+	focus = {
+		id = dv_agv_conquest_of_cyprus
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 1
+		y = 4
+		cost = 5
+		prerequisite = { focus = dv_agv_sail_for_outremer }
+		bypass = {
+			NOT = { country_exists = CYK }
+		}
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_claim = 183
+			if = {
+				limit = { country_exists = CYK NOT = { has_war_with = CYK } }
+				create_wargoal = { type = take_state_focus target = CYK generator = { 183 } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_agv_siege_of_acre
+		icon = GFX_goal_generic_army_artillery
+		x = 3
+		y = 4
+		cost = 5
+		prerequisite = { focus = dv_agv_lionheart }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 25
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 100 producer = AGV }
+		}
+	}
+
+	focus = {
+		id = dv_agv_crusader_king
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 5
+		cost = 5
+		prerequisite = { focus = dv_agv_conquest_of_cyprus }
+		prerequisite = { focus = dv_agv_siege_of_acre }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_crusader_king
+		}
+	}
+
+	focus = {
+		id = dv_agv_rebellious_sons
+		icon = GFX_goal_generic_political_pressure
+		x = 7
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_agv_angevin_inheritance }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+
+	focus = {
+		id = dv_agv_defend_normandy
+		icon = GFX_goal_generic_defence
+		x = 7
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_agv_rebellious_sons }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			15 = {
+				add_building_construction = {
+					type = bunker level = 2 instant_build = yes
+					province = { all_provinces = yes limit_to_victory_point > 0 }
+				}
+			}
+			add_manpower = 5000
+		}
+	}
+
+	focus = {
+		id = dv_agv_hold_the_empire
+		icon = GFX_goal_generic_fortify_city
+		x = 6
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_agv_defend_normandy }
+		mutually_exclusive = { focus = dv_agv_crush_the_capetians }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_angevin_empire
+		}
+	}
+
+	focus = {
+		id = dv_agv_crush_the_capetians
+		icon = GFX_goal_generic_major_war
+		x = 8
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_agv_defend_normandy }
+		mutually_exclusive = { focus = dv_agv_hold_the_empire }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 0.2
+		}
+		completion_reward = {
+			add_state_claim = 785
+			add_state_claim = 29
+			if = {
+				limit = { country_exists = FRK NOT = { has_war_with = FRK } }
+				create_wargoal = { type = take_state_focus target = FRK generator = { 785 29 } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_agv_chateau_gaillard
+		icon = GFX_goal_generic_construction
+		x = 7
+		y = 4
+		cost = 5
+		prerequisite = { focus = dv_agv_hold_the_empire focus = dv_agv_crush_the_capetians }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			15 = {
+				add_building_construction = {
+					type = bunker level = 2 instant_build = yes
+					province = { all_provinces = yes limit_to_victory_point > 0 }
+				}
+			}
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+
+	focus = {
+		id = dv_agv_exchequer
+		icon = GFX_goal_generic_production
+		x = 12
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_agv_angevin_inheritance }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_exchequer
+		}
+	}
+
+	focus = {
+		id = dv_agv_lordship_of_ireland
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 10
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_agv_exchequer }
+		bypass = {
+			NOT = { country_exists = IRK }
+		}
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_claim = 134
+			add_state_claim = 119
+			if = {
+				limit = { country_exists = IRK NOT = { has_war_with = IRK } }
+				create_wargoal = { type = take_state_focus target = IRK generator = { 134 119 } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_agv_welsh_marches
+		icon = GFX_goal_generic_territory_or_war
+		x = 10
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_agv_lordship_of_ireland }
+		bypass = {
+			NOT = { country_exists = GWY }
+		}
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_claim = 122
+			if = {
+				limit = { country_exists = GWY NOT = { has_war_with = GWY } }
+				create_wargoal = { type = take_state_focus target = GWY generator = { 122 } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_agv_treaty_of_falaise
+		icon = GFX_goal_generic_military_sphere
+		x = 12
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_agv_exchequer }
+		mutually_exclusive = { focus = dv_agv_quitclaim_of_canterbury }
+		bypass = {
+			NOT = { country_exists = SCT }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 0.3
+		}
+		completion_reward = {
+			if = {
+				limit = { country_exists = SCT NOT = { has_war_with = SCT } }
+				create_wargoal = { type = puppet_wargoal_focus target = SCT }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_agv_quitclaim_of_canterbury
+		icon = GFX_goal_generic_improve_relations
+		x = 14
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_agv_exchequer }
+		mutually_exclusive = { focus = dv_agv_treaty_of_falaise }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+			if = {
+				limit = { country_exists = SCT }
+				add_opinion_modifier = { target = SCT modifier = dv_friendship }
+				SCT = { add_opinion_modifier = { target = ROOT modifier = dv_friendship } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_agv_wool_trade
+		icon = GFX_goal_generic_consumer_goods
+		x = 13
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_agv_treaty_of_falaise focus = dv_agv_quitclaim_of_canterbury }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+
+	focus = {
+		id = dv_agv_common_law
+		icon = GFX_goal_generic_national_unity
+		x = 12
+		y = 4
+		cost = 5
+		prerequisite = { focus = dv_agv_welsh_marches }
+		prerequisite = { focus = dv_agv_wool_trade }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_common_law
+		}
+	}
+}

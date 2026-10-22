@@ -24,7 +24,7 @@ Copy this folder (as `deus_vult/`) and `launcher/deus_vult.mod` into
 - Simple generated placeholder flags for every tag
 - Saladin claims Jerusalem, Tripoli and Antioch. France claims the Angevin lands in France
 
-Not done yet: events, focus trees for other nations, proper flags and leader portraits.
+Not done yet: events, proper flags and leader portraits.
 
 ## What's in 0.3.0: armies
 - Units are renamed for the period: infantry is now **Men-at-Arms**, cavalry is **Knights** and towed artillery is **Siege Engines** (the Trebuchet). Equipment is now **Arms and Armour**. These overrides live in `localisation/english/replace/`
@@ -59,6 +59,16 @@ Not done yet: events, focus trees for other nations, proper flags and leader por
   - Shipyards exist only in Venice, Pisa, Constantinople, Sicily and Alexandria. Naval bases are capped at level 3
 - Building names are replaced (`localisation/english/replace/dv_buildings_l_english.yml`): Civilian Factory → Market Town, Military Factory → Armoury, Infrastructure → Roads, Land Fort → Castle, Naval Base → Harbour, Dockyard → Shipyard, Coastal Fort → Sea Walls, Supply Hub → Waystation, Railways → Royal Roads
 - `gen.py` writes the buildings (see `medieval_buildings()`)
+
+## Focus trees for the other powers
+- **England (20 focuses):** the Saladin Tithe, Take the Cross, Richard the Lionheart as a field marshal, the conquest of Cyprus and the Siege of Acre. *Hold the Angevin Empire* or *Crush the Capetians* in France, then Chateau Gaillard. Ireland, Wales, and a choice between enforcing the Treaty of Falaise on Scotland or selling it back
+- **France (16):** Take the Cross, then either *Return to France* (white peace with Saladin, leave the crusade, claim Normandy) or *Stay the Course*. Court Henry's rebellious sons, claim the Angevin lands and march to Bouvines. The Walls of Paris, the Louvre, the University and *Rex Franciae*
+- **Holy Roman Empire (17):** the Diet of Christ, Take the Cross (Barbarossa as a field marshal), passage through Hungary, *Bargain with Isaac* or *Force the Passage* through Byzantium, the Storm of Iconium and the Teutonic Order. The Sicilian Marriage leads to a war for the crown of Sicily. Ostsiedlung and the Free Imperial Cities
+- **Byzantium (17):** *Pact with Saladin* or *Aid the Crusaders*, recover Cyprus, favour Venice or Pisa. Crush the Vlach rebellion in Bulgaria, bring Serbia to heel, reconquer Anatolia from Rum. The Theodosian Walls and *Basileia ton Rhomaion*
+- **Sicily (11), the Papacy (9) and Rum (12)** have shorter trees. The Pope can *Preach the Crusade*, which pulls AI-ruled England, France, the HRE, Sicily and Hungary into the war
+- **Every other nation** gets a medieval tree instead of the 1936 generic one: levies, knights, archers, siege engines, markets, roads, armouries and castles, plus a faith branch that only shows for its own religion (Take the Cross for Catholics, Answer the Jihad for Muslims, Defenders of Orthodoxy, or the Old Ways)
+- The *Take the Cross* focuses do the same as the decision and complete on their own if the country already swore the vow
+- `tools/gen_focus.py` writes all of this
 
 ## Regenerating the map
 `tools/` holds the Python scripts that built the country and state files from the vanilla game files.

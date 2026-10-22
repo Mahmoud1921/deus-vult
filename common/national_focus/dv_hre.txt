@@ -1,0 +1,357 @@
+focus_tree = {
+	id = dv_hre_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HRE
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 50 y = 1200 }
+
+	focus = {
+		id = dv_hre_diet_of_christ
+		icon = GFX_goal_generic_national_unity
+		x = 6
+		y = 0
+		cost = 3
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = dv_hre_take_the_cross
+		icon = GFX_goal_generic_major_alliance
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_hre_diet_of_christ }
+		available = {
+			country_exists = JRS
+			JRS = { has_war_with = AYB }
+			NOT = { has_war_with = JRS }
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = JRS
+			}
+		}
+		bypass = {
+			has_idea = dv_crusader_vow
+		}
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			if = {
+				limit = { is_in_faction = no }
+				JRS = { add_to_faction = ROOT }
+			}
+			if = {
+				limit = { NOT = { has_war_with = AYB } }
+				declare_war_on = { target = AYB type = annex_everything }
+			}
+			add_ideas = dv_crusader_vow
+			create_field_marshal = {
+				name = "Frederick Barbarossa"
+				traits = { }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 4
+				planning_skill = 4
+				logistics_skill = 3
+			}
+		}
+	}
+
+	focus = {
+		id = dv_hre_passage_through_hungary
+		icon = GFX_goal_generic_improve_relations
+		x = 2
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_hre_take_the_cross }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = { country_exists = HNG NOT = { has_war_with = HNG } }
+				HNG = { give_military_access = ROOT }
+				add_opinion_modifier = { target = HNG modifier = dv_friendship }
+				HNG = { add_opinion_modifier = { target = ROOT modifier = dv_friendship } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_hre_bargain_with_isaac
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 1
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_hre_passage_through_hungary }
+		mutually_exclusive = { focus = dv_hre_force_the_passage }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = -50
+			if = {
+				limit = { country_exists = BYZ NOT = { has_war_with = BYZ } }
+				BYZ = { give_military_access = ROOT }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_hre_force_the_passage
+		icon = GFX_goal_generic_occupy_start_war
+		x = 3
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_hre_passage_through_hungary }
+		mutually_exclusive = { focus = dv_hre_bargain_with_isaac }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 0.3
+		}
+		completion_reward = {
+			army_experience = 10
+			if = {
+				limit = { country_exists = BYZ NOT = { has_war_with = BYZ } }
+				create_wargoal = { type = take_state_focus target = BYZ generator = { 212 341 } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_hre_storm_of_iconium
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 2
+		y = 4
+		cost = 5
+		prerequisite = { focus = dv_hre_bargain_with_isaac focus = dv_hre_force_the_passage }
+		bypass = {
+			NOT = { country_exists = RUM }
+		}
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 25
+			if = {
+				limit = { country_exists = RUM NOT = { has_war_with = RUM } }
+				create_wargoal = { type = take_state_focus target = RUM generator = { 346 } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_hre_teutonic_order
+		icon = GFX_goal_generic_special_forces
+		x = 2
+		y = 5
+		cost = 5
+		prerequisite = { focus = dv_hre_storm_of_iconium }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_teutonic_order
+		}
+	}
+
+	focus = {
+		id = dv_hre_italian_policy
+		icon = GFX_goal_generic_political_pressure
+		x = 6
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_hre_diet_of_christ }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = dv_hre_peace_of_constance
+		icon = GFX_goal_generic_improve_relations
+		x = 5
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_hre_italian_policy }
+		mutually_exclusive = { focus = dv_hre_pressure_the_pope }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_lombard_towns
+		}
+	}
+
+	focus = {
+		id = dv_hre_pressure_the_pope
+		icon = GFX_goal_generic_territory_or_war
+		x = 7
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_hre_italian_policy }
+		mutually_exclusive = { focus = dv_hre_peace_of_constance }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 0.2
+		}
+		completion_reward = {
+			add_state_claim = 2
+			if = {
+				limit = { country_exists = PPS NOT = { has_war_with = PPS } }
+				create_wargoal = { type = take_state_focus target = PPS generator = { 2 } }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_hre_sicilian_marriage
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 6
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_hre_peace_of_constance focus = dv_hre_pressure_the_pope }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_claim = 115
+			add_state_claim = 117
+			add_state_claim = 156
+			add_state_claim = 849
+			add_state_claim = 157
+			add_state_claim = 116
+		}
+	}
+
+	focus = {
+		id = dv_hre_crown_of_sicily
+		icon = GFX_goal_generic_major_war
+		x = 6
+		y = 4
+		cost = 5
+		prerequisite = { focus = dv_hre_sicilian_marriage }
+		bypass = {
+			NOT = { country_exists = SCL }
+		}
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = { country_exists = SCL NOT = { has_war_with = SCL } }
+				create_wargoal = { type = annex_everything target = SCL }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_hre_imperial_diet
+		icon = GFX_goal_generic_national_unity
+		x = 11
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_hre_diet_of_christ }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+
+	focus = {
+		id = dv_hre_fall_of_the_lion
+		icon = GFX_goal_generic_military_sphere
+		x = 10
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_hre_imperial_diet }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = dv_hre_ostsiedlung
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 12
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_hre_imperial_diet }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_ostsiedlung
+		}
+	}
+
+	focus = {
+		id = dv_hre_imperial_cities
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 11
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_hre_fall_of_the_lion }
+		prerequisite = { focus = dv_hre_ostsiedlung }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+
+	focus = {
+		id = dv_hre_hohenstaufen
+		icon = GFX_goal_generic_political_pressure
+		x = 9
+		y = 5
+		cost = 5
+		prerequisite = { focus = dv_hre_crown_of_sicily }
+		prerequisite = { focus = dv_hre_imperial_cities }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_hohenstaufen
+		}
+	}
+}
