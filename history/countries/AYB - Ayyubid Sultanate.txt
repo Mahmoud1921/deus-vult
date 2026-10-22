@@ -41,3 +41,4 @@ JRS = {
 declare_war_on = { target = JRS type = annex_everything }
 declare_war_on = { target = TRP type = annex_everything }
 declare_war_on = { target = ANT type = annex_everything }
+create_faction = DV_FACTION_AYYUBID_ALLIANCE

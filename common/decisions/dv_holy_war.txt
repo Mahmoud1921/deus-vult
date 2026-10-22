@@ -1,0 +1,150 @@
+dv_holy_war = {
+	dv_take_the_cross = {
+		icon = generic_decision
+		cost = 50
+		visible = {
+			has_idea = dv_catholic
+			NOT = { tag = JRS }
+			country_exists = JRS
+		}
+		available = {
+			JRS = { has_war_with = AYB }
+			is_in_faction = no
+			NOT = { has_war_with = JRS }
+			NOT = { has_war_with = AYB }
+		}
+		complete_effect = {
+			JRS = { add_to_faction = ROOT }
+			declare_war_on = { target = AYB type = annex_everything }
+			add_ideas = dv_crusader_vow
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	dv_answer_the_jihad = {
+		icon = generic_decision
+		cost = 50
+		visible = {
+			OR = {
+				has_idea = dv_sunni
+				has_idea = dv_shia
+			}
+			NOT = { tag = AYB }
+			country_exists = AYB
+		}
+		available = {
+			AYB = { has_war_with = JRS }
+			is_in_faction = no
+			NOT = { has_war_with = AYB }
+			NOT = { has_war_with = JRS }
+		}
+		complete_effect = {
+			AYB = { add_to_faction = ROOT }
+			declare_war_on = { target = JRS type = annex_everything }
+			add_ideas = dv_jihad
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+dv_faith = {
+	dv_convert_pagan_to_catholic = {
+		icon = generic_decision
+		cost = 100
+		visible = {
+			has_idea = dv_pagan
+		}
+		complete_effect = {
+			remove_ideas = dv_pagan
+			add_ideas = dv_catholic
+			add_stability = -0.10
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	dv_convert_pagan_to_orthodox = {
+		icon = generic_decision
+		cost = 100
+		visible = {
+			has_idea = dv_pagan
+		}
+		complete_effect = {
+			remove_ideas = dv_pagan
+			add_ideas = dv_orthodox
+			add_stability = -0.10
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	dv_convert_pagan_to_sunni = {
+		icon = generic_decision
+		cost = 100
+		visible = {
+			has_idea = dv_pagan
+		}
+		complete_effect = {
+			remove_ideas = dv_pagan
+			add_ideas = dv_sunni
+			add_stability = -0.10
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	dv_convert_tengri_to_catholic = {
+		icon = generic_decision
+		cost = 100
+		visible = {
+			has_idea = dv_tengri
+		}
+		complete_effect = {
+			remove_ideas = dv_tengri
+			add_ideas = dv_catholic
+			add_stability = -0.10
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	dv_convert_tengri_to_orthodox = {
+		icon = generic_decision
+		cost = 100
+		visible = {
+			has_idea = dv_tengri
+		}
+		complete_effect = {
+			remove_ideas = dv_tengri
+			add_ideas = dv_orthodox
+			add_stability = -0.10
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	dv_convert_tengri_to_sunni = {
+		icon = generic_decision
+		cost = 100
+		visible = {
+			has_idea = dv_tengri
+		}
+		complete_effect = {
+			remove_ideas = dv_tengri
+			add_ideas = dv_sunni
+			add_stability = -0.10
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

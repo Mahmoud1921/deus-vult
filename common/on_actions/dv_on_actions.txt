@@ -1,0 +1,110 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = { has_idea = dv_catholic }
+				every_other_country = {
+					limit = { has_idea = dv_catholic }
+					add_opinion_modifier = { target = PREV modifier = dv_same_faith }
+				}
+				every_other_country = {
+					limit = { has_idea = dv_orthodox }
+					add_opinion_modifier = { target = PREV modifier = dv_schismatic }
+				}
+				every_other_country = {
+					limit = { has_idea = dv_sunni }
+					add_opinion_modifier = { target = PREV modifier = dv_infidel }
+				}
+				every_other_country = {
+					limit = { has_idea = dv_shia }
+					add_opinion_modifier = { target = PREV modifier = dv_infidel }
+				}
+			}
+			every_country = {
+				limit = { has_idea = dv_orthodox }
+				every_other_country = {
+					limit = { has_idea = dv_catholic }
+					add_opinion_modifier = { target = PREV modifier = dv_schismatic }
+				}
+				every_other_country = {
+					limit = { has_idea = dv_orthodox }
+					add_opinion_modifier = { target = PREV modifier = dv_same_faith }
+				}
+				every_other_country = {
+					limit = { has_idea = dv_sunni }
+					add_opinion_modifier = { target = PREV modifier = dv_infidel }
+				}
+				every_other_country = {
+					limit = { has_idea = dv_shia }
+					add_opinion_modifier = { target = PREV modifier = dv_infidel }
+				}
+			}
+			every_country = {
+				limit = { has_idea = dv_sunni }
+				every_other_country = {
+					limit = { has_idea = dv_catholic }
+					add_opinion_modifier = { target = PREV modifier = dv_infidel }
+				}
+				every_other_country = {
+					limit = { has_idea = dv_orthodox }
+					add_opinion_modifier = { target = PREV modifier = dv_infidel }
+				}
+				every_other_country = {
+					limit = { has_idea = dv_sunni }
+					add_opinion_modifier = { target = PREV modifier = dv_same_faith }
+				}
+				every_other_country = {
+					limit = { has_idea = dv_shia }
+					add_opinion_modifier = { target = PREV modifier = dv_schismatic }
+				}
+			}
+			every_country = {
+				limit = { has_idea = dv_shia }
+				every_other_country = {
+					limit = { has_idea = dv_catholic }
+					add_opinion_modifier = { target = PREV modifier = dv_infidel }
+				}
+				every_other_country = {
+					limit = { has_idea = dv_orthodox }
+					add_opinion_modifier = { target = PREV modifier = dv_infidel }
+				}
+				every_other_country = {
+					limit = { has_idea = dv_sunni }
+					add_opinion_modifier = { target = PREV modifier = dv_schismatic }
+				}
+				every_other_country = {
+					limit = { has_idea = dv_shia }
+					add_opinion_modifier = { target = PREV modifier = dv_same_faith }
+				}
+			}
+			every_country = {
+				limit = { has_idea = dv_pagan }
+				every_other_country = {
+					limit = { has_idea = dv_pagan }
+					add_opinion_modifier = { target = PREV modifier = dv_same_faith }
+				}
+			}
+			every_country = {
+				limit = { has_idea = dv_tengri }
+				every_other_country = {
+					limit = { has_idea = dv_tengri }
+					add_opinion_modifier = { target = PREV modifier = dv_same_faith }
+				}
+			}
+			every_country = {
+				limit = { has_idea = dv_dharmic }
+				every_other_country = {
+					limit = { has_idea = dv_dharmic }
+					add_opinion_modifier = { target = PREV modifier = dv_same_faith }
+				}
+			}
+			every_country = {
+				limit = { has_idea = dv_native }
+				every_other_country = {
+					limit = { has_idea = dv_native }
+					add_opinion_modifier = { target = PREV modifier = dv_same_faith }
+				}
+			}
+		}
+	}
+}

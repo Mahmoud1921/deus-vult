@@ -1,0 +1,278 @@
+focus_tree = {
+	id = dv_jerusalem_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = JRS
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 50 y = 1200 }
+
+	focus = {
+		id = dv_jrs_horns_of_hattin
+		icon = GFX_goal_generic_major_war
+		x = 6
+		y = 0
+		cost = 3
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 15
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = dv_jrs_defend_tyre
+		icon = GFX_goal_generic_fortify_city
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_jrs_horns_of_hattin }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 5000
+			553 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = dv_jrs_military_orders
+		icon = GFX_goal_generic_special_forces
+		x = 2
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_jrs_defend_tyre }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_military_orders
+		}
+	}
+
+	focus = {
+		id = dv_jrs_turcopoles
+		icon = GFX_goal_generic_cavalry
+		x = 1
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_jrs_military_orders }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_turcopoles
+			add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 500 producer = JRS }
+		}
+	}
+
+	focus = {
+		id = dv_jrs_siege_engines
+		icon = GFX_goal_generic_army_artillery
+		x = 3
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_jrs_military_orders }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 100 producer = JRS }
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = dv_jrs_reclaim_jerusalem
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 2
+		y = 4
+		cost = 5
+		prerequisite = { focus = dv_jrs_turcopoles }
+		prerequisite = { focus = dv_jrs_siege_engines }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_core = 454
+			add_state_core = 455
+			add_state_core = 553
+			add_state_core = 799
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = dv_jrs_appeal_to_the_pope
+		icon = GFX_goal_generic_improve_relations
+		x = 6
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_jrs_horns_of_hattin }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+			if = {
+				limit = { country_exists = PPS }
+				add_opinion_modifier = { target = PPS modifier = dv_same_faith }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_jrs_the_third_crusade
+		icon = GFX_goal_generic_major_alliance
+		x = 5
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_jrs_appeal_to_the_pope }
+		mutually_exclusive = { focus = dv_jrs_peace_with_saladin }
+		available = {
+			has_war_with = AYB
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = { tag = AGV tag = FRK tag = HRE }
+					is_ai = yes
+					is_in_faction = no
+					NOT = { has_war_with = JRS }
+				}
+				JRS = { add_to_faction = PREV }
+				declare_war_on = { target = AYB type = annex_everything }
+				add_ideas = dv_crusader_vow
+			}
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = dv_jrs_peace_with_saladin
+		icon = GFX_goal_generic_neutrality_focus
+		x = 7
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_jrs_appeal_to_the_pope }
+		mutually_exclusive = { focus = dv_jrs_the_third_crusade }
+		available = {
+			has_war_with = AYB
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			white_peace = AYB
+			add_stability = 0.10
+			add_war_support = -0.10
+		}
+	}
+
+	focus = {
+		id = dv_jrs_lionheart
+		icon = GFX_goal_generic_amphibious_assault
+		x = 5
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_jrs_the_third_crusade }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 25
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = dv_jrs_haute_cour
+		icon = GFX_goal_generic_national_unity
+		x = 10
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_jrs_horns_of_hattin }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = dv_jrs_italian_merchants
+		icon = GFX_goal_generic_trade
+		x = 9
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_jrs_haute_cour }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_italian_merchants
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+
+	focus = {
+		id = dv_jrs_castles
+		icon = GFX_goal_generic_construction
+		x = 11
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_jrs_haute_cour }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+			}
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+
+	focus = {
+		id = dv_jrs_kingdom_endures
+		icon = GFX_goal_generic_defence
+		x = 10
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_jrs_italian_merchants }
+		prerequisite = { focus = dv_jrs_castles }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_kingdom_endures
+		}
+	}
+}
