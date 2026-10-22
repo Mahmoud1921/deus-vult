@@ -40,7 +40,7 @@ Not done yet: events, focus trees for other nations, proper flags and leader por
 ## What's in 0.4.0: icons and the opening war
 - Medieval unit icons replace the WW2 ones: a nasal helm for men-at-arms, a mounted knight with a lance, a trebuchet for siege engines, a bow for archers, and sword-and-shield and trebuchet pictures for the equipment. `tools/draw_icons.py` draws them, and `interface/dv_units.gfx` registers the archer sprite
 - The game opens at war, as it was in July 1187: the Ayyubids against the Crusader States faction (Jerusalem, Tripoli and Antioch)
-- The 3D models on the map are still vanilla. Turn on "show units as counters" in the game settings to see the medieval icons on the map instead
+- The 3D models on the map are still vanilla here (replaced in the 3D unit models section below)
 
 ## What's in 0.5.0: focus trees and religion
 - **Religions now have effects.** Each faith's national spirit gives small bonuses: Catholic and Orthodox give stability, Sunni gives morale, Tengrism gives army speed, the Old Gods give defence, and so on
@@ -59,6 +59,18 @@ Not done yet: events, focus trees for other nations, proper flags and leader por
   - Shipyards exist only in Venice, Pisa, Constantinople, Sicily and Alexandria. Naval bases are capped at level 3
 - Building names are replaced (`localisation/english/replace/dv_buildings_l_english.yml`): Civilian Factory → Market Town, Military Factory → Armoury, Infrastructure → Roads, Land Fort → Castle, Naval Base → Harbour, Dockyard → Shipyard, Coastal Fort → Sea Walls, Supply Hub → Waystation, Railways → Royal Roads
 - `gen.py` writes the buildings (see `medieval_buildings()`)
+
+## 3D unit models
+- The WW2 soldiers on the map are replaced by original medieval models (`gfx/models/units/dv/`). Their textures are baked in Blender from procedural chainmail, cloth weave, leather, wood and steel, with ambient occlusion, normal maps and shine maps like the vanilla units:
+  - **Men-at-arms** with a spear, nasal helm, kite shield and a cross surcoat (white with a red cross in the west, crimson with a gold cross for the Orthodox)
+  - **Knights** in great helms with lances, riding the vanilla horse
+  - **Saracens** in turban helms and kaftans with round shields, for Islamic and African realms
+  - **Archers** in kettle hats and gambesons, with a bow and quiver. Archers now have their own model (`sprite = dv_archers`)
+  - East Asian realms get red lacquered soldiers, and the Americas cotton-armoured warriors
+  - **Siege engines** are a trebuchet with its crew
+- The soldiers are rigged to the vanilla infantry skeleton, so they use the game's own walking, charging and riding animations. Weapons are held at the same hand nodes as the vanilla rifles
+- `gfx/entities/dv_units.gfx` registers the meshes. `units_infantry.asset`, `units_cavalry.asset` and `units_artillery.asset` override the vanilla files: they keep every vanilla entity and replace only the generic and per-culture infantry, archer, cavalry and artillery entities
+- Rebuild with `tools/models/build_models.py` (Blender's `bpy` module and the [io_pdx_mesh](https://github.com/ross-g/io_pdx_mesh) exporter) and `tools/models/gen_entities.py`. Both read the vanilla game folder. Rerun `gen_entities.py` after a game patch, since it copies the vanilla entity files
 
 ## Regenerating the map
 `tools/` holds the Python scripts that built the country and state files from the vanilla game files.
