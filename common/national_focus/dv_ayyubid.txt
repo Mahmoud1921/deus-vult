@@ -1,0 +1,263 @@
+focus_tree = {
+	id = dv_ayyubid_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = AYB
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 50 y = 1200 }
+
+	focus = {
+		id = dv_ayb_unite_the_faithful
+		icon = GFX_goal_generic_national_unity
+		x = 6
+		y = 0
+		cost = 3
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = dv_ayb_mamluks
+		icon = GFX_goal_generic_army_doctrines
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_ayb_unite_the_faithful }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_mamluk_regiments
+		}
+	}
+
+	focus = {
+		id = dv_ayb_victory_at_hattin
+		icon = GFX_goal_generic_major_war
+		x = 2
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_ayb_mamluks }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = dv_ayb_take_jerusalem
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 1
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_ayb_victory_at_hattin }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_core = 454
+			add_state_core = 455
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = dv_ayb_sweep_the_coast
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 3
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_ayb_victory_at_hattin }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_core = 553
+			add_state_core = 799
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 100 producer = AYB }
+		}
+	}
+
+	focus = {
+		id = dv_ayb_saladin_in_the_field
+		icon = GFX_goal_generic_position_armies
+		x = 2
+		y = 4
+		cost = 5
+		prerequisite = { focus = dv_ayb_take_jerusalem }
+		prerequisite = { focus = dv_ayb_sweep_the_coast }
+		search_filters = { FOCUS_FILTER_MILITARY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_field_marshal = {
+				name = "Saladin"
+				traits = { }
+				skill = 5
+				attack_skill = 5
+				defense_skill = 4
+				planning_skill = 4
+				logistics_skill = 4
+			}
+		}
+	}
+
+	focus = {
+		id = dv_ayb_caliphs_blessing
+		icon = GFX_goal_generic_improve_relations
+		x = 6
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_ayb_unite_the_faithful }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+			if = {
+				limit = { country_exists = ABS }
+				add_opinion_modifier = { target = ABS modifier = dv_same_faith }
+			}
+		}
+	}
+
+	focus = {
+		id = dv_ayb_proclaim_jihad
+		icon = GFX_goal_generic_major_alliance
+		x = 5
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_ayb_caliphs_blessing }
+		mutually_exclusive = { focus = dv_ayb_treaty_of_ramla }
+		available = {
+			has_war_with = JRS
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = { tag = ARQ tag = ABS }
+					is_ai = yes
+					is_in_faction = no
+					NOT = { has_war_with = AYB }
+				}
+				AYB = { add_to_faction = PREV }
+				declare_war_on = { target = JRS type = annex_everything }
+				add_ideas = dv_jihad
+			}
+			add_ideas = dv_jihad
+		}
+	}
+
+	focus = {
+		id = dv_ayb_treaty_of_ramla
+		icon = GFX_goal_generic_neutrality_focus
+		x = 7
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_ayb_caliphs_blessing }
+		mutually_exclusive = { focus = dv_ayb_proclaim_jihad }
+		available = {
+			has_war_with = JRS
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			white_peace = JRS
+			add_stability = 0.15
+			add_war_support = -0.10
+		}
+	}
+
+	focus = {
+		id = dv_ayb_egyptian_grain
+		icon = GFX_goal_generic_consumer_goods
+		x = 10
+		y = 1
+		cost = 5
+		prerequisite = { focus = dv_ayb_unite_the_faithful }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_egyptian_grain
+		}
+	}
+
+	focus = {
+		id = dv_ayb_citadel_of_cairo
+		icon = GFX_goal_generic_fortify_city
+		x = 9
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_ayb_egyptian_grain }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			907 = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+
+	focus = {
+		id = dv_ayb_madrasas
+		icon = GFX_goal_generic_scientific_exchange
+		x = 11
+		y = 2
+		cost = 5
+		prerequisite = { focus = dv_ayb_egyptian_grain }
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_madrasas
+		}
+	}
+
+	focus = {
+		id = dv_ayb_sultan_of_egypt_and_syria
+		icon = GFX_goal_generic_political_pressure
+		x = 10
+		y = 3
+		cost = 5
+		prerequisite = { focus = dv_ayb_citadel_of_cairo }
+		prerequisite = { focus = dv_ayb_madrasas }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = dv_sultan_of_egypt_and_syria
+		}
+	}
+}

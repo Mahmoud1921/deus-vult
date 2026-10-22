@@ -1,0 +1,11 @@
+opinion_modifiers = {
+	dv_same_faith = {
+		value = 25
+	}
+	dv_schismatic = {
+		value = -15
+	}
+	dv_infidel = {
+		value = -40
+	}
+}

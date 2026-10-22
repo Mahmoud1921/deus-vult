@@ -46,6 +46,7 @@ JRS = {
 declare_war_on = { target = JRS type = annex_everything }
 declare_war_on = { target = TRP type = annex_everything }
 declare_war_on = { target = ANT type = annex_everything }
+create_faction = DV_FACTION_AYYUBID_ALLIANCE
 '''}
 # --- countries
 tags=[];loc=['l_english:']
@@ -119,17 +120,7 @@ set_popularities = {{
         p=os.path.join(OUT,'gfx/flags',sub); os.makedirs(p,exist_ok=True)
         (img if sub=='' else img.resize(size,Image.LANCZOS)).save(os.path.join(p,tag+'.tga'))
 w('common/country_tags/dv_countries.txt','\n'.join(tags)+'\n')
-# religions as national spirits (placeholder until real religion mechanic)
-REL={'catholic':('Catholic','The Pope in Rome is the head of the Church.'),'orthodox':('Orthodox','The Patriarch of Constantinople guides the faithful.'),
-'sunni':('Sunni Islam','The Abbasid Caliph in Baghdad is the nominal head of the faithful.'),'shia':('Shia Islam','The followers of Ali.'),
-'pagan':('Old Gods','The old gods of forest and field are still worshipped here.'),'tengri':('Tengrism','The Eternal Blue Sky rules over the steppe.'),
-'dharmic':('Eastern Faiths','Buddhist, Hindu and Confucian traditions shape this realm.'),'native':('Native Faiths','Local traditions far from the Holy Land.')}
-ideas='ideas = {\n\tcountry = {\n'
-for k,(n,dsc) in REL.items():
-    ideas+=f'\t\tdv_{k} = {{\n\t\t\tpicture = generic_morale_bonus\n\t\t\tallowed = {{ always = no }}\n\t\t\tremoval_cost = -1\n\t\t\tmodifier = {{ }}\n\t\t}}\n'
-    loc.append(f' dv_{k}:0 "{n}"'); loc.append(f' dv_{k}_desc:0 "{dsc}"')
-ideas+='\t}\n}\n'
-w('common/ideas/dv_religions.txt',ideas)
+# religion national spirits, holy war decisions and focus trees live in tools/gen_content.py
 # bookmark
 majors=['JRS','AYB','AGV','FRK','HRE','BYZ','RUM']
 bm='bookmarks = {\n\tbookmark = {\n\t\tname = "DV_BOOKMARK_1187"\n\t\tdesc = "DV_BOOKMARK_1187_DESC"\n\t\tdate = 1187.7.4.12\n\t\tpicture = "GFX_select_date_1936"\n\t\tdefault_country = "JRS"\n\t\tdefault = yes\n'
@@ -147,7 +138,7 @@ BD={'JRS':"4 July 1187. King Guy has marched the whole army of Jerusalem out to 
 'HRE':"Frederick Barbarossa, the old emperor, has one last campaign left in him.",
 'BYZ':"Isaac II Angelos holds a weakened empire, threatened by Bulgarian rebels, Sicilian fleets and crusading armies alike.",
 'RUM':"Kilij Arslan II has beaten Byzantium at Myriokephalon, but his sons are already fighting over his realm."}
-loc+=[' DV_FACTION_CRUSADER_STATES:0 "Crusader States"',' DV_BOOKMARK_1187:0 "The Third Crusade"',' DV_BOOKMARK_1187_DESC:0 "July 1187. Saladin has invaded the Kingdom of Jerusalem, and Europe is about to take the cross."',' DV_OTHER_BOOKMARK_DESC:0 "A realm caught up in the struggle for the Holy Land."']
+loc+=[' DV_FACTION_CRUSADER_STATES:0 "Crusader States"',' DV_FACTION_AYYUBID_ALLIANCE:0 "Ayyubid Alliance"',' DV_BOOKMARK_1187:0 "The Third Crusade"',' DV_BOOKMARK_1187_DESC:0 "July 1187. Saladin has invaded the Kingdom of Jerusalem, and Europe is about to take the cross."',' DV_OTHER_BOOKMARK_DESC:0 "A realm caught up in the struggle for the Holy Land."']
 loc+=[f' DV_{k}_BOOKMARK_DESC:0 "{v}"' for k,v in BD.items()]
 w('localisation/english/dv_countries_l_english.yml','\n'.join(loc)+'\n',bom=True)
 w('common/defines/dv_defines.lua','NDefines.NGame.START_DATE = "1187.7.4.12"\nNDefines.NGame.END_DATE = "1300.1.1.1"\n')

@@ -1,0 +1,96 @@
+ideas = {
+	country = {
+		dv_crusader_vow = {
+			picture = generic_morale_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		dv_jihad = {
+			picture = generic_morale_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		dv_military_orders = {
+			picture = generic_infantry_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.15
+				army_org_factor = 0.05
+			}
+		}
+		dv_turcopoles = {
+			picture = generic_army_war_college
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		dv_italian_merchants = {
+			picture = generic_foreign_capital
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				political_power_gain = 0.1
+			}
+		}
+		dv_kingdom_endures = {
+			picture = generic_pp_unity_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				army_defence_factor = 0.05
+			}
+		}
+		dv_mamluk_regiments = {
+			picture = generic_army_war_college
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
+		dv_egyptian_grain = {
+			picture = generic_agrarian_society
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.1
+				stability_factor = 0.05
+			}
+		}
+		dv_madrasas = {
+			picture = generic_research_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.1
+			}
+		}
+		dv_sultan_of_egypt_and_syria = {
+			picture = generic_pp_unity_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				army_attack_factor = 0.05
+			}
+		}
+	}
+}

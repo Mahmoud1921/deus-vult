@@ -1,0 +1,21 @@
+dv_holy_war = {
+	icon = generic_crisis
+	picture = GFX_decision_cat_generic_hre
+	visible = {
+		OR = {
+			has_idea = dv_catholic
+			has_idea = dv_sunni
+			has_idea = dv_shia
+		}
+	}
+}
+
+dv_faith = {
+	icon = generic_political_actions
+	visible = {
+		OR = {
+			has_idea = dv_pagan
+			has_idea = dv_tengri
+		}
+	}
+}
