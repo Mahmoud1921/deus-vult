@@ -9,20 +9,20 @@ state={
 	history={
 		owner = LVN
 		add_core_of = LVN
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			9340 = {
+				bunker = 3
+				naval_base = 3
+			}
+		}
 
 		victory_points = {
 			9340 5 
 		}
-		buildings = {
-			infrastructure = 3 #was: 5
-			arms_factory = 1
-			industrial_complex = 4
-			air_base = 3
-			9340 = {
-				naval_base = 3
-			}
-
-		}
+		
 
 	}
 

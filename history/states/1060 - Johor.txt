@@ -15,6 +15,12 @@ state = {
 	history = {
 		owner = SRV
 		add_core_of = SRV
+		buildings = {
+			infrastructure = 1
+			13376 = {
+				naval_base = 1
+			}
+		}
 
 
 
@@ -22,16 +28,7 @@ state = {
 			13376 2 # Johor Bahru 
 		}
 
-		buildings = {
-
-			infrastructure = 2
-			industrial_complex = 1
-
-			13376 = {
-				naval_base = 1
-			}
-
-		}
+		
 		
 	}
 

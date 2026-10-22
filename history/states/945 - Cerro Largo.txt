@@ -13,14 +13,13 @@ state = {
 	history = {
 		owner = AMZ
 		add_core_of = AMZ
+		buildings = {
+			infrastructure = 1
+		}
  
 
 
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 2
-			dockyard = 1
-		}
+		
 
 		victory_points = {
 			1641 1

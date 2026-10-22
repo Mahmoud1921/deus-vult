@@ -9,6 +9,12 @@ state = {
 	history = {
 		owner = JIN
 		add_core_of = JIN
+		buildings = {
+			infrastructure = 1
+			10000 = {
+				naval_base = 3
+			}
+		}
 
 
 		IF = {
@@ -21,19 +27,7 @@ state = {
 			10000 5 # Qingdao
 		}
 
-		buildings = {
-
-			infrastructure = 3 #was: 5
-			industrial_complex = 1
-			air_base = 1
-
-			10000 = {
-				naval_base = 5
-				coastal_bunker = 1
-				bunker = 1
-			}
-
-		}
+		
 
 		
 

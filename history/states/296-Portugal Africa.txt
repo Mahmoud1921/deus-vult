@@ -11,16 +11,17 @@ state={
 	history={
 		owner = GHN
 		add_core_of = GHN
+		buildings = {
+			infrastructure = 1
+			12891 = {
+				naval_base = 1
+			}
+		}
 
 		victory_points = {
 			12891 1
 		}
-		buildings = {
-			infrastructure = 1
-			12891 ={
-				naval_base = 1
-			}
-		}
+		
 	}
 
 	provinces={

@@ -8,10 +8,11 @@ state={
 	history={
 		owner = MGT
 		add_core_of = MGT
-
 		buildings = {
 			infrastructure = 1
 		}
+
+		
 		victory_points = {
 			12612 1 #Sainshand
 		}

@@ -12,17 +12,16 @@ state = {
 	history = {
 		owner = ADN
 		add_core_of = ADN
-
-
-
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-			air_base = 1
+			infrastructure = 1
 			13288 = {
 				naval_base = 1
 			}
 		}
+
+
+
+		
 		
 		victory_points = {
 			2210 5 

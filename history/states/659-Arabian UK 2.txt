@@ -12,10 +12,10 @@ state={
 	history = {
 		owner = AYB
 		add_core_of = AYB
-
 		buildings = {
 			infrastructure = 1
-			air_base = 1
 		}
+
+		
 	}
 }

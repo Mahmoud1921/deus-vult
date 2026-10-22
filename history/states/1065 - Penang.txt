@@ -11,6 +11,12 @@ state = {
 	history = {
 		owner = SRV
 		add_core_of = SRV
+		buildings = {
+			infrastructure = 1
+			13408 = {
+				naval_base = 1
+			}
+		}
 
 
 
@@ -18,16 +24,7 @@ state = {
 			13408 1 # Seberang Perai 
 		}
 
-		buildings = {
-
-			infrastructure = 2
-
-			13408 = {
-				naval_base = 1
-				bunker = 2
-			}
-
-		}
+		
 		
 	}
 

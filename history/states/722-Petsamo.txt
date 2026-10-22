@@ -8,18 +8,19 @@ state={
 	history={
 		owner = SAP
 		add_core_of = SAP
+		buildings = {
+			infrastructure = 1
+			9140 = {
+				naval_base = 1
+			}
+		}
 
 
 		victory_points = { #Petsamo
 			9140 1
 		}
 
-		buildings = {
-			infrastructure = 1 #MM: Was 2
-			9140 = {
-				naval_base = 1
-			}
-		}
+		
 
 	}
 	

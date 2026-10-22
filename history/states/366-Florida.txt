@@ -9,16 +9,13 @@ state={
 	history={
 		owner = NAM
 		add_core_of = NAM
-
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 3
-			air_base = 8
+			infrastructure = 1
 			1572 = {
 				naval_base = 2
 			}
 			1843 = {
-				naval_base = 5
+				naval_base = 3
 			}
 			7388 = {
 				naval_base = 3
@@ -27,6 +24,8 @@ state={
 				naval_base = 1
 			}
 		}
+
+		
 		victory_points = {
 			1843 5 
 		}

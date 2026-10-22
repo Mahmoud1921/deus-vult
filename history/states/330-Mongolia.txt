@@ -10,6 +10,14 @@ state={
 	history={
 		owner = MGT
 		add_core_of = MGT
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			4801 = {
+				bunker = 3
+			}
+		}
 
 		victory_points = {
 			4801 10
@@ -17,13 +25,7 @@ state={
 		victory_points = {
 			7799 1 
 		}
-		buildings = {
-			infrastructure = 1
-			arms_factory = 1
-			industrial_complex = 3
-			air_base = 1
-
-		}
+		
 
 	}
 

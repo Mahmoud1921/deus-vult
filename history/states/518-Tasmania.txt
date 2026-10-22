@@ -12,6 +12,12 @@ state = {
 	history = {
 		owner = OCN
 		add_core_of = OCN
+		buildings = {
+			infrastructure = 1
+			5187 = {
+				naval_base = 2
+			}
+		}
 
 
 
@@ -19,17 +25,7 @@ state = {
 			5187 1 # Hobart
 		}
 
-		buildings = {
-
-			infrastructure = 3 #was: 5
-
-			5187 = {
-				naval_base = 2
-				# The Great Lake Scheme
-				dam = 1
-			}
-
-		}
+		
 		
 	}
 	provinces = {

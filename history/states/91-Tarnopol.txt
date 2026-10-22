@@ -8,6 +8,13 @@ state={
 	history={
 		owner = HLC
 		add_core_of = HLC
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			11479 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			11479 3
@@ -15,11 +22,7 @@ state={
 		#victory_points = {
 		#	3483 5
 		#}
-		buildings = {
-			infrastructure = 3
-			industrial_complex = 3
-			air_base = 5
-		}
+		
 	}
 
 	provinces={

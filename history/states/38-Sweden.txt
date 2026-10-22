@@ -8,6 +8,15 @@ state = {
 	history = {
 		owner = SWD
 		add_core_of = SWD
+		buildings = {
+			infrastructure = 2
+			11091 = {
+				bunker = 2
+			}
+			130 = {
+				naval_base = 1
+			}
+		}
 
 
 		victory_points = {
@@ -18,19 +27,7 @@ state = {
 			130 1 # Sundsvall
 		}
 
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-			air_base = 3
-
-			# Krångede Hydroelectric Power Station
-			11129 = { dam = 1 }
-
-			130 = {
-				naval_base = 1
-			}
-
-		}
+		
 
 	}
 

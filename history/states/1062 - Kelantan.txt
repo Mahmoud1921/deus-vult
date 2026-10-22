@@ -14,6 +14,12 @@ state = {
 	history = {
 		owner = SRV
 		add_core_of = SRV
+		buildings = {
+			infrastructure = 1
+			7329 = {
+				naval_base = 1
+			}
+		}
 
 
 
@@ -25,17 +31,7 @@ state = {
 			12199 1 # Kuala Terengganu 
 		}
 
-		buildings = {
-
-			infrastructure = 1
-			dockyard = 1
-			arms_factory = 1
-
-			7329 = {
-				naval_base = 1
-			}
-
-		}
+		
 		
 	}
 

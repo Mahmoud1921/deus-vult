@@ -12,6 +12,13 @@ state = {
 	history = {
 		owner = NJD
 		add_core_of = NJD
+		buildings = {
+			infrastructure = 2
+			7960 = {
+				bunker = 2
+				naval_base = 3
+			}
+		}
 
 		
 
@@ -19,12 +26,7 @@ state = {
 			7960 1 # Abu Dhabi
 		}
 
-		buildings = {
-			infrastructure = 1
-			7960 = {
-				naval_base = 3
-			}
-		}
+		
 
 	}
 

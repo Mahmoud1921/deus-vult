@@ -12,6 +12,12 @@ state = {
 	history = {
 		owner = MSA
 		add_core_of = MSA
+		buildings = {
+			infrastructure = 1
+			153 = {
+				naval_base = 1
+			}
+		}
 
 		
 
@@ -19,14 +25,7 @@ state = {
 			153 1 # Willemstad
 		}
 
-		buildings = {
-			fuel_silo = 1
-			infrastructure = 2
-			153 = {
-				naval_base = 1
-				coastal_bunker = 2
-			}
-		}
+		
 
 		
 	}

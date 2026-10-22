@@ -7,6 +7,12 @@ state = {
 	history = {
 		owner = DNK
 		add_core_of = DNK
+		buildings = {
+			infrastructure = 2
+			317 = {
+				bunker = 2
+			}
+		}
 
 
 
@@ -14,10 +20,7 @@ state = {
 			317 3  # Flensburg
 		}
 
-		buildings = {
-			infrastructure = 3
-			arms_factory = 1
-		}
+		
 		
 	}
 

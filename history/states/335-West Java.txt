@@ -14,6 +14,9 @@ state={
 	history={
 		owner = SRV
 		add_core_of = SRV
+		buildings = {
+			infrastructure = 1
+		}
 
 		victory_points = {
 			7421 15
@@ -22,10 +25,7 @@ state={
 			4434 1
 		}
 
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-		}
+		
 	}
 
 	provinces={

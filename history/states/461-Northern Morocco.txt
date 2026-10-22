@@ -14,6 +14,14 @@ state = {
 	history = {
 		owner = ALM
 		add_core_of = ALM
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			7069 = {
+				bunker = 2
+				naval_base = 3
+			}
+		}
 
 
 
@@ -25,14 +33,7 @@ state = {
 			10070 2 # Rabat
 		}
 
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-			air_base = 4
-			7069 = {
-				naval_base = 4
-			}
-		}
+		
 	}
 
 	provinces = {

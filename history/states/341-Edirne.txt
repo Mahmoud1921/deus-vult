@@ -12,18 +12,20 @@ state= {
 	history= {
 		owner = BYZ
 		add_core_of = BYZ
+		buildings = {
+			infrastructure = 2
+			11842 = {
+				bunker = 2
+			}
+			849 = {
+				naval_base = 3
+			}
+		}
 
 		victory_points = {
 			11842 5
 		}
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-			849 = {
-				naval_base = 3
-				coastal_bunker = 2
-			}
-		}
+		
 
 		
 

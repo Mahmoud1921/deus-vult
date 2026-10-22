@@ -8,18 +8,16 @@ state = {
 	history = {
 		owner = OCN
 		add_core_of = OCN
-
-
-
 		buildings = {
 			infrastructure = 1
-			air_base = 3
-
 			4329 = {
-				naval_base = 4
+				naval_base = 3
 			}
-
 		}
+
+
+
+		
 
 		victory_points = {
 			4329 5 # Port Moresby

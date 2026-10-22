@@ -10,12 +10,13 @@ state = {
 	history = {
 		owner = ALM
 		add_core_of = ALM
-
-
-
 		buildings = {
-			infrastructure = 0
+			infrastructure = 2
 		}
+
+
+
+		
 
 	}
 

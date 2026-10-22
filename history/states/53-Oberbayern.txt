@@ -8,13 +8,16 @@ state = {
 	history = {
 		owner = HRE
 		add_core_of = HRE
-
-
-
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 2
+			9515 = {
+				bunker = 2
+			}
 		}
+
+
+
+		
 		
 		victory_points = {
 			9515 3 # Regensburg

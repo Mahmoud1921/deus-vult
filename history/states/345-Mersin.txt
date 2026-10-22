@@ -7,6 +7,14 @@ state={
 		owner = CIL
 		add_core_of = CIL
 		add_claim_by = BYZ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			10056 = {
+				bunker = 3
+			}
+		}
 
 		victory_points = {
 			10056 1 
@@ -14,10 +22,7 @@ state={
 		victory_points = {
 			11810 5 
 		}
-		buildings = {
-			infrastructure = 2
-
-		}
+		
 
 	}
 

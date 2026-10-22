@@ -11,6 +11,15 @@ state = {
 	history = {
 		owner = VNC
 		add_core_of = VNC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 1
+			11584 = {
+				naval_base = 3
+			}
+		}
 
 		victory_points = { #Venezia
 			11584 10 
@@ -22,16 +31,7 @@ state = {
 			603 1
 		}
 
-		buildings = {
-			infrastructure = 3 #was: 6
-			arms_factory = 2
-			industrial_complex = 4
-			dockyard = 1
-			air_base = 3
-			11584 = {
-				naval_base = 6
-			}
-		}
+		
 		
 
 	}

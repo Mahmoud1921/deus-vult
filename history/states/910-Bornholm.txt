@@ -7,14 +7,14 @@ state = {
 	history = {
 		owner = DNK
 		add_core_of = DNK
-
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
-		6361 = {
+			6361 = {
 				naval_base = 1
 			}
 		}
+
+		
 	}
 
 	provinces={

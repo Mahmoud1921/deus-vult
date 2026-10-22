@@ -5,6 +5,9 @@ state = {
 	history = {
 		owner = ABY
 		add_core_of = ABY
+		buildings = {
+			infrastructure = 1
+		}
 
 		set_variable = {
 			908.ETH_state_development_production_speed = -0.3
@@ -17,10 +20,7 @@ state = {
 			modifier = ETH_state_development_dynamic_modifier
 
 		}
-		buildings = {
-			infrastructure = 1
-			arms_factory = 1
-		}
+		
 		victory_points = {
 			13240 2 
 		}

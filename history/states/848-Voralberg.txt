@@ -7,11 +7,11 @@ state={
 	history={
 		owner = HRE
 		add_core_of = HRE
-
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
 		}
+
+		
 		
 	}
 	provinces={

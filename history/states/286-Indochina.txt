@@ -12,6 +12,12 @@ state = {
 	history = {
 		owner = KHR
 		add_core_of = KHR
+		buildings = {
+			infrastructure = 1
+			10309 = {
+				naval_base = 1
+			}
+		}
 
 		
 
@@ -23,15 +29,7 @@ state = {
 			10309 2 # Tourane
 		}
 
-		buildings = {
-
-			infrastructure = 2
-
-			10309 = {
-				naval_base = 1
-			}
-
-		}
+		
 
 	}
 

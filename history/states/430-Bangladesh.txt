@@ -5,19 +5,17 @@ state={
 	history={
 		owner = HND
 		add_core_of = HND
+		buildings = {
+			infrastructure = 1
+			11968 = {
+				naval_base = 3
+			}
+		}
 
 		victory_points = {
 			11929 1 
 		}
-		buildings = {
-			infrastructure = 3 #was: 5
-			industrial_complex = 2
-			11968 = {
-				naval_base = 3
-
-			}
-
-		}
+		
 
 	}
 

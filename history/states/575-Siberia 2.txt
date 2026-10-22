@@ -8,12 +8,13 @@ state = {
 	history = {
 		owner = SBT
 		add_core_of = SBT
-
-
-
 		buildings = {
 			infrastructure = 1
 		}
+
+
+
+		
 		
 	}
 

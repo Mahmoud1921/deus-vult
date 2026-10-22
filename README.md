@@ -24,7 +24,7 @@ Copy this folder (as `deus_vult/`) and `launcher/deus_vult.mod` into
 - Simple generated placeholder flags for every tag
 - Saladin claims Jerusalem, Tripoli and Antioch. France claims the Angevin lands in France
 
-Not done yet: events, focus trees for other nations, proper flags and leader portraits. Vanilla buildings and resources are still on every state.
+Not done yet: events, focus trees for other nations, proper flags and leader portraits.
 
 ## What's in 0.3.0: armies
 - Units are renamed for the period: infantry is now **Men-at-Arms**, cavalry is **Knights** and towed artillery is **Siege Engines** (the Trebuchet). Equipment is now **Arms and Armour**. These overrides live in `localisation/english/replace/`
@@ -50,6 +50,15 @@ Not done yet: events, focus trees for other nations, proper flags and leader por
 - **Jerusalem focus tree (14 focuses):** Hattin, Hold Tyre, the Military Orders, Turcopoles, siege engines and Reclaim Jerusalem. *The Third Crusade* (which pulls AI-ruled England, France and the HRE into the war) and *Peace with Saladin* exclude each other. The internal branch ends in *The Kingdom Endures*
 - **Ayyubid focus tree (12 focuses):** Mamluk Regiments, Victory at Hattin, Take Jerusalem, Sweep the Coast and *Saladin Takes the Field* (Saladin as a field marshal). *Proclaim the Jihad* (pulls in the Artuqids and the Abbasids) and the *Treaty of Ramla* exclude each other. The internal branch ends in *Sultan of Egypt and Syria*
 - `tools/gen_content.py` writes all of this
+
+## What's in 0.6.0: medieval buildings
+- The 1936 buildings are replaced on every state:
+  - Air bases, radar, rocket sites, reactors, refineries and landmarks are removed
+  - Factories are cut back to what a 12th-century realm could support. Each capital has a Market Town and an Armoury, and the great powers (Ayyubids, HRE, England, France, Byzantium, Almohads, Sicily and others) get 3 and 2. Large cities in the theatre get a Market Town
+  - Every state in the theatre with a city has a **Castle** (land fort level 2). Capitals get level 3, and the famous strongholds get level 4: Kerak, Krak des Chevaliers, Antioch and Constantinople. Jerusalem, Cairo, Damascus and Aleppo get level 3
+  - Shipyards exist only in Venice, Pisa, Constantinople, Sicily and Alexandria. Naval bases are capped at level 3
+- Building names are replaced (`localisation/english/replace/dv_buildings_l_english.yml`): Civilian Factory → Market Town, Military Factory → Armoury, Infrastructure → Roads, Land Fort → Castle, Naval Base → Harbour, Dockyard → Shipyard, Coastal Fort → Sea Walls, Supply Hub → Waystation, Railways → Royal Roads
+- `gen.py` writes the buildings (see `medieval_buildings()`)
 
 ## Regenerating the map
 `tools/` holds the Python scripts that built the country and state files from the vanilla game files.

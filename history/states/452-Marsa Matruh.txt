@@ -9,10 +9,14 @@ state={
 	history={
 		owner = AYB
 		add_core_of = AYB
-
 		buildings = {
 			infrastructure = 2
+			10061 = {
+				bunker = 2
+			}
 		}
+
+		
 
 		victory_points = {
 			10061 2 # Mersa Matruh

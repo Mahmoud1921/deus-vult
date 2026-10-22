@@ -9,14 +9,19 @@ state={
 	history={
 		owner = PLT
 		add_core_of = PLT
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			11241 = {
+				bunker = 3
+			}
+		}
 
 		victory_points = {
 			11241 5
 		}
-		buildings = {
-			infrastructure = 3 #was: 5
-			air_base = 5
-		}
+		
 	}
 
 	provinces={

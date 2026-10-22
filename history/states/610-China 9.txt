@@ -13,6 +13,9 @@ state = {
 	history = {
 		owner = JIN
 		add_core_of = JIN
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -24,9 +27,7 @@ state = {
 			934 1 # Chaoyang
 		}
 
-		buildings = {
-			infrastructure = 2
-		}
+		
 
 	}
 

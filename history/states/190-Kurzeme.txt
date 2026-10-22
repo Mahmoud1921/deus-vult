@@ -8,6 +8,13 @@ state={
 	history={
 		owner = LVN
 		add_core_of = LVN
+		buildings = {
+			infrastructure = 2
+			9262 = {
+				bunker = 2
+				naval_base = 1
+			}
+		}
 
 		victory_points = {
 			9262 3
@@ -15,13 +22,7 @@ state={
 		victory_points = {
 			3296 1 #Ventspils
 		}
-		buildings = {
-			infrastructure = 3 #was: 5
-			9262 = {
-				naval_base = 1
-			}
-			dockyard = 1
-		}
+		
 	}
 
 	provinces={

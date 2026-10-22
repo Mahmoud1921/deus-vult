@@ -13,14 +13,15 @@ state = {
 	history = {
 		owner = SAP
 		add_core_of = SAP
+		buildings = {
+			infrastructure = 1
+		}
 
 		
 		victory_points = {
 			3048 1
 		}
-		buildings = {
-			infrastructure = 2
-		}
+		
 	}
 
 

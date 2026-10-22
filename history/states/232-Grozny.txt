@@ -12,12 +12,16 @@ state = {
 	history = {
 		owner = SHV
 		add_core_of = SHV
-
-
-
 		buildings = {
 			infrastructure = 2
+			6701 = {
+				bunker = 2
+			}
 		}
+
+
+
+		
 
 		victory_points = {
 			6701 3 # Makhachkala

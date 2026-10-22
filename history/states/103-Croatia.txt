@@ -10,17 +10,8 @@ state={
 	history={
 		owner = HNG
 		add_core_of = HNG
-
-		victory_points = { #Dubrovnik
-			6889 3 
-		}
-		victory_points = { #Split
-			3924 3
-		}
 		buildings = {
-			infrastructure = 3
-			dockyard = 1
-			industrial_complex = 3
+			infrastructure = 2
 			3924 = {
 				naval_base = 3
 			}
@@ -28,6 +19,14 @@ state={
 				naval_base = 1
 			}
 		}
+
+		victory_points = { #Dubrovnik
+			6889 3 
+		}
+		victory_points = { #Split
+			3924 3
+		}
+		
 		# #added by focus
 	}
 

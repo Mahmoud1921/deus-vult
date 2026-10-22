@@ -8,6 +8,13 @@ state = {
 	history = {
 		owner = LTH
 		add_core_of = LTH
+		buildings = {
+			infrastructure = 2
+			3288 = {
+				bunker = 2
+				naval_base = 1
+			}
+		}
 
 
 
@@ -15,13 +22,7 @@ state = {
 			3288 3 # Klaipeda/Memel
 		}
 		
-		buildings = {
-			infrastructure = 3 #was: 5
-			industrial_complex = 1
-			3288 = {
-				naval_base = 1
-			}
-		}
+		
 		
 		
 

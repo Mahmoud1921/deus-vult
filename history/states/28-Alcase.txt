@@ -13,6 +13,13 @@ state={
 	history={
 		owner = HRE
 		add_core_of = HRE
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			6529 = {
+				bunker = 2
+			}
+		}
 
 		add_dynamic_modifier = {
 			modifier = FRA_maginot_line_dynamic_modifier
@@ -22,39 +29,7 @@ state={
 		victory_points = { 678 5 }
 		victory_points = { 9503 5 }
 		victory_points = { 9559 10 }
-		buildings = {
-			infrastructure = 4
-			industrial_complex = 3
-			549 = {
-				bunker = 10
-
-			}
-			678 = {
-				bunker = 10
-
-			}
-			3629 = {
-				bunker = 10
-
-			}
-			6529 = {
-				bunker = 10
-			}
-			9503 = {
-				bunker = 10
-			}
-			9559 = {
-				bunker = 10
-
-			}
-			11502 = {
-				bunker = 10
-
-			}
-			anti_air_building = 5
-			air_base = 5
-
-		}
+		
 		
 	}
 

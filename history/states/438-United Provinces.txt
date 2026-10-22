@@ -11,16 +11,21 @@ state={
 	history={
 		owner = HND
 		add_core_of = HND
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			1377 = {
+				bunker = 3
+			}
+		}
 
 		victory_points = {
 			1377 10
 		}
 
 
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 1
-		}
+		
 
 	}
 }

@@ -8,6 +8,13 @@ state = {
 	history = {
 		owner = PLD
 		add_core_of = PLD
+		buildings = {
+			infrastructure = 2
+			9263 = {
+				bunker = 2
+				naval_base = 1
+			}
+		}
 
 
 
@@ -23,15 +30,7 @@ state = {
 			279 1 # Bydgoszcz
 		}
 
-		buildings = {
-			infrastructure = 3 #was: 6
-			arms_factory = 2
-			industrial_complex = 1
-			air_base = 2
-			9263 = {
-				naval_base = 1
-			}
-		}
+		
 		
 		
 	}

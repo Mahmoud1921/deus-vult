@@ -9,12 +9,13 @@ state = {
 	history = {
 		owner = SOG
 		add_core_of = SOG
-
-
-
 		buildings = {
 			infrastructure = 1
 		}
+
+
+
+		
 
 		victory_points = {
 			7294 1 # Liangshan

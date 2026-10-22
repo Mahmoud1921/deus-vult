@@ -12,6 +12,13 @@ state={
 	history={
 		owner = PLD
 		add_core_of = PLD
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			11430 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			11430 5
@@ -22,9 +29,7 @@ state={
 		#victory_points = {
 		#	562 3
 		#}
-		buildings = {
-			infrastructure = 3
-		}
+		
 	}
 
 	provinces={

@@ -7,13 +7,17 @@ state = {
 	history = {
 		owner = NRW
 		add_core_of = NRW
+		buildings = {
+			infrastructure = 2
+			6310 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			6310 1
 		}
-		buildings = {
-			infrastructure = 3
-		}
+		
 	}
 
 

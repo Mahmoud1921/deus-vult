@@ -12,13 +12,19 @@ state={
 		owner = ANT
 		add_core_of = ANT
 		add_claim_by = AYB
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			12029 = {
+				bunker = 4
+			}
+		}
 
 		victory_points = {
 			12029 1
 		}
-		buildings = {
-			infrastructure = 1
-		}
+		
 
 		
 	}

@@ -8,6 +8,13 @@ state = {
 	history = {
 		owner = AGV
 		add_core_of = AGV
+		buildings = {
+			infrastructure = 2
+			271 = {
+				bunker = 2
+				naval_base = 3
+			}
+		}
 
 
 
@@ -19,19 +26,7 @@ state = {
 			322 3 # Norwich
 		}
 
-		buildings = {
-			infrastructure = 4 #was: 7
-			arms_factory = 1
-			industrial_complex = 3
-			anti_air_building = 1
-			radar_station = 1
-			air_base = 10
-
-			271 = {
-				naval_base = 3
-			}
-
-		}
+		
 		
 	}
 

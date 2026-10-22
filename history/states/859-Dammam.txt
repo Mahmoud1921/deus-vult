@@ -10,6 +10,15 @@ state = {
 	history = {
 		owner = UYN
 		add_core_of = UYN
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			12702 = {
+				bunker = 3
+				naval_base = 3
+			}
+		}
 
 
 
@@ -17,12 +26,7 @@ state = {
 			12702 1 
 		}
 
-		buildings = {
-			infrastructure = 1
-			12702 = {
-				naval_base = 6
-			}
-		}
+		
 	}
 	
 	provinces = {

@@ -10,6 +10,12 @@ state = {
 	history = {
 		owner = OCN
 		add_core_of = OCN
+		buildings = {
+			infrastructure = 1
+			4268 = {
+				naval_base = 1
+			}
+		}
 
 
 
@@ -17,12 +23,7 @@ state = {
 			4268 1 # Noumea 
 		}
 
-		buildings = {
-			infrastructure = 2
-			4268 = {
-				naval_base = 1
-			}
-		}
+		
 	}
 
 	provinces = {

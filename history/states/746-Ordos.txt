@@ -10,6 +10,9 @@ state={
 	history = {
 		owner = JIN
 		add_core_of = JIN
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -21,9 +24,7 @@ state={
 			10854 1 # Wuhai
 		}
 		
-		buildings = {
-			infrastructure = 1
-		}
+		
 
 		
 		

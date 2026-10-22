@@ -10,6 +10,9 @@ state = {
 	history = {
 		owner = ABY
 		add_core_of = ABY
+		buildings = {
+			infrastructure = 1
+		}
 
 		set_variable = { ETH_state_development_production_speed = -0.3 }
 		set_variable = { ETH_state_development_local_building_slots_factor = -0.3 }
@@ -24,9 +27,7 @@ state = {
 			scope = ETH
 		}
 		
-		buildings = {
-			# infrastructure = 1
-		}
+		
 		# Gaba
 		victory_points = { 
 			10775 1

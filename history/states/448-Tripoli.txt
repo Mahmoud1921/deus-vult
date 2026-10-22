@@ -9,18 +9,19 @@ state={
 	history={
 		owner = MAJ
 		add_core_of = MAJ
+		buildings = {
+			infrastructure = 2
+			1149 = {
+				bunker = 2
+				naval_base = 3
+			}
+		}
 
 		
 		victory_points = {
 			1149 10 
 		}
-		buildings = {
-			infrastructure = 2
-			air_base = 6
-			1149 = {
-				naval_base = 5
-			}
-		}
+		
 	}
 
 	provinces={

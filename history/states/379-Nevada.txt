@@ -14,16 +14,13 @@ state = {
 	history = {
 		owner = NAM
 		add_core_of = NAM
-
-
-
 		buildings = {
-			infrastructure = 2
-
-			# Hoover Dam
-			4799 = { dam_mountain = 1 }
-
+			infrastructure = 1
 		}
+
+
+
+		
 
 		victory_points = {
 			4799 5 # Las Vegas

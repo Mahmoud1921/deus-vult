@@ -9,11 +9,16 @@ state={
 	history={
 		owner = RUM
 		add_core_of = RUM
-
 		buildings = {
-			infrastructure = 2
-			air_base = 5
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 2
+			9861 = {
+				bunker = 3
+			}
 		}
+
+		
 		
 		victory_points = {
 			9861 5

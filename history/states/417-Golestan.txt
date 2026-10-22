@@ -13,6 +13,14 @@ state={
 	history={
 		owner = SLJ
 		add_core_of = SLJ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			8040 = {
+				bunker = 3
+			}
+		}
 
 		victory_points = {
 			8040 3 
@@ -20,9 +28,7 @@ state={
 		victory_points = {
 			2065 1 
 		}
-		buildings = {
-			infrastructure = 2
-		}
+		
 	}
 
 	provinces={

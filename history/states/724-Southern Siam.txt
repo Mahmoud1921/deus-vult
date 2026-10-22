@@ -15,10 +15,8 @@ state={
 	history={
 		owner = KHR
 		add_core_of = KHR
-
 		buildings = {
 			infrastructure = 1
-			industrial_complex = 1
 			12230 = {
 				naval_base = 1
 			}
@@ -26,6 +24,8 @@ state={
 				naval_base = 1
 			}
 		}
+
+		
 		victory_points = {
 			7236 1 
 		}

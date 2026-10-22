@@ -11,6 +11,9 @@ state = {
 	history = {
 		owner = JIN
 		add_core_of = JIN
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -22,10 +25,7 @@ state = {
 			7631 1 # Kweisui/Hohhot 
 		}
 
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 1
-		}
+		
 
 		
 

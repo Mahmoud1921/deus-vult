@@ -15,6 +15,9 @@ state = {
 	history = {
 		owner = SRV
 		add_core_of = SRV
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -22,11 +25,7 @@ state = {
 			1376 1 # Ipoh 
 		}
 
-		buildings = {
-
-			infrastructure = 1
-
-		}
+		
 		
 	}
 

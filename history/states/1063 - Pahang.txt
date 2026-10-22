@@ -13,6 +13,9 @@ state = {
 	history = {
 		owner = SRV
 		add_core_of = SRV
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -20,11 +23,7 @@ state = {
 			7399 1 # Kuantan 
 		}
 
-		buildings = {
-
-			infrastructure = 1
-
-		}
+		
 		
 	}
 

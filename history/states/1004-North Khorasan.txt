@@ -8,10 +8,11 @@ state={
 	history={
 		owner = KHW
 		add_core_of = KHW
-
 		buildings = {
 			infrastructure = 2
 		}
+
+		
 	}
 	provinces={
 		7573 1521 10351

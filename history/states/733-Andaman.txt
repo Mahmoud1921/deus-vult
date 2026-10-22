@@ -7,14 +7,14 @@ state={
 	history={
 		owner = DCN
 		add_core_of = DCN
-
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			12251 = {
 				naval_base = 2
-
 			}
 		}
+
+		
 
 		victory_points = {
 			12251 1 #Port Blair 

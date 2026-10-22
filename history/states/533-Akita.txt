@@ -12,21 +12,16 @@ state = {
 	history = {
 		owner = JPN
 		add_core_of = JPN
-
-
-
 		buildings = {
-			
-			industrial_complex = 1
-			fuel_silo = 1
-			infrastructure = 2
-			air_base = 6
-
+			infrastructure = 1
 			9859 = {
-				naval_base = 6
+				naval_base = 3
 			}
-
 		}
+
+
+
+		
 		
 		victory_points = {
 			6994 5 # Aomori

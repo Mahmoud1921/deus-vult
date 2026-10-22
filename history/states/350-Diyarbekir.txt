@@ -6,6 +6,14 @@ state={
 	history={
 		owner = ARQ
 		add_core_of = ARQ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			4512 = {
+				bunker = 3
+			}
+		}
 
 		victory_points = {
 			4512 5 
@@ -16,11 +24,7 @@ state={
 		victory_points = {
 			12387 1 
 		}
-		buildings = {
-			infrastructure = 2
-			air_base = 2
-
-		}
+		
 		if = {
 			limit = {
 				has_dlc = "Battle for the Bosporus"

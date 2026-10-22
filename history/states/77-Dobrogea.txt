@@ -9,14 +9,17 @@ state={
 	history={
 		owner = BLG
 		add_core_of = BLG
+		buildings = {
+			infrastructure = 2
+			11597 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			11597 1
 		}
-		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
-		}
+		
 	}
 
 	provinces={

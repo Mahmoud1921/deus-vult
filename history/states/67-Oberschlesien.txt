@@ -13,6 +13,12 @@ state = {
 	history = {
 		owner = PLD
 		add_core_of = PLD
+		buildings = {
+			infrastructure = 2
+			11467 = {
+				bunker = 2
+			}
+		}
 
 
 
@@ -23,9 +29,7 @@ state = {
 			9511 3 # Oppeln
 		}
 		
-		buildings = {
-			infrastructure = 3
-		}
+		
 		
 	}
 

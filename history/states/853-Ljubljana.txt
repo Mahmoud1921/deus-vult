@@ -10,10 +10,14 @@ state=
 	{
 		owner = HRE
 		add_core_of = HRE
-
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
+			9627 = {
+				bunker = 2
+			}
 		}
+
+		
 		victory_points = {
 			9627 3 
 		}

@@ -8,6 +8,9 @@ state = {
 	history = {
 		owner = KHR
 		add_core_of = KHR
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -19,9 +22,7 @@ state = {
 			4613 2 # Luang Prabang 
 		}
 
-		buildings = {
-			infrastructure = 1
-		}
+		
 
 	}
 

@@ -8,19 +8,10 @@ state = {
 	history = {
 		owner = AMZ
 		add_core_of = AMZ
-
-
-
 		buildings = {
-			infrastructure = 3 #was: 6
-			arms_factory = 2
-			industrial_complex = 5
-			dockyard = 1
-			air_base = 4
+			infrastructure = 1
 			12364 = {
-				naval_base = 7
-				bunker = 1
-				coastal_bunker = 1
+				naval_base = 3
 			}
 			7621 = {
 				naval_base = 2
@@ -29,6 +20,10 @@ state = {
 				naval_base = 1
 			}
 		}
+
+
+
+		
 		
 		victory_points = {
 			12364 15 

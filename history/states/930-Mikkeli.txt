@@ -9,6 +9,9 @@ state={
 	history={
 		owner = FNT
 		add_core_of = FNT
+		buildings = {
+			infrastructure = 2
+		}
 
 
 		victory_points = { #Mikkeli
@@ -19,9 +22,7 @@ state={
 			37 1
 		}
 		
-		buildings = {
-			infrastructure = 1 #MM: Was 2
-		}
+		
 		
 	}
 

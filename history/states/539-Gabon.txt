@@ -5,18 +5,17 @@ state={
 	history={
 		owner = BNT
 		add_core_of = BNT
+		buildings = {
+			infrastructure = 1
+			5139 = {
+				naval_base = 1
+			}
+		}
 
 		victory_points = {
 			5139 1 
 		}
-		buildings = {
-			infrastructure = 2
-			5139 = {
-				naval_base = 1
-
-			}
-
-		}
+		
 
 	}
 

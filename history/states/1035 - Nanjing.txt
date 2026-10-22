@@ -10,20 +10,12 @@ state = {
 	history = {
 		owner = SOG
 		add_core_of = SOG
-
-
 		buildings = {
-			infrastructure = 2	
-			industrial_complex = 2
-			11913 = {
-                landmark_nanjing_presidential_palace = {
-                    level = 1
-                    allowed = {
-                        has_dlc = "No Compromise, No Surrender"
-                    }
-                }
-			}
+			infrastructure = 1
 		}
+
+
+		
 
 		victory_points = {
 			11913 20 # Nanjing

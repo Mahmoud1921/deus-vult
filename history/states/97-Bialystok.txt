@@ -5,6 +5,12 @@ state={
 	history={
 		owner = PLD
 		add_core_of = PLD
+		buildings = {
+			infrastructure = 2
+			11301 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			11301 3
@@ -13,12 +19,7 @@ state={
 		victory_points = {
 			3254 1
 		}
-		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
-			air_base = 3
-
-		}
+		
 
 	}
 

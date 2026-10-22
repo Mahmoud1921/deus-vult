@@ -12,23 +12,19 @@ state = {
 	history = {
 		owner = SOG
 		add_core_of = SOG
-
-
-
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
+			infrastructure = 1
 			7071 = {
 				naval_base = 1
-				coastal_bunker = 1
-				bunker = 1
 			}
 			4196 = {
 				naval_base = 3
-				coastal_bunker = 1
-				bunker = 1
 			}
 		}
+
+
+
+		
 
 		victory_points = { 
 			4196 3 # Fuzhou 

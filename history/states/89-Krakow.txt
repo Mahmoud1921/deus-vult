@@ -5,6 +5,14 @@ state={
 	history={
 		owner = HLC
 		add_core_of = HLC
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			11411 = {
+				bunker = 3
+			}
+		}
 
 		victory_points = {
 			11411 1
@@ -12,11 +20,7 @@ state={
 		#victory_points = {
 		#	6483 1
 		#}
-		buildings = {
-			infrastructure = 3
-			air_base = 3
-
-		}
+		
 
 	}
 

@@ -8,13 +8,14 @@ state={
 	history={
 		owner = SRV
 		add_core_of = SRV
-
 		buildings = {
 			infrastructure = 1
 			13386 = {
 				naval_base = 1
 			}
 		}
+
+		
 
 		victory_points = {
 			13386 3 # Denpassar

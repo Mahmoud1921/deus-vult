@@ -13,6 +13,9 @@ state = {
 	history = {
 		owner = BNT
 		add_core_of = BNT
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -24,9 +27,7 @@ state = {
 			5221 1 #Fort Jameson
 		}
 
-		buildings = {
-			infrastructure = 2
-		}
+		
 	}
 
 	provinces = {

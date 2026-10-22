@@ -14,6 +14,9 @@ state={
 	history={
 		owner = GHR
 		add_core_of = GHR
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -21,10 +24,7 @@ state={
 			12774 1 # Gwadar
 		}
 
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 1
-		}
+		
 
 	}
 }

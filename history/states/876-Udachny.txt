@@ -5,15 +5,16 @@ state = {
 	history = {
 		owner = SBT
 		add_core_of = SBT
+		buildings = {
+			infrastructure = 1
+		}
 
 
 		#victory_points = {
 		#	6085 1  #Udachny was founded in 1955
 		#}
 
-		buildings = {
-			infrastructure = 1
-		}
+		
 
 
 	}

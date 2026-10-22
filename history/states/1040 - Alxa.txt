@@ -10,6 +10,9 @@ state={
 	history={
 		owner = XXA
 		add_core_of = XXA
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -17,9 +20,7 @@ state={
 			4783 1 # Ejin Banner
 		}
 
-		buildings = {
-			infrastructure = 1
-		}
+		
 
 		
 

@@ -8,6 +8,15 @@ state={
 	history={
 		owner = PRT
 		add_core_of = PRT
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			11805 = {
+				bunker = 3
+				naval_base = 3
+			}
+		}
 
 		victory_points = {
 			11805 20 
@@ -15,16 +24,7 @@ state={
 		victory_points = {
 			3798 1 
 		}
-		buildings = {
-			infrastructure = 3
-			arms_factory = 2
-			industrial_complex = 2
-			air_base = 5
-			dockyard = 2
-			11805 = {
-				naval_base = 8
-			}
-		}
+		
 
 	}
 

@@ -11,12 +11,13 @@ state = {
 	history = {
 		owner = OCN
 		add_core_of = OCN
-
-
-
 		buildings = {
 			infrastructure = 1
 		}
+
+
+
+		
 
 		victory_points = {
 			2223 1 # Alice Springs 

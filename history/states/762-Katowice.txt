@@ -15,6 +15,12 @@ state = {
 	history = {
 		owner = PLD
 		add_core_of = PLD
+		buildings = {
+			infrastructure = 2
+			6464 = {
+				bunker = 2
+			}
+		}
 
 		
 
@@ -22,10 +28,7 @@ state = {
 			6464 5 # Katovice
 		}
 
-		buildings = {
-			infrastructure = 3 #was: 6
-			industrial_complex = 1
-		}
+		
 		
 	}
 

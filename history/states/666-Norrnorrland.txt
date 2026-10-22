@@ -13,6 +13,12 @@ state = {
 	history = {
 		owner = SAP
 		add_core_of = SAP
+		buildings = {
+			infrastructure = 1
+			9108 = {
+				naval_base = 2
+			}
+		}
  
 
 		
@@ -33,18 +39,7 @@ state = {
 			9147 1 # Haparanda
 		}
 		
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-
-			9108 = {
-				naval_base = 2
-			}
-
-			# Harsprånget
-			#3054 = { dam = 1 }
-
-		}
+		
 
 	}
 

@@ -9,10 +9,11 @@ state={
 	history={
 		owner = ADN
 		add_core_of = ADN
-
 		buildings = {
 			infrastructure = 1
 		}
+
+		
 	}
 
 	provinces={

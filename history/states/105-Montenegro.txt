@@ -10,6 +10,16 @@ state={
 	history={
 		owner = SRB
 		add_core_of = SRB
+		buildings = {
+			infrastructure = 2
+			9809 = {
+				bunker = 2
+				naval_base = 1
+			}
+			9821 = {
+				naval_base = 1
+			}
+		}
 
 		victory_points = {
 			9809 3 
@@ -17,16 +27,7 @@ state={
 		victory_points = {
 			9821 1
 		}
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-			9809 = {
-				naval_base = 1
-			}
-			9821 = {
-				naval_base = 1
-			}
-		}
+		
 
 	}
 

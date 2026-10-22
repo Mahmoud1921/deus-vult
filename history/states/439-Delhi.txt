@@ -11,12 +11,11 @@ state={
 	history={
 		owner = HND
 		add_core_of = HND
-
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
-			air_base = 4
+			infrastructure = 1
 		}
+
+		
 		victory_points = {
 			2086 30
 		}

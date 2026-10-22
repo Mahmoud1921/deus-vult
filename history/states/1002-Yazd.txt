@@ -11,10 +11,14 @@ state={
 	history={
 		owner = SLG
 		add_core_of = SLG
-
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
+			8031 = {
+				bunker = 2
+			}
 		}
+
+		
 		victory_points = {
 			8031 1 
 		}

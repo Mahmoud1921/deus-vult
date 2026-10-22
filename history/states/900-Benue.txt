@@ -11,6 +11,9 @@ state = {
 	history = {
 		owner = BNT
 		add_core_of = BNT
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -19,9 +22,7 @@ state = {
 			8034 2 # Enugu
 		} 
 
-		buildings = {
-			infrastructure = 2
-		}
+		
 
 	}
 

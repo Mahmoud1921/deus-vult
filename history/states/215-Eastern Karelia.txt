@@ -8,11 +8,11 @@ state={
 	history={
 		owner = SAP
 		add_core_of = SAP
-
 		buildings = {
-			infrastructure = 2
-
+			infrastructure = 1
 		}
+
+		
 	}
 
 	provinces={

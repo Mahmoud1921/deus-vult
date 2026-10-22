@@ -8,16 +8,16 @@ state = {
 	history =  {
 		owner = CUM
 		add_core_of = CUM
-
-
-
 		buildings = {
-			infrastructure = 3 #was: 5
-
-			# Tsimlyanskoye Hydroelectric Station
-			#6490 = { dam = 1 }
-			
+			infrastructure = 2
+			11476 = {
+				bunker = 2
+			}
 		}
+
+
+
+		
 		
 		victory_points = {
 			11476 1 # Millerovo

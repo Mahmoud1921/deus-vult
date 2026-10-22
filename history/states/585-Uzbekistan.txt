@@ -5,12 +5,12 @@ state = {
 	history = {
 		owner = KRK
 		add_core_of = KRK
+		buildings = {
+			infrastructure = 1
+		}
 
 		
-		buildings = {
-			infrastructure = 2
-
-		}
+		
 		
 		victory_points = {
 			1554 1 

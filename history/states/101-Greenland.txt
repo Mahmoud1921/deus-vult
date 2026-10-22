@@ -12,13 +12,14 @@ state = {
 	history = {
 		owner = ICL
 		add_core_of = ICL
-
 		buildings = {
 			infrastructure = 1
-			12512 ={
+			12512 = {
 				naval_base = 1
 			}
 		}
+
+		
 
 		victory_points = { #Nuuk
 			12512 1

@@ -8,6 +8,12 @@ state={
 	history={
 		owner = AYB
 		add_core_of = AYB
+		buildings = {
+			infrastructure = 2
+			3942 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			3942 1
@@ -18,9 +24,7 @@ state={
 		victory_points = {
 			6883 1
 		}
-		buildings = {
-			infrastructure = 1
-		}
+		
 	}
 
 

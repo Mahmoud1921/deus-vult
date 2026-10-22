@@ -10,16 +10,14 @@ state={
 	history={
 		owner = OCN
 		add_core_of = OCN
-
 		buildings = {
-			infrastructure = 2
-			air_base = 1
+			infrastructure = 1
 			7669 = {
 				naval_base = 1
-
 			}
-
 		}
+
+		
 		victory_points = {
 			7669 5 
 		}

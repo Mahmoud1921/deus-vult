@@ -9,11 +9,11 @@ state={
 	history={
 		owner = KRK
 		add_core_of = KRK
-
 		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
+			infrastructure = 1
 		}
+
+		
 		victory_points = {
 			4823 2
 		}

@@ -9,20 +9,21 @@ state=
 	history = {
 		owner = BYZ
 		add_core_of = BYZ
-
-		victory_points = {
-			10007 1 
-		}
 		buildings = {
-			infrastructure = 3 #was: 5
-			air_base = 1
+			infrastructure = 2
 			10007 = {
-				naval_base = 4
+				bunker = 2
+				naval_base = 3
 			}
 			7003 = {
 				naval_base = 1
 			}
 		}
+
+		victory_points = {
+			10007 1 
+		}
+		
 
 		### CHANGED TO A MROE ROBUST SYSTEM
 		##CONTROLLED BY ITALY AT GAME START -> ITALIAN NAMES

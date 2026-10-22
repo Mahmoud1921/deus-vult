@@ -8,17 +8,15 @@ state = {
 	history = {
 		owner = PPS
 		add_core_of = PPS
-
-		victory_points = { 9904 40 } #Rome
-		victory_points = { 11846 2 } #Anzio (was 5)
-		victory_points = { 13413 1 } #Ostia
 		buildings = {
-			infrastructure = 4
-			air_base = 8
+			infrastructure = 3
+			industrial_complex = 1
 			arms_factory = 1
-			industrial_complex = 4
+			9904 = {
+				bunker = 3
+			}
 			11751 = {
-				naval_base = 5
+				naval_base = 3
 			}
 			11846 = {
 				naval_base = 2
@@ -26,15 +24,12 @@ state = {
 			13413 = {
 				naval_base = 1
 			}
-            9904 = {
-                landmark_colosseum = {
-                    level = 1
-                    allowed = {
-                        has_dlc = "Gotterdammerung"
-                    }
-                }
-            }
 		}
+
+		victory_points = { 9904 40 } #Rome
+		victory_points = { 11846 2 } #Anzio (was 5)
+		victory_points = { 13413 1 } #Ostia
+		
 		
 	}
 

@@ -15,16 +15,8 @@ state = {
 	history = {
 		owner = SRV
 		add_core_of = SRV
-
-
-
-		victory_points = {
-			4279 1
-		}
-
 		buildings = {
 			infrastructure = 1
-			industrial_complex = 1
 			4279 = {
 				naval_base = 1
 			}
@@ -32,6 +24,14 @@ state = {
 				naval_base = 1
 			}
 		}
+
+
+
+		victory_points = {
+			4279 1
+		}
+
+		
 
 	}
 

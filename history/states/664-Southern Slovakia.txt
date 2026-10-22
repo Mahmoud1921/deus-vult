@@ -16,13 +16,16 @@ state = {
 	history = {
 		owner = HNG
 		add_core_of = HNG
-
-
-
 		buildings = {
-			infrastructure = 3 #was: 6
-			industrial_complex = 3
+			infrastructure = 2
+			6573 = {
+				bunker = 2
+			}
 		}
+
+
+
+		
 
 		victory_points = {
 			6573 1 # Kosice

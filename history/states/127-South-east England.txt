@@ -12,6 +12,17 @@ state = {
 	history = {
 		owner = AGV
 		add_core_of = AGV
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			3501 = {
+				bunker = 2
+				naval_base = 3
+			}
+			9458 = {
+				naval_base = 3
+			}
+		}
 
 
 
@@ -22,27 +33,7 @@ state = {
 			9458 15 # Portsmouth
 		}
 
-		buildings = {
-			infrastructure = 4 #was: 8
-			arms_factory = 1
-			industrial_complex = 1
-			dockyard = 2
-			fuel_silo = 1
-			anti_air_building = 1
-			radar_station = 1
-			air_base = 10
-			3501 = {
-				naval_base = 6
-				coastal_bunker = 3
-			}
-			9458 = {
-				naval_base = 10
-			}
-			13070 = {
-				# HM Dockyard, Chatham
-				naval_facility = 1
-			}
-		}
+		
 		
 		
 

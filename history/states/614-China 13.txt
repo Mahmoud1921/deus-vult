@@ -13,6 +13,9 @@ state={
 	history = {
 		owner = JIN
 		add_core_of = JIN
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -22,9 +25,7 @@ state={
 
 		
 		
-		buildings = {
-			infrastructure = 2
-		}
+		
 
 		
 	}

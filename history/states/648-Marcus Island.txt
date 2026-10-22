@@ -6,14 +6,14 @@ state = {
 	history = {
 		owner = JPN
 		add_core_of = JPN
-
 		buildings = {
-			infrastructure = 2
-			air_base = 1
+			infrastructure = 1
 			13026 = {
 				naval_base = 1
 			}
 		}
+
+		
 
 	}
 	provinces = { 13026 }

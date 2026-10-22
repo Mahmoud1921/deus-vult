@@ -7,6 +7,12 @@ state = {
 	history = {
 		owner = PRS
 		add_core_of = PRS
+		buildings = {
+			infrastructure = 2
+			6375 = {
+				bunker = 2
+			}
+		}
 
 
 
@@ -18,9 +24,7 @@ state = {
 		#	11386 1 # Lyck
 		#}
 		
-		buildings = {
-			infrastructure = 3
-		}
+		
 		
 	}
 

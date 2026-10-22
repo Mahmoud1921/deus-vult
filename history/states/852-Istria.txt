@@ -13,17 +13,17 @@ state = {
 	history = {
 		owner = HRE
 		add_core_of = HRE
-
-		victory_points = { #Fiume (Rijeka)
-			11564 1 
-		}
 		buildings = {
-			infrastructure = 3
-			dockyard = 1
+			infrastructure = 2
 			11564 = {
 				naval_base = 2
 			}
 		}
+
+		victory_points = { #Fiume (Rijeka)
+			11564 1 
+		}
+		
 
 		### CHANGED TO A MROE ROBUST SYSTEM
 		##CONTROLLED BY ITALY AT GAME START -> ITALIAN NAMES

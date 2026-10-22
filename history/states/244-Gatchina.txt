@@ -8,16 +8,16 @@ state = {
 	history = {
 		owner = NVG
 		add_core_of = NVG
-
-
-
 		buildings = {
-			infrastructure = 3 #was: 5
-
-			# Volkhov Hydroelectric Station
-			9197 = { dam = 1 }
-
+			infrastructure = 2
+			9197 = {
+				bunker = 2
+			}
 		}
+
+
+
+		
 		
 		victory_points = {
 			9197 1 # Volkhov

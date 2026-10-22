@@ -7,10 +7,11 @@ state={
 	history = {
 		owner = OCN
 		add_core_of = OCN
-
 		buildings = {
 			infrastructure = 1
 		}
+
+		
 	}
 	manpower=220000#PreTAOG 100000
 	state_category = rural

@@ -13,11 +13,8 @@ state={
 	history={
 		owner = BNT
 		add_core_of = BNT
-
 		buildings = {
-			infrastructure = 3 #was: 5
-			industrial_complex = 2
-			air_base = 1
+			infrastructure = 1
 			1468 = {
 				naval_base = 2
 			}
@@ -25,6 +22,8 @@ state={
 				naval_base = 2
 			}
 		}
+
+		
 		victory_points = {
 			1468 3 
 		}

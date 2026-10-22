@@ -6,6 +6,12 @@ state={
 	history={
 		owner = LVN
 		add_core_of = LVN
+		buildings = {
+			infrastructure = 2
+			6222 = {
+				bunker = 2
+			}
+		}
 
 		
 		victory_points = {
@@ -15,11 +21,7 @@ state={
 			3255 1 #Jekabpils
 		}
 		
-		buildings = {
-			infrastructure = 2
-			industrial_complex = 1
-			arms_factory = 1
-		}
+		
 
 	}
 

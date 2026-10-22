@@ -6,6 +6,12 @@ state={
 	history={
 		owner = ESN
 		add_core_of = ESN
+		buildings = {
+			infrastructure = 2
+			9221 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			9221 1 
@@ -13,10 +19,7 @@ state={
 		victory_points = {
 			592 1 #Voru
 		}
-		buildings = {
-			infrastructure = 3 #was: 5
-
-		}
+		
 
 	}
 

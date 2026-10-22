@@ -12,11 +12,11 @@ state={
 	history={
 		owner = PLD
 		add_core_of = PLD
-
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
+			infrastructure = 2
 		}
+
+		
 
 		
 	}

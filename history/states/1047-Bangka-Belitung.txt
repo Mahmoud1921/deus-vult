@@ -9,13 +9,14 @@ state={
 	history={
 		owner = SRV
 		add_core_of = SRV
-
 		buildings = {
 			infrastructure = 1
 			7384 = {
 				naval_base = 1
 			}
 		}
+
+		
 
 		victory_points = {
 			7384 1

@@ -11,6 +11,20 @@ state = {
 	history = {
 		owner = SLG
 		add_core_of = SLG
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			8117 = {
+				bunker = 3
+			}
+			7982 = {
+				naval_base = 3
+			}
+			12832 = {
+				naval_base = 2
+			}
+		}
 
 
 
@@ -26,15 +40,7 @@ state = {
 			12832 1
 		}
 		
-		buildings = {
-			infrastructure = 1
-			7982 = {
-				naval_base = 4
-			}
-			12832 = {
-				naval_base = 2
-			}
-		}
+		
 		
 	}
 

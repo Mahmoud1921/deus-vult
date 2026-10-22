@@ -9,14 +9,18 @@ state={
 	history={
 		owner = KYV
 		add_core_of = KYV
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			488 = {
+				bunker = 2
+			}
+		}
 
 		victory_points = {
 			488 5
 		}
-		buildings = {
-			infrastructure = 3 #was: 5
-			industrial_complex = 1
-		}
+		
 	}
 
 	provinces={

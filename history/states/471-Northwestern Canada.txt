@@ -5,15 +5,14 @@ state={
 	history={
 		owner = NAM
 		add_core_of = NAM
-
 		buildings = {
 			infrastructure = 1
 			10548 = {
 				naval_base = 1
-
 			}
-
 		}
+
+		
 
 	}
 

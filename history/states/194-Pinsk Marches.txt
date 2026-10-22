@@ -9,11 +9,14 @@ state={
 	history={
 		owner = KYV
 		add_core_of = KYV
-
 		buildings = {
 			infrastructure = 2
-			air_base = 3
+			6232 = {
+				bunker = 2
+			}
 		}
+
+		
 		victory_points = {
 			6232 1
 		}

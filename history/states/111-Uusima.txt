@@ -9,6 +9,12 @@ state = {
 	history = {
 		owner = FNT
 		add_core_of = FNT
+		buildings = {
+			infrastructure = 2
+			11105 = {
+				naval_base = 3
+			}
+		}
 
 		victory_points = { #Helsinki
 			11105 15 
@@ -22,16 +28,7 @@ state = {
 			11211 1 
 		}
 
-		buildings = {
-			infrastructure = 2 #MM: Was 3
-			arms_factory = 2
-			industrial_complex = 1
-			air_base = 3
-			11105 = {
-				naval_base = 5
-				coastal_bunker = 2
-			}
-		}
+		
 	}
 
 	provinces={

@@ -12,29 +12,18 @@ state = {
 	history = {
 		owner = GRY
 		add_core_of = GRY
+		buildings = {
+			infrastructure = 1
+			3900 = {
+				naval_base = 2
+			}
+		}
 
 
 
 		
 
-		buildings = {
-			infrastructure = 3 # was: 5
-			arms_factory = 1
-			industrial_complex = 1
-			synthetic_refinery = 1
-
-			3900 = {
-				naval_base = 2
-				
-				landmark_great_wall_section = {
-				    level = 1
-				    allowed = {
-				        has_dlc = "No Compromise, No Surrender"
-				    }
-				}
-			}
-
-		}
+		
 
 		victory_points = {
 			11822 2 # Tongzhou

@@ -8,13 +8,14 @@ state = {
 	history = {
 		owner = NRW
 		add_core_of = NRW
-
 		buildings = {
 			infrastructure = 2
 			13003 = {
 				naval_base = 1
 			}
 		}
+
+		
 
 		victory_points = { #Tórshavn
 			13003 1

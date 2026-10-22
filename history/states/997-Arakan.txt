@@ -12,15 +12,15 @@ state = {
 	history = {
 		owner = PGN
 		add_core_of = PGN
-
-
 		buildings = {
 			infrastructure = 1
-			air_base = 1
 			12090 = {
 				naval_base = 1
 			}
 		}
+
+
+		
 
 		victory_points = {
 			12090 1 # Akyab/Sittwe

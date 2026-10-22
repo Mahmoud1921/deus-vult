@@ -6,6 +6,13 @@ state={
 	history={
 		owner = IRK
 		add_core_of = IRK
+		buildings = {
+			infrastructure = 2
+			3379 = {
+				bunker = 2
+				naval_base = 3
+			}
+		}
 
 		victory_points = {
 			3379 5 
@@ -13,16 +20,7 @@ state={
 		victory_points = {
 			385 1 # Londonderry
 		}
-		buildings = {
-			infrastructure = 3
-			arms_factory = 1
-			industrial_complex = 2
-			air_base = 1
-			dockyard = 2
-			3379 = {
-				naval_base = 4
-			}
-		}
+		
 	}
 
 	provinces={

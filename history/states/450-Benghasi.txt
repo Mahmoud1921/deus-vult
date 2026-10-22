@@ -9,18 +9,19 @@ state={
 	history={
 		owner = AYB
 		add_core_of = AYB
+		buildings = {
+			infrastructure = 2
+			11954 = {
+				bunker = 2
+				naval_base = 1
+			}
+		}
 
 		
 		victory_points = {
 			11954 3 
 		}
-		buildings = {
-			infrastructure = 2
-			air_base = 1
-			11954 = {
-				naval_base = 1
-			}
-		}
+		
 	}
 
 	provinces={

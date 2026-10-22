@@ -8,13 +8,19 @@ state={
 	history={
 		owner = GHN
 		add_core_of = GHN
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			10836 = {
+				bunker = 3
+			}
+		}
 
 		victory_points = {
 			10836 1
 		}
-		buildings = {
-			infrastructure = 2
-		}
+		
 	}
 
 	provinces={

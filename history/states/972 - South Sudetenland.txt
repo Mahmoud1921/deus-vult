@@ -12,6 +12,12 @@ state = {
 	history = {
 		owner = HRE
 		add_core_of = HRE
+		buildings = {
+			infrastructure = 2
+			557 = {
+				bunker = 2
+			}
+		}
 
 
 
@@ -19,19 +25,7 @@ state = {
 			557 1
 		}
 
-		buildings = {
 		
-			infrastructure = 3
-			anti_air_building = 1
-
-			5283 = {
-				bunker = 1
-			}
-
-			# Vranov Dam
-			11525 = { dam = 1 }
-
-		}
 
 		
 

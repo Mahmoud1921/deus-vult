@@ -14,11 +14,11 @@ state = {
 	history = {
 		owner = NVG
 		add_core_of = NVG
-
 		buildings = {
 			infrastructure = 1
-
 		}
+
+		
 	}
 
 	provinces = {

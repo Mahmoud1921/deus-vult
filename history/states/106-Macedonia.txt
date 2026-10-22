@@ -9,13 +9,14 @@ state = {
 	history = {
 		owner = BYZ
 		add_core_of = BYZ
-
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
-			air_base = 2
-
+			3882 = {
+				bunker = 2
+			}
 		}
+
+		
 		victory_points = {
 			3882 5
 		}

@@ -12,6 +12,9 @@ state = {
 	history = {
 		owner = JIN
 		add_core_of = JIN
+		buildings = {
+			infrastructure = 1
+		}
 
 
 
@@ -27,14 +30,7 @@ state = {
 			1180 1 # Jincheng 
 		}
 
-		buildings = {
-			infrastructure = 2
-			arms_factory = 2
-			industrial_complex = 2
-			4174 = {
-				bunker = 1
-			}
-		}
+		
 
 		
 
