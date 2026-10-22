@@ -61,7 +61,7 @@ Not done yet: events, focus trees for other nations, proper flags and leader por
 - `gen.py` writes the buildings (see `medieval_buildings()`)
 
 ## 3D unit models
-- The WW2 soldiers on the map are replaced by original low-poly medieval models (`gfx/models/units/dv/`):
+- The WW2 soldiers on the map are replaced by original medieval models (`gfx/models/units/dv/`). Their textures are baked in Blender from procedural chainmail, cloth weave, leather, wood and steel, with ambient occlusion, normal maps and shine maps like the vanilla units:
   - **Men-at-arms** with a spear, nasal helm, kite shield and a cross surcoat (white with a red cross in the west, crimson with a gold cross for the Orthodox)
   - **Knights** in great helms with lances, riding the vanilla horse
   - **Saracens** in turban helms and kaftans with round shields, for Islamic and African realms
